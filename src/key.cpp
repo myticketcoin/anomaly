@@ -9,6 +9,7 @@
 #include <crypto/common.h>
 #include <crypto/hmac_sha512.h>
 #include <random.h>
+#include <hash.h>
 
 #include <secp256k1.h>
 #include <secp256k1_recovery.h>
