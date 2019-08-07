@@ -41,11 +41,7 @@
 #define SPH_SHA2_H__
 
 #include <stddef.h>
-#include "crypto/x16r/sph_types.h"
-
-#ifdef __cplusplus
-extern "C"{
-#endif
+#include "sph_types.h"
 
 /**
  * Output size (in bits) for SHA-224.
@@ -65,7 +61,7 @@ extern "C"{
  *
  * The contents of this structure are private. A running SHA-224 computation
  * can be cloned by copying the context (e.g. with a simple
- * <code>memcpy()</code>).
+ * memcpy()).
  */
 typedef struct {
 #ifndef DOXYGEN_IGNORE
@@ -82,7 +78,7 @@ typedef struct {
 /**
  * This structure is a context for SHA-256 computations. It is identical
  * to the SHA-224 context. However, a context is initialized for SHA-224
- * <strong>or</strong> SHA-256, but not both (the internal IV is not the
+ * or SHA-256, but not both (the internal IV is not the
  * same).
  */
 typedef sph_sha224_context sph_sha256_context;
@@ -91,12 +87,12 @@ typedef sph_sha224_context sph_sha256_context;
  * Initialize a SHA-224 context. This process performs no memory allocation.
  *
  * @param cc   the SHA-224 context (pointer to
- *             a <code>sph_sha224_context</code>)
+ *             a sph_sha224_context)
  */
 void sph_sha224_init(void *cc);
 
 /**
- * Process some data bytes. It is acceptable that <code>len</code> is zero
+ * Process some data bytes. It is acceptable that len is zero
  * (in which case this function does nothing).
  *
  * @param cc     the SHA-224 context
@@ -120,7 +116,7 @@ void sph_sha224_close(void *cc, void *dst);
  * Add a few additional bits (0 to 7) to the current computation, then
  * terminate it and output the result in the provided buffer, which must
  * be wide enough to accomodate the result (28 bytes). If bit number i
- * in <code>ub</code> has value 2^i, then the extra bits are those
+ * in ub has value 2^i, then the extra bits are those
  * numbered 7 downto 8-n (this is the big-endian convention at the byte
  * level). The context is automatically reinitialized.
  *
@@ -133,9 +129,9 @@ void sph_sha224_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst);
 
 /**
  * Apply the SHA-224 compression function on the provided data. The
- * <code>msg</code> parameter contains the 16 32-bit input blocks,
+ * msg parameter contains the 16 32-bit input blocks,
  * as numerical values (hence after the big-endian decoding). The
- * <code>val</code> parameter contains the 8 32-bit input blocks for
+ * val parameter contains the 8 32-bit input blocks for
  * the compression function; the output is written in place in this
  * array.
  *
@@ -148,14 +144,14 @@ void sph_sha224_comp(const sph_u32 msg[16], sph_u32 val[8]);
  * Initialize a SHA-256 context. This process performs no memory allocation.
  *
  * @param cc   the SHA-256 context (pointer to
- *             a <code>sph_sha256_context</code>)
+ *             a sph_sha256_context)
  */
 void sph_sha256_init(void *cc);
 
 #ifdef DOXYGEN_IGNORE
 /**
  * Process some data bytes, for SHA-256. This function is identical to
- * <code>sha_224()</code>
+ * sha_224()
  *
  * @param cc     the SHA-224 context
  * @param data   the input data
@@ -183,7 +179,7 @@ void sph_sha256_close(void *cc, void *dst);
  * Add a few additional bits (0 to 7) to the current computation, then
  * terminate it and output the result in the provided buffer, which must
  * be wide enough to accomodate the result (32 bytes). If bit number i
- * in <code>ub</code> has value 2^i, then the extra bits are those
+ * in ub has value 2^i, then the extra bits are those
  * numbered 7 downto 8-n (this is the big-endian convention at the byte
  * level). The context is automatically reinitialized.
  *
@@ -197,7 +193,7 @@ void sph_sha256_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst);
 #ifdef DOXYGEN_IGNORE
 /**
  * Apply the SHA-256 compression function on the provided data. This
- * function is identical to <code>sha224_comp()</code>.
+ * function is identical to sha224_comp().
  *
  * @param msg   the message block (16 values)
  * @param val   the function 256-bit input and output
@@ -229,7 +225,7 @@ void sph_sha256_comp(const sph_u32 msg[16], sph_u32 val[8]);
  *
  * The contents of this structure are private. A running SHA-384 computation
  * can be cloned by copying the context (e.g. with a simple
- * <code>memcpy()</code>).
+ * memcpy()).
  */
 typedef struct {
 #ifndef DOXYGEN_IGNORE
@@ -243,12 +239,12 @@ typedef struct {
  * Initialize a SHA-384 context. This process performs no memory allocation.
  *
  * @param cc   the SHA-384 context (pointer to
- *             a <code>sph_sha384_context</code>)
+ *             a sph_sha384_context)
  */
 void sph_sha384_init(void *cc);
 
 /**
- * Process some data bytes. It is acceptable that <code>len</code> is zero
+ * Process some data bytes. It is acceptable that len is zero
  * (in which case this function does nothing).
  *
  * @param cc     the SHA-384 context
@@ -272,7 +268,7 @@ void sph_sha384_close(void *cc, void *dst);
  * Add a few additional bits (0 to 7) to the current computation, then
  * terminate it and output the result in the provided buffer, which must
  * be wide enough to accomodate the result (48 bytes). If bit number i
- * in <code>ub</code> has value 2^i, then the extra bits are those
+ * in ub has value 2^i, then the extra bits are those
  * numbered 7 downto 8-n (this is the big-endian convention at the byte
  * level). The context is automatically reinitialized.
  *
@@ -285,9 +281,9 @@ void sph_sha384_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst);
 
 /**
  * Apply the SHA-384 compression function on the provided data. The
- * <code>msg</code> parameter contains the 16 64-bit input blocks,
+ * msg parameter contains the 16 64-bit input blocks,
  * as numerical values (hence after the big-endian decoding). The
- * <code>val</code> parameter contains the 8 64-bit input blocks for
+ * val parameter contains the 8 64-bit input blocks for
  * the compression function; the output is written in place in this
  * array.
  *
@@ -299,7 +295,7 @@ void sph_sha384_comp(const sph_u64 msg[16], sph_u64 val[8]);
 /**
  * This structure is a context for SHA-512 computations. It is identical
  * to the SHA-384 context. However, a context is initialized for SHA-384
- * <strong>or</strong> SHA-512, but not both (the internal IV is not the
+ * or SHA-512, but not both (the internal IV is not the
  * same).
  */
 typedef sph_sha384_context sph_sha512_context;
@@ -308,14 +304,14 @@ typedef sph_sha384_context sph_sha512_context;
  * Initialize a SHA-512 context. This process performs no memory allocation.
  *
  * @param cc   the SHA-512 context (pointer to
- *             a <code>sph_sha512_context</code>)
+ *             a sph_sha512_context)
  */
 void sph_sha512_init(void *cc);
 
 #ifdef DOXYGEN_IGNORE
 /**
  * Process some data bytes, for SHA-512. This function is identical to
- * <code>sph_sha384()</code>.
+ * sph_sha384().
  *
  * @param cc     the SHA-384 context
  * @param data   the input data
@@ -343,7 +339,7 @@ void sph_sha512_close(void *cc, void *dst);
  * Add a few additional bits (0 to 7) to the current computation, then
  * terminate it and output the result in the provided buffer, which must
  * be wide enough to accomodate the result (64 bytes). If bit number i
- * in <code>ub</code> has value 2^i, then the extra bits are those
+ * in ub has value 2^i, then the extra bits are those
  * numbered 7 downto 8-n (this is the big-endian convention at the byte
  * level). The context is automatically reinitialized.
  *
@@ -357,7 +353,7 @@ void sph_sha512_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst);
 #ifdef DOXYGEN_IGNORE
 /**
  * Apply the SHA-512 compression function. This function is identical to
- * <code>sph_sha384_comp()</code>.
+ * sph_sha384_comp().
  *
  * @param msg   the message block (16 values)
  * @param val   the function 512-bit input and output
@@ -371,8 +367,5 @@ void sph_sha512_comp(const sph_u64 msg[16], sph_u64 val[8]);
 
 #endif
 
-#endif
-#ifdef __cplusplus
-}
 #endif
 

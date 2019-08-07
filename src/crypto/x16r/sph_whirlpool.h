@@ -49,11 +49,7 @@
 #define SPH_WHIRLPOOL_H__
 
 #include <stddef.h>
-#include "crypto/x16r/sph_types.h"
-
-#ifdef __cplusplus
-extern "C"{
-#endif
+#include "sph_types.h"
 
 #if SPH_64
 
@@ -210,8 +206,4 @@ void sph_whirlpool1_close(void *cc, void *dst);
 
 #endif
 
-#endif
-
-#ifdef __cplusplus
-}
 #endif
