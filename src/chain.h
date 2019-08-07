@@ -13,6 +13,7 @@
 #include <uint256.h>
 
 #include <vector>
+#include <map>
 
 /**
  * Maximum amount of time that a block timestamp is allowed to exceed the
@@ -162,6 +163,11 @@ enum BlockStatus: uint32_t {
     BLOCK_OPT_WITNESS       =   128, //!< block data in blk*.data was received with a witness-enforcing client
 };
 
+enum BlockMemFlags: uint32_t {
+    POS_BADWEIGHT = (1 << 0),
+};
+
+
 /** The block chain is a tree shaped structure starting with the
  * genesis block at the root, with each block potentially having multiple
  * candidates to be the next block. A blockindex may have multiple pprev pointing
@@ -197,6 +203,9 @@ public:
     //! (memory only) Total amount of work (expected number of hashes) in the chain up to and including this block
     arith_uint256 nChainWork;
 
+    //! (memory only) Total amount of work (only looking at PoW) in the chain up to and including this block
+    arith_uint256 nChainPoW;
+
     //! Number of transactions in this block.
     //! Note: in a potential headers-first mode, this number cannot be relied upon
     unsigned int nTx;
@@ -231,6 +240,9 @@ public:
     //! (memory only) Maximum nTime in the chain up to and including this block.
     unsigned int nTimeMax;
 
+    //! (memory only) Maximum nTime in the chain up to and including this block.
+    uint32_t nMemFlags;
+
     void SetNull()
     {
         phashBlock = nullptr;
@@ -238,15 +250,18 @@ public:
         pnext = nullptr;
         pskip = nullptr;
         nHeight = 0;
+	nMoneySupply = 0;
         nFile = 0;
         nDataPos = 0;
         nUndoPos = 0;
         nChainWork = arith_uint256();
+	nChainPoW = arith_uint256();
         nTx = 0;
         nChainTx = 0;
         nStatus = 0;
         nSequenceId = 0;
         nTimeMax = 0;
+        nMemFlags = 0;
 
         nVersion       = 0;
         hashMerkleRoot = uint256();
@@ -283,6 +298,7 @@ public:
         hashProof = uint256(); 
         prevoutStake   = block.prevoutStake; // qtum
         vchBlockSig    = block.vchBlockSig; // qtum
+//        hashProof = uint256(); // activate perhaps?
     }
 
     CDiskBlockPos GetBlockPos() const {
@@ -308,7 +324,7 @@ public:
         CBlockHeader block;
         block.nVersion       = nVersion;
         if (pprev)
-            block.hashPrevBlock = pprev->GetBlockHash();
+        block.hashPrevBlock  = pprev->GetBlockHash();
         block.hashMerkleRoot = hashMerkleRoot;
         block.nTime          = nTime;
         block.nBits          = nBits;
@@ -325,6 +341,11 @@ public:
         return *phashBlock;
     }
 
+    uint256 GetBlockPoWHash() const
+    {
+        return GetBlockHeader().GetPoWHash();
+    }
+
     int64_t GetBlockTime() const
     {
         return (int64_t)nTime;
@@ -334,6 +355,10 @@ public:
     {
         return (int64_t)nTimeMax;
     }
+
+    int64_t GetBlockWork() const;
+    int64_t GetBlockPoW() const;
+    arith_uint256 GetChainPoW() const;
 
     static constexpr int nMedianTimeSpan = 11;
 
@@ -398,6 +423,7 @@ public:
     //! Efficiently find an ancestor of this block.
     CBlockIndex* GetAncestor(int height);
     const CBlockIndex* GetAncestor(int height) const;
+    const CBlockIndex* GetBestPoWAncestor() const;
 };
 
 arith_uint256 GetBlockProof(const CBlockIndex& block);
@@ -430,6 +456,7 @@ public:
             READWRITE(VARINT(_nVersion, VarIntMode::NONNEGATIVE_SIGNED));
 
         READWRITE(VARINT(nHeight, VarIntMode::NONNEGATIVE_SIGNED));
+        READWRITE(nMoneySupply);
         READWRITE(VARINT(nStatus));
         READWRITE(VARINT(nTx));
         if (nStatus & (BLOCK_HAVE_DATA | BLOCK_HAVE_UNDO))

@@ -9,6 +9,9 @@
 #include <primitives/transaction.h>
 #include <serialize.h>
 #include <uint256.h>
+#include <hash.h>
+
+#include <unordered_map>
 
 static const int SER_WITHOUT_SIGNATURE = 1 << 3;
 
@@ -44,7 +47,8 @@ public:
 
     template <typename Stream, typename Operation>
     inline void SerializationOp(Stream& s, Operation ser_action) {
-        READWRITE(this->nVersion);
+//        READWRITE(this->nVersion); // perhaps activate
+        READWRITE(nVersion);
         READWRITE(hashPrevBlock);
         READWRITE(hashMerkleRoot);
         READWRITE(nTime);
@@ -79,6 +83,8 @@ public:
     uint256 GetHash() const;
 
     uint256 GetHashWithoutSign() const;
+
+    uint256 GetPoWHash() const;
 
     int64_t GetBlockTime() const
     {
@@ -150,7 +156,7 @@ public:
 
     template <typename Stream, typename Operation>
     inline void SerializationOp(Stream& s, Operation ser_action) {
-        READWRITEAS(CBlockHeader, *this);
+        READWRITEAS(CBlockHeader, *this); // CBlock*?
         READWRITE(vtx);
     }
 

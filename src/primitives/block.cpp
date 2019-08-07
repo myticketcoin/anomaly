@@ -9,6 +9,7 @@
 #include <tinyformat.h>
 #include <utilstrencodings.h>
 #include <crypto/common.h>
+#include <streams.h>
 
 uint256 CBlockHeader::GetHash() const
 {
@@ -18,6 +19,15 @@ uint256 CBlockHeader::GetHash() const
 uint256 CBlockHeader::GetHashWithoutSign() const
 {
     return SerializeHash(*this, SER_GETHASH | SER_WITHOUT_SIGNATURE);
+}
+
+#define TIME_MASK 0xffffff80
+uint256 CBlockHeader::GetPoWHash() const
+{
+    //Only change every 128 seconds
+    int32_t nTimeX16r = nTime&TIME_MASK;
+    uint256 hashTime = Hash(BEGIN(nTimeX16r), END(nTimeX16r));
+    return HashX16R(BEGIN(nVersion), END(nNonce), hashTime);
 }
 
 std::string CBlock::ToString() const
