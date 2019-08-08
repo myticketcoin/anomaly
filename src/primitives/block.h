@@ -10,22 +10,6 @@
 #include <serialize.h>
 #include <uint256.h>
 #include <hash.h>
-#include <crypto/x16r/sph_blake.h>
-#include <crypto/x16r/sph_bmw.h>
-#include <crypto/x16r/sph_groestl.h>
-#include <crypto/x16r/sph_jh.h>
-#include <crypto/x16r/sph_keccak.h>
-#include <crypto/x16r/sph_skein.h>
-#include <crypto/x16r/sph_luffa.h>
-#include <crypto/x16r/sph_cubehash.h>
-#include <crypto/x16r/sph_shavite.h>
-#include <crypto/x16r/sph_simd.h>
-#include <crypto/x16r/sph_echo.h>
-#include <crypto/x16r/sph_hamsi.h>
-#include <crypto/x16r/sph_fugue.h>
-#include <crypto/x16r/sph_shabal.h>
-#include <crypto/x16r/sph_whirlpool.h>
-#include <crypto/x16r/sph_sha2.h>
 
 #include <unordered_map>
 
