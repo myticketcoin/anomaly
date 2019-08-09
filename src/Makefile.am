@@ -327,6 +327,42 @@ crypto_libbitcoin_crypto_base_a_SOURCES = \
   crypto/sha256.h \
   crypto/sha512.cpp \
   crypto/sha512.h \
+  crypto/x16r/aes_helper.c \
+  crypto/x16r/blake.c \
+  crypto/x16r/bmw.c \
+  crypto/x16r/cubehash.c \
+  crypto/x16r/echo.c \
+  crypto/x16r/groestl.c \
+  crypto/x16r/jh.c \
+  crypto/x16r/keccak.c \
+  crypto/x16r/luffa.c \
+  crypto/x16r/shavite.c \
+  crypto/x16r/simd.c \
+  crypto/x16r/skein.c \
+  crypto/x16r/sph_hamsi.c \
+  crypto/x16r/sph_hamsi_helper.c \
+  crypto/x16r/sph_fugue.c \
+  crypto/x16r/sph_shabal.c \
+  crypto/x16r/sph_whirlpool.c \
+  crypto/x16r/sph_sha2.c \
+  crypto/x16r/sph_sha512.c \
+  crypto/x16r/sph_blake.h \
+  crypto/x16r/sph_bmw.h \
+  crypto/x16r/sph_cubehash.h \
+  crypto/x16r/sph_echo.h \
+  crypto/x16r/sph_groestl.h \
+  crypto/x16r/sph_jh.h \
+  crypto/x16r/sph_keccak.h \
+  crypto/x16r/sph_luffa.h \
+  crypto/x16r/sph_shavite.h \
+  crypto/x16r/sph_simd.h \
+  crypto/x16r/sph_skein.h \
+  crypto/x16r/sph_hamsi.h \
+  crypto/x16r/sph_fugue.h \
+  crypto/x16r/sph_shabal.h \
+  crypto/x16r/sph_whirlpool.h \
+  crypto/x16r/sph_sha2.h \
+  crypto/x16r/sph_types.h \
   crypto/external/hmac_sha256.c \
   crypto/external/hmac_sha256.h \
   crypto/external/hmac_sha512.c \
@@ -339,46 +375,6 @@ crypto_libbitcoin_crypto_base_a_SOURCES = \
   crypto/external/sha512.h \
   crypto/external/zeroize.c \
   crypto/external/zeroize.h \
-  crypto/x16r/aes_helper.c \
-  crypto/x16r/blake.c \
-  crypto/x16r/bmw.c \
-  crypto/x16r/cubehash.c \
-  crypto/x16r/echo.c \
-  crypto/x16r/groestl.c \
-  crypto/x16r/jh.c \
-  crypto/x16r/keccak.c \
-  crypto/x16r/luffa.c \
-  crypto/x16r/md_helper.c \
-  crypto/x16r/sha2.c \
-  crypto/x16r/shavite.c \
-  crypto/x16r/simd.c \
-  crypto/x16r/skein.c \
-  crypto/x16r/sph_blake.h \
-  crypto/x16r/sph_bmw.h \
-  crypto/x16r/sph_cubehash.h \
-  crypto/x16r/sph_echo.h \
-  crypto/x16r/sph_fugue.c \
-  crypto/x16r/sph_fugue.h \
-  crypto/x16r/sph_groestl.h \
-  crypto/x16r/sph_hamsi.c \
-  crypto/x16r/sph_hamsi.h \
-  crypto/x16r/sph_hamsi_helper.c \
-  crypto/x16r/sph_jh.h \
-  crypto/x16r/sph_keccak.h \
-  crypto/x16r/sph_luffa.h \
-  crypto/x16r/sph_sha2.c \
-  crypto/x16r/sph_sha2.h \
-  crypto/x16r/sph_sha512.h \
-  crypto/x16r/sph_shabal.c \
-  crypto/x16r/sph_shabal.h \
-  crypto/x16r/sph_shavite.h \
-  crypto/x16r/sph_simd.h \
-  crypto/x16r/sph_skein.h \
-  crypto/x16r/sph_types.h \
-  crypto/x16r/sph_whirlpool.c \
-  crypto/x16r/sph_whirlpool.h \
-  crypto/x16r/whirlpool.c \
-  crypto/x16r/whirlpoolx.c \  
   cpp-ethereum/utils/libscrypt/b64.c \
   cpp-ethereum/utils/libscrypt/b64.h \
   cpp-ethereum/utils/libscrypt/crypto-mcf.c \
@@ -396,9 +392,7 @@ crypto_libbitcoin_crypto_base_a_SOURCES = \
   cpp-ethereum/utils/libscrypt/sysendian.h
 
 if USE_ASM
-crypto_libbitcoin_crypto_base_a_SOURCES += \
-  crypto/sha256_sse4.cpp \
-  crypto/x16r/sha256_sse4.cpp
+crypto_libbitcoin_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
 endif
 
 crypto_libbitcoin_crypto_sse41_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
