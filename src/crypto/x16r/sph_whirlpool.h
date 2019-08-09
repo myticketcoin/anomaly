@@ -51,6 +51,10 @@
 #include <stddef.h>
 #include "sph_types.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 #if SPH_64
 
 /**
@@ -206,4 +210,7 @@ void sph_whirlpool1_close(void *cc, void *dst);
 
 #endif
 
+#endif
+#ifdef __cplusplus
+}
 #endif
