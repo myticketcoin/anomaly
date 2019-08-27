@@ -1,6 +1,6 @@
 #include <boost/test/unit_test.hpp>
 #include <test/test_bitcoin.h>
-#include <qtumtests/test_utils.h>
+#include <anomalytests/test_utils.h>
 
 dev::u256 GASLIMIT = dev::u256(500000);
 dev::Address SENDERADDRESS = dev::Address("0101010101010101010101010101010101010101");

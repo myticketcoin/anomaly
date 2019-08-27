@@ -87,7 +87,7 @@ static const CRPCConvertParam vRPCConvertParams[] =
     { "sendmanywithdupes", 4, "subtractfeefrom" },
     { "addmultisigaddress", 0, "nrequired" },
     { "addmultisigaddress", 1, "keys" },
-    ////////////////////////////////////////////////// // qtum
+    ////////////////////////////////////////////////// // anomaly
     { "getaddresstxids", 0, "addresses"},
     { "getaddressmempool", 0, "addresses"},
     { "getaddressdeltas", 0, "addresses"},

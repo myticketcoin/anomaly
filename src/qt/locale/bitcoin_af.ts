@@ -410,8 +410,8 @@
         <translation>Orebalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en qtum: URI's)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en anomaly: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -422,8 +422,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Skep 'n qtum: URI of betalingsversoek</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Skep 'n anomaly: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1876,7 +1876,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Qtum Kern</translation>

@@ -1,7 +1,7 @@
 What is Qtum?
 -------------
 
-Qtum is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. It achieves this through the revolutionary Account Abstraction Layer which allows the EVM to communicate with Qtum's Bitcoin-like UTXO blockchain. For more general information about Qtum as well as links to join our community, go to https://qtum.org
+Qtum is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. It achieves this through the revolutionary Account Abstraction Layer which allows the EVM to communicate with Qtum's Bitcoin-like UTXO blockchain. For more general information about Qtum as well as links to join our community, go to https://anomaly.org
 
 Welcome to the Qtum Ignition Main Network. This is the main network where the tokens hold value and should be guarded very carefully. If you are testing the network, or developing unstable software on Qtum, we highly recommend using either testnet or regtest mode. 
 
@@ -21,43 +21,43 @@ These are some resources that might be helpful in understanding Qtum. Note that 
 
 Basic usage resources:
 
-* [Official Qtum Usage Guide](https://github.com/qtumproject/qtum/wiki/Qtum-Wallet-Tutorial)
-* [Unofficial Qtum staking tutorial](https://steemit.com/qtum/@cryptominder/qtum-staking-tutorial-using-qtum-qt)
-* [Unofficial Qtum staking tutorial on Raspberry Pi](https://steemit.com/qtum/@cryptominder/qtum-staking-tutorial-using-qtumd-on-a-raspberry-pi-3)
-* [Unofficial guide for keeping your wallet safe](https://steemit.com/qtum/@cryptominder/encrypting-backing-up-and-restoring-your-qtum-wallet)
-* [Block explorer](https://explorer.qtum.org)
-* [Unofficial block explorer](https://qtumexplorer.io/)
-* [Unofficial Raspberry Pi Web UI](https://github.com/rpiwalletui/qtum-ui)
+* [Official Qtum Usage Guide](https://github.com/anomalyproject/anomaly/wiki/Qtum-Wallet-Tutorial)
+* [Unofficial Qtum staking tutorial](https://steemit.com/anomaly/@cryptominder/anomaly-staking-tutorial-using-anomaly-qt)
+* [Unofficial Qtum staking tutorial on Raspberry Pi](https://steemit.com/anomaly/@cryptominder/anomaly-staking-tutorial-using-anomalyd-on-a-raspberry-pi-3)
+* [Unofficial guide for keeping your wallet safe](https://steemit.com/anomaly/@cryptominder/encrypting-backing-up-and-restoring-your-anomaly-wallet)
+* [Block explorer](https://explorer.anomaly.org)
+* [Unofficial block explorer](https://anomalyexplorer.io/)
+* [Unofficial Raspberry Pi Web UI](https://github.com/rpiwalletui/anomaly-ui)
 
 Development resources:
 
-* [Deploying a custom token to Qtum](https://blog.qtum.org/qtum-custom-token-walkthrough-467d725fa27d)
-* [Early example faucet contract](http://earlz.net/view/2017/06/30/2144/the-qtum-sparknet-faucet)
-* [Unofficial Qtum Hello World tutorial](https://steemit.com/qtum/@cryptominder/quantum-qtum-blockchain-developer-tutorial-hello-world)
-* [Qtum Book - A Developer's Guide To QTUM](https://github.com/qtumproject/qtumbook)
+* [Deploying a custom token to Qtum](https://blog.anomaly.org/anomaly-custom-token-walkthrough-467d725fa27d)
+* [Early example faucet contract](http://earlz.net/view/2017/06/30/2144/the-anomaly-sparknet-faucet)
+* [Unofficial Qtum Hello World tutorial](https://steemit.com/anomaly/@cryptominder/quantum-anomaly-blockchain-developer-tutorial-hello-world)
+* [Qtum Book - A Developer's Guide To QTUM](https://github.com/anomalyproject/anomalybook)
 
 General Info about Qtum:
 
-* [Mainnet event AMA](https://www.reddit.com/r/Qtum/comments/6zs8t0/official_qtum_ama_thread_starts_at_10pm_beijing/)
-* [Qtum's PoS vs CASPER](https://www.reddit.com/r/Qtum/comments/788oa5/qtums_pos_vs_casper_and_the_nothingatstake_problem/)
+* [Mainnet event AMA](https://www.reddit.com/r/Qtum/comments/6zs8t0/official_anomaly_ama_thread_starts_at_10pm_beijing/)
+* [Qtum's PoS vs CASPER](https://www.reddit.com/r/Qtum/comments/788oa5/anomalys_pos_vs_casper_and_the_nothingatstake_problem/)
 * [Technical article explaining Qtum's PoS model in depth](http://earlz.net/view/2017/07/27/1904/the-missing-explanation-of-proof-of-stake-version)
-* [Unofficial What is Qtum article](https://storeofvalue.github.io/posts/what-is-qtum-without-the-bullshit/)
+* [Unofficial What is Qtum article](https://storeofvalue.github.io/posts/what-is-anomaly-without-the-bullshit/)
 
 Developer's Tools
 -----------------
 
 * Smart contract deployment tool
-  * https://github.com/qtumproject/solar
+  * https://github.com/anomalyproject/solar
 * DApp JavaScript Library
-  * https://github.com/qtumproject/qtumjs
-* A toolkit for building qtum light wallets
-  * https://github.com/qtumproject/qtumjs-wallet
-* CORS qtumd RPC proxy for DApp
-  * https://github.com/qtumproject/qtumportal
-* Docker images for running qtum services
-  * https://github.com/qtumproject/qtum-docker
+  * https://github.com/anomalyproject/anomalyjs
+* A toolkit for building anomaly light wallets
+  * https://github.com/anomalyproject/anomalyjs-wallet
+* CORS anomalyd RPC proxy for DApp
+  * https://github.com/anomalyproject/anomalyportal
+* Docker images for running anomaly services
+  * https://github.com/anomalyproject/anomaly-docker
 * HTTP API that powers the block explorer and the QTUM web wallet
-  * https://github.com/qtumproject/insight-api
+  * https://github.com/anomalyproject/insight-api
 
 
 What is Qtum Core?
@@ -85,15 +85,15 @@ Qtum Core uses a full node model, and thus requires downloading the entire block
 
 A light wallet that supports the Ledger hardware wallet and is based on the well known Electrum wallet software. 
 
-Download: https://github.com/qtumproject/qtum-electrum/releases
+Download: https://github.com/anomalyproject/anomaly-electrum/releases
 
 ### iOS and Android Wallets
 
 These wallets run on mobile devices and synchronize quickly. 
 
-Android Download: https://play.google.com/store/apps/details?id=org.qtum.wallet
+Android Download: https://play.google.com/store/apps/details?id=org.anomaly.wallet
 
-iOS Download: https://github.com/qtumproject/qtum-ios (open source, we are still working with Apple to get approval for their app store)
+iOS Download: https://github.com/anomalyproject/anomaly-ios (open source, we are still working with Apple to get approval for their app store)
 
 ### Ledger Chrome Wallet
 
@@ -119,8 +119,8 @@ Building Qtum Core
     # If you want to build the Qt GUI:
     sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler qrencode
 
-    git clone https://github.com/qtumproject/qtum --recursive
-    cd qtum
+    git clone https://github.com/anomalyproject/anomaly --recursive
+    cd anomaly
 
     # Note autogen will prompt to install some more dependencies if needed
     ./autogen.sh
@@ -129,7 +129,7 @@ Building Qtum Core
     
 ### Build on CentOS
 
-Here is a brief description for compiling Qtum on CentOS, for more details please refer to [the specific document](https://github.com/qtumproject/qtum/blob/master/doc/build-unix.md)
+Here is a brief description for compiling Qtum on CentOS, for more details please refer to [the specific document](https://github.com/anomalyproject/anomaly/blob/master/doc/build-unix.md)
 
     # Compiling boost manually
     sudo yum install python-devel bzip2-devel
@@ -149,8 +149,8 @@ Here is a brief description for compiling Qtum on CentOS, for more details pleas
     sudo yum install qt5-qttools-devel protobuf-devel qrencode-devel
     
     # Building Qtum
-    git clone --recursive https://github.com/qtumproject/qtum.git
-    cd qtum
+    git clone --recursive https://github.com/anomalyproject/anomaly.git
+    cd anomaly
     ./autogen.sh
     ./configure
     make -j4
@@ -178,14 +178,14 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 #### Build Qtum Core
 
-1. Clone the qtum source code and cd into `qtum`
+1. Clone the anomaly source code and cd into `anomaly`
 
-        git clone --recursive https://github.com/qtumproject/qtum.git
-        cd qtum
+        git clone --recursive https://github.com/anomalyproject/anomaly.git
+        cd anomaly
 
-2.  Build qtum-core:
+2.  Build anomaly-core:
 
-    Configure and build the headless qtum binaries as well as the GUI (if Qt is found).
+    Configure and build the headless anomaly binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -199,7 +199,7 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 ### Run
 
-Then you can either run the command-line daemon using `src/qtumd` and `src/qtum-cli`, or you can run the Qt GUI using `src/qt/qtum-qt`
+Then you can either run the command-line daemon using `src/anomalyd` and `src/anomaly-cli`, or you can run the Qt GUI using `src/qt/anomaly-qt`
 
 For in-depth description of Sparknet and how to use Qtum for interacting with contracts, please see [sparknet-guide](doc/sparknet-guide.md).
 
@@ -213,12 +213,12 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/qtumproject/qtum/tags) are created
+completely stable. [Tags](https://github.com/anomalyproject/anomaly/tags) are created
 regularly to indicate new official, stable release versions of Qtum.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Developer IRC can be found on Freenode at #qtum-dev.
+Developer IRC can be found on Freenode at #anomaly-dev.
 
 Testing
 -------

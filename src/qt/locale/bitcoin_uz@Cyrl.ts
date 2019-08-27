@@ -226,8 +226,8 @@
         <translation>Ички ойналар асбоблар панели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Тўловлар (QR кодлари ва qtum ёрдамида яратишлар: URI’лар) сўраш</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Тўловлар (QR кодлари ва anomaly ёрдамида яратишлар: URI’лар) сўраш</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -238,7 +238,7 @@
         <translation>Фойдаланилган қабул қилинган манзиллар ва ёрлиқлар рўйхатини кўрсатиш</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
+        <source>Open a anomaly: URI or payment request</source>
         <translation>Qtum’ни очиш: URI ёки тўлов сўрови</translation>
     </message>
     <message>
@@ -1170,7 +1170,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Qtum Core</translation>

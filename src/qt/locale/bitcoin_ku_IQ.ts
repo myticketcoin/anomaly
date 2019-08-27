@@ -374,7 +374,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Information</source>
         <translation>زانیاری</translation>

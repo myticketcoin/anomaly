@@ -188,7 +188,7 @@
         <translation>Lompakko salattiin</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your anomalys from being stolen by malware infecting your computer.</source>
         <translation>%1 sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
     </message>
     <message>
@@ -422,8 +422,8 @@
         <translation>Välilehtipalkki</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Pyydä maksuja (Luo QR koodit ja qtum: URIt)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Pyydä maksuja (Luo QR koodit ja anomaly: URIt)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -434,8 +434,8 @@
         <translation>Näytä vastaanottamiseen käytettyjen osoitteiden ja nimien lista</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Avaa qtum: URI tai maksupyyntö</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Avaa anomaly: URI tai maksupyyntö</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -862,12 +862,12 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
-        <translation>Viimeiset tapahtumat eivät välttämättä vielä näy, joten lompakkosi saldo voi olla virheellinen. Tieto korjautuu, kunhan lompakkosi synkronointi qtum-verkon kanssa on päättynyt. Tiedot näkyvät alla.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the anomaly network, as detailed below.</source>
+        <translation>Viimeiset tapahtumat eivät välttämättä vielä näy, joten lompakkosi saldo voi olla virheellinen. Tieto korjautuu, kunhan lompakkosi synkronointi anomaly-verkon kanssa on päättynyt. Tiedot näkyvät alla.</translation>
     </message>
     <message>
-        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Verkko ei tule hyväksymään sellaisten qtumien käyttämistä, jotka liittyvät vielä näkymättömissä oleviin siirtoihin.</translation>
+        <source>Attempting to spend anomalys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Verkko ei tule hyväksymään sellaisten anomalyien käyttämistä, jotka liittyvät vielä näkymättömissä oleviin siirtoihin.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1117,11 +1117,11 @@
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona qtum-määrät näytetään</translation>
+        <translation>Yksikkö jona anomaly-määrät näytetään</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti qtum-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti anomaly-määrien näyttämiseen.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1266,7 +1266,7 @@
         <translation>Maksupyyntövirhe</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
+        <source>Cannot start anomaly: click-to-pay handler</source>
         <translation>Qtumia ei voi käynnistää: klikkaa-maksaaksesi -käsittelijän virhe</translation>
     </message>
     <message>
@@ -2224,8 +2224,8 @@
         <translation>Poista tämä alkio</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän qtumeja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less anomalys than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän anomalyeja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2252,8 +2252,8 @@
         <translation>Aseta nimi tälle osoitteelle lisätäksesi sen käytettyjen osoitteiden listalle.</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
-        <translation>Viesti joka liitettiin qtum: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Qtum-verkkoon.</translation>
+        <source>A message that was attached to the anomaly: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+        <translation>Viesti joka liitettiin anomaly: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Qtum-verkkoon.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2297,8 +2297,8 @@
         <translation>&amp;Allekirjoita viesti</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Voit allekirjoittaa viestit / sopimukset omalla osoitteellasi todistaaksesi että voit vastaanottaa siihen lähetetyt qtumit. Varo allekirjoittamasta mitään epämääräistä, sillä phishing-hyökkääjät voivat huijata sinua luovuttamaan henkilöllisyytesi allekirjoituksella. Allekirjoita ainoastaan täysin yksityiskohtainen selvitys siitä, mihin olet sitoutumassa.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive anomalys sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Voit allekirjoittaa viestit / sopimukset omalla osoitteellasi todistaaksesi että voit vastaanottaa siihen lähetetyt anomalyit. Varo allekirjoittamasta mitään epämääräistä, sillä phishing-hyökkääjät voivat huijata sinua luovuttamaan henkilöllisyytesi allekirjoituksella. Allekirjoita ainoastaan täysin yksityiskohtainen selvitys siitä, mihin olet sitoutumassa.</translation>
     </message>
     <message>
         <source>The Qtum address to sign the message with</source>
@@ -2952,7 +2952,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Jaettu MIT -ohjelmistolisenssin alaisuudessa, katso mukana tuleva %s tiedosto tai %s</translation>

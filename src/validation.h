@@ -33,14 +33,14 @@
 
 #include <consensus/consensus.h>
 
-/////////////////////////////////////////// qtum
-#include <qtum/qtumstate.h>
-#include <qtum/qtumDGP.h>
+/////////////////////////////////////////// anomaly
+#include <anomaly/anomalystate.h>
+#include <anomaly/anomalyDGP.h>
 #include <libethereum/ChainParams.h>
 #include <libethashseal/Ethash.h>
 #include <libethashseal/GenesisInfo.h>
 #include <script/standard.h>
-#include <qtum/storageresults.h>
+#include <anomaly/storageresults.h>
 
 
 extern std::unique_ptr<QtumState> globalState;
@@ -172,7 +172,7 @@ static const uint64_t DEFAULT_GAS_LIMIT_OP_SEND=250000;
 static const CAmount DEFAULT_GAS_PRICE=0.00000040*COIN;
 static const CAmount MAX_RPC_GAS_PRICE=0.00000100*COIN;
 
-static const size_t MAX_CONTRACT_VOUTS = 1000; // qtum
+static const size_t MAX_CONTRACT_VOUTS = 1000; // anomaly
 
 struct BlockHasher
 {
@@ -355,7 +355,7 @@ std::string FormatStateMessage(const CValidationState &state);
 /** Get the BIP9 state for a given deployment at the current tip. */
 ThresholdState VersionBitsTipState(const Consensus::Params& params, Consensus::DeploymentPos pos);
 
-//////////////////////////////////////////////////////////// // qtum
+//////////////////////////////////////////////////////////// // anomaly
 struct CHeightTxIndexIteratorKey {
     unsigned int height;
 
@@ -620,7 +620,7 @@ inline bool IsBlockPruned(const CBlockIndex* pblockindex)
 
 bool CheckReward(const CBlock& block, CValidationState& state, int nHeight, const Consensus::Params& consensusParams, CAmount nFees, CAmount gasRefunds, CAmount nActualStakeReward, const std::vector<CTxOut>& vouts);
 
-//////////////////////////////////////////////////////// qtum
+//////////////////////////////////////////////////////// anomaly
 std::vector<ResultExecute> CallContract(const dev::Address& addrContract, std::vector<unsigned char> opcode, const dev::Address& sender = dev::Address(), uint64_t gasLimit=0);
 
 bool CheckSenderScript(const CCoinsViewCache& view, const CTransaction& tx);
@@ -663,7 +663,7 @@ public:
 
     QtumTxConverter(CTransaction tx, CCoinsViewCache* v = NULL, const std::vector<CTransactionRef>* blockTxs = NULL) : txBit(tx), view(v), blockTransactions(blockTxs){}
 
-    bool extractionQtumTransactions(ExtractQtumTX& qtumTx);
+    bool extractionQtumTransactions(ExtractQtumTX& anomalyTx);
 
 private:
 

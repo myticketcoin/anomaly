@@ -220,7 +220,7 @@ BitcoinGUI::BitcoinGUI(interfaces::Node& node, const PlatformStyle *_platformSty
 
     modalOverlay = new ModalOverlay(this->centralWidget());
     modalBackupOverlay = new ModalOverlay(this, ModalOverlay::Backup);
-    qtumVersionChecker = new QtumVersionChecker(this);
+    anomalyVersionChecker = new QtumVersionChecker(this);
 
 #ifdef ENABLE_WALLET
     if(enableWallet) {
@@ -274,7 +274,7 @@ void BitcoinGUI::createActions()
     sendCoinsMenuAction->setToolTip(sendCoinsMenuAction->statusTip());
 
     receiveCoinsAction = new QAction(platformStyle->MultiStatesIcon(":/icons/receive_from"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and qtum: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and anomaly: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
@@ -390,7 +390,7 @@ void BitcoinGUI::createActions()
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
     openAction = new QAction(platformStyle->MenuColorIcon(":/icons/open"), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a qtum: URI or payment request"));//QTUM_LINE
+    openAction->setStatusTip(tr("Open a anomaly: URI or payment request"));//QTUM_LINE
 
     showHelpMessageAction = new QAction(platformStyle->MenuColorIcon(":/icons/info"), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
@@ -532,7 +532,7 @@ void BitcoinGUI::setClientModel(ClientModel *_clientModel)
     if(_clientModel)
     {
         // Check for updates
-        if(_clientModel->getOptionsModel()->getCheckForUpdates() && qtumVersionChecker->newVersionAvailable())
+        if(_clientModel->getOptionsModel()->getCheckForUpdates() && anomalyVersionChecker->newVersionAvailable())
         {
             QString link = QString("<a href=%1>%2</a>").arg(QTUM_RELEASES, QTUM_RELEASES);
             QString message(tr("New version of Qtum wallet is available on the Qtum source code repository: <br /> %1. <br />It is recommended to download it and update this application").arg(link));

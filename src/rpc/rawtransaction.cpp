@@ -40,10 +40,10 @@
 
 static void TxToJSON(const CTransaction& tx, const uint256 hashBlock, UniValue& entry)
 {
-    // Call into TxToUniv() in qtum-common to decode the transaction hex.
+    // Call into TxToUniv() in anomaly-common to decode the transaction hex.
     //
     // Blockchain contextual information (confirmations and blocktime) is not
-    // available to code in qtum-common, so we query them here and push the
+    // available to code in anomaly-common, so we query them here and push the
     // data into the returned UniValue.
     TxToUniv(tx, uint256(), entry, true, RPCSerializationFlags());
 
@@ -179,7 +179,7 @@ static UniValue getrawtransaction(const JSONRPCRequest& request)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"address\"        (string) qtum address\n"
+            "           \"address\"        (string) anomaly address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -483,9 +483,9 @@ CMutableTransaction ConstructTransaction(const UniValue& inputs_in, const UniVal
 
             // Get dgp gas limit and gas price
             LOCK(cs_main);
-            QtumDGP qtumDGP(globalState.get(), fGettingValuesDGP);
-            uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(chainActive.Height());
-            uint64_t minGasPrice = CAmount(qtumDGP.getMinGasPrice(chainActive.Height()));
+            QtumDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+            uint64_t blockGasLimit = anomalyDGP.getBlockGasLimit(chainActive.Height());
+            uint64_t minGasPrice = CAmount(anomalyDGP.getMinGasPrice(chainActive.Height()));
             CAmount nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE)?minGasPrice:DEFAULT_GAS_PRICE;
 
             // Get the contract address
@@ -598,7 +598,7 @@ static UniValue createrawtransaction(const JSONRPCRequest& request)
             "2. \"outputs\"               (array, required) a json array with outputs (key-value pairs)\n"
             "   [\n"
             "    {\n"
-            "      \"address\": x.xxx,    (obj, optional) A key-value pair. The key (string) is the qtum address, the value (float or string) is the amount in " + CURRENCY_UNIT + "\n"
+            "      \"address\": x.xxx,    (obj, optional) A key-value pair. The key (string) is the anomaly address, the value (float or string) is the amount in " + CURRENCY_UNIT + "\n"
             "    },\n"
             "    {\n"
             "      \"data\": \"hex\"        (obj, optional) A key-value pair. The key must be \"data\", the value is hex encoded data\n"
@@ -691,7 +691,7 @@ static UniValue decoderawtransaction(const JSONRPCRequest& request)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"Q2tvKAXCxZjSmdNbao16dKXC8tRWfcF5oc\"   (string) qtum address\n"
+            "           \"Q2tvKAXCxZjSmdNbao16dKXC8tRWfcF5oc\"   (string) anomaly address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -738,7 +738,7 @@ static UniValue decodescript(const JSONRPCRequest& request)
             "  \"type\":\"type\", (string) The output type\n"
             "  \"reqSigs\": n,    (numeric) The required signatures\n"
             "  \"addresses\": [   (json array of string)\n"
-            "     \"address\"     (string) qtum address\n"
+            "     \"address\"     (string) anomaly address\n"
             "     ,...\n"
             "  ],\n"
             "  \"p2sh\",\"address\" (string) address of P2SH script wrapping this redeem script (not returned if the script is already a P2SH).\n"
@@ -1190,7 +1190,7 @@ UniValue signrawtransaction(const JSONRPCRequest& request)
 
     if (!IsDeprecatedRPCEnabled("signrawtransaction")) {
         throw JSONRPCError(RPC_METHOD_DEPRECATED, "signrawtransaction is deprecated and will be fully removed in v0.18. "
-            "To use signrawtransaction in v0.17, restart qtumd with -deprecatedrpc=signrawtransaction.\n"
+            "To use signrawtransaction in v0.17, restart anomalyd with -deprecatedrpc=signrawtransaction.\n"
             "Projects should transition to using signrawtransactionwithkey and signrawtransactionwithwallet before upgrading to v0.18");
     }
 
@@ -1835,7 +1835,7 @@ UniValue createpsbt(const JSONRPCRequest& request)
                             "2. \"outputs\"               (array, required) a json array with outputs (key-value pairs)\n"
                             "   [\n"
                             "    {\n"
-                            "      \"address\": x.xxx,    (obj, optional) A key-value pair. The key (string) is the qtum address, the value (float or string) is the amount in " + CURRENCY_UNIT + "\n"
+                            "      \"address\": x.xxx,    (obj, optional) A key-value pair. The key (string) is the anomaly address, the value (float or string) is the amount in " + CURRENCY_UNIT + "\n"
                             "    },\n"
                             "    {\n"
                             "      \"data\": \"hex\"        (obj, optional) A key-value pair. The key must be \"data\", the value is hex encoded data\n"

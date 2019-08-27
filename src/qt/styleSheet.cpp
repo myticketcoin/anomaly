@@ -98,9 +98,9 @@ void StyleSheet::setStyleSheet(QWidget *widget, const QString &style_name)
 void StyleSheet::setStyleSheet(QApplication *app, const QString& style_name)
 {
     QStyle* mainStyle = QStyleFactory::create("fusion");
-    QtumStyle* qtumStyle = new QtumStyle;
-    qtumStyle->setBaseStyle(mainStyle);
-    app->setStyle(qtumStyle);
+    QtumStyle* anomalyStyle = new QtumStyle;
+    anomalyStyle->setBaseStyle(mainStyle);
+    app->setStyle(anomalyStyle);
 
     QPalette mainPalette(app->palette());
     mainPalette.setColor(QPalette::Link, LINK_COLOR);

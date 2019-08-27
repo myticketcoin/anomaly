@@ -47,11 +47,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Choisissez une adresse où envoyer les qtums</translation>
+        <translation>Choisissez une adresse où envoyer les anomalys</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Choisissez une adresse où recevoir les qtums</translation>
+        <translation>Choisissez une adresse où recevoir les anomalys</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -188,7 +188,7 @@
         <translation>Portefeuille chiffré</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your anomalys from being stolen by malware infecting your computer.</source>
         <translation>%1 va à présent se fermer pour terminer la procédure de cryptage. N'oubliez pas que le chiffrement de votre porte-monnaie ne peut pas fournir une protection totale contre le vol par des logiciels malveillants qui infecteraient votre ordinateur.</translation>
     </message>
     <message>
@@ -422,8 +422,8 @@
         <translation>Barre d'outils des onglets</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Demander des paiements (générer QR codes et qtum: URIs)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Demander des paiements (générer QR codes et anomaly: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -434,8 +434,8 @@
         <translation>Afficher la liste des labels et adresses de réception utilisées</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Ouvrir un qtum: URI ou demande de paiement</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Ouvrir un anomaly: URI ou demande de paiement</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -2228,7 +2228,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Unable to start HTTP server. See debug log for details.</source>
         <translation>Impossible de démarrer le serveur HTTP. Voir le journal de débogage pour plus de détails.</translation>

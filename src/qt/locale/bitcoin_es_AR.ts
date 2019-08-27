@@ -286,6 +286,6 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     </context>
 </TS>

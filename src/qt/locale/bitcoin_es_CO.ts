@@ -395,8 +395,8 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Barra de herramientas de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Solicitar pagos (genera códigos QR y qtum: URIs)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Solicitar pagos (genera códigos QR y anomaly: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -407,8 +407,8 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Mostrar la lista de direcciones y etiquetas de recepción usadas</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Abra un qtum: URI o solicitud de pago</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Abra un anomaly: URI o solicitud de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -741,12 +741,12 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Formar</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
-        <translation>Es posible que las transacciones recientes aún no estén visibles y, por lo tanto, el saldo de su billetera podría ser incorrecto. Esta información será correcta una vez que su billetera haya terminado de sincronizarse con la red qtum, como se detalla a continuación.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the anomaly network, as detailed below.</source>
+        <translation>Es posible que las transacciones recientes aún no estén visibles y, por lo tanto, el saldo de su billetera podría ser incorrecto. Esta información será correcta una vez que su billetera haya terminado de sincronizarse con la red anomaly, como se detalla a continuación.</translation>
     </message>
     <message>
-        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>La red no aceptará intentar gastar qtums que se vean afectados por transacciones aún no mostradas</translation>
+        <source>Attempting to spend anomalys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>La red no aceptará intentar gastar anomalys que se vean afectados por transacciones aún no mostradas</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1121,7 +1121,7 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Error de solicitud de pago</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
+        <source>Cannot start anomaly: click-to-pay handler</source>
         <translation>No se puede iniciar Qtum: controlador de clic para pagar</translation>
     </message>
     <message>
@@ -1893,7 +1893,7 @@ Exportar los datos en la pestaña actual a un archivo</translation>
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Qtum Core</translation>

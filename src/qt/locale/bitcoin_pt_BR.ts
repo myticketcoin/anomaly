@@ -355,7 +355,7 @@
     </message>
     <message>
         <source>Send coins to a Qtum address</source>
-        <translation>Enviar moedas para um endereço qtum</translation>
+        <translation>Enviar moedas para um endereço anomaly</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -430,8 +430,8 @@
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Solicitações de pagamentos (gera códigos QR e qtum: URIs)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Solicitações de pagamentos (gera códigos QR e anomaly: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -442,8 +442,8 @@
         <translation>Mostrar a lista de endereços de recebimento usados ​​e rótulos</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Abrir um qtum: URI ou cobrança</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Abrir um anomaly: URI ou cobrança</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -900,12 +900,12 @@
         <translation>Formulário</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the anomaly network, as detailed below.</source>
         <translation>Transações recentes podem não estar visíveis ainda, portanto o seu saldo pode estar incorreto. Esta informação será corrigida assim que sua carteira for sincronizada com a rede, como detalhado abaixo.</translation>
     </message>
     <message>
-        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Tentar gastar qtums que estão em transações ainda não exibidas, não vão ser aceitos pela rede.</translation>
+        <source>Attempting to spend anomalys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Tentar gastar anomalys que estão em transações ainda não exibidas, não vão ser aceitos pela rede.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1324,16 +1324,16 @@
         <translation>Erro no pedido de pagamento</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
-        <translation>Não foi possível iniciar qtum: manipulador click-to-pay</translation>
+        <source>Cannot start anomaly: click-to-pay handler</source>
+        <translation>Não foi possível iniciar anomaly: manipulador click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>Manipulação de URI</translation>
     </message>
     <message>
-        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
-        <translation>'qtum://' não é um URI válido. Use 'qtum:'.</translation>
+        <source>'anomaly://' is not a valid URI. Use 'anomaly:' instead.</source>
+        <translation>'anomaly://' não é um URI válido. Use 'anomaly:'.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -2147,7 +2147,7 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
         <translation>Ocultar</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for anomaly transactions than the network can process.</source>
         <translation>Pagando apenas a taxa mínima é bom, desde que haja pouco volume de transações. Mas esteja ciente de que isso pode acabar em uma transação nunca confirmanda uma vez que há mais demanda por transações do que a rede pode processar.</translation>
     </message>
     <message>
@@ -2390,8 +2390,8 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
         <translation>Remover esta entrada</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>A taxa será deduzida da quantia que está sendo enviada. O destinatário receberá menos qtums do que você colocou no campo de quantidade. Se vários destinatários estão selecionados, a taxa é dividida igualmente.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less anomalys than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>A taxa será deduzida da quantia que está sendo enviada. O destinatário receberá menos anomalys do que você colocou no campo de quantidade. Se vários destinatários estão selecionados, a taxa é dividida igualmente.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2418,8 +2418,8 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
         <translation>Digite um rótulo para este endereço para adicioná-lo no catálogo</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
-        <translation>A mensagem que foi anexada ao qtum: URI na qual será gravada na transação para sua referência. Nota: Essa mensagem não será gravada publicamente na rede Qtum.</translation>
+        <source>A message that was attached to the anomaly: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+        <translation>A mensagem que foi anexada ao anomaly: URI na qual será gravada na transação para sua referência. Nota: Essa mensagem não será gravada publicamente na rede Qtum.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2463,8 +2463,8 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
         <translation>&amp;Assinar mensagem</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Você pode assinar mensagens com seus endereços para provar que você pode receber qtums enviados por alguém. Cuidado para não assinar nada vago ou aleatório, pois ataques phishing podem tentar te enganar para assinar coisas para eles como se fosse você. Somente assine termos bem detalhados que você concorde.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive anomalys sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Você pode assinar mensagens com seus endereços para provar que você pode receber anomalys enviados por alguém. Cuidado para não assinar nada vago ou aleatório, pois ataques phishing podem tentar te enganar para assinar coisas para eles como se fosse você. Somente assine termos bem detalhados que você concorde.</translation>
     </message>
     <message>
         <source>The Qtum address to sign the message with</source>
@@ -3146,7 +3146,7 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
     </message>
 </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Distribuído sob a licença de software MIT, veja o arquivo %s ou %s</translation>

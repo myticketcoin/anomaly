@@ -235,7 +235,7 @@ public:
     explicit BlockAssembler(const CChainParams& params);
     BlockAssembler(const CChainParams& params, const Options& options);
 
-///////////////////////////////////////////// // qtum
+///////////////////////////////////////////// // anomaly
     ByteCodeExecResult bceResult;
     uint64_t minGasPrice = 1;
     uint64_t hardBlockGasLimit;
@@ -244,7 +244,7 @@ public:
 /////////////////////////////////////////////
 
     // The original constructed reward tx (either coinbase or coinstake) without gas refund adjustments
-    CMutableTransaction originalRewardTx; // qtum
+    CMutableTransaction originalRewardTx; // anomaly
 
     //When GetAdjustedTime() exceeds this, no more transactions will attempt to be added
     int32_t nTimeLimit;

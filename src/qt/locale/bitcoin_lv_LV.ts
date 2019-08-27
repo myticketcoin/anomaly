@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Izvēlies adresi uz kuru sūtīt qtums</translation>
+        <translation>Izvēlies adresi uz kuru sūtīt anomalys</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Izvēlies adresi ar kuru saņemt qtums</translation>
+        <translation>Izvēlies adresi ar kuru saņemt anomalys</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -290,12 +290,12 @@
         <translation>Ciļņu rīkjosla</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Pieprasīt maksājumus (izveido QR kodu un qtum: URIs)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Pieprasīt maksājumus (izveido QR kodu un anomaly: URIs)</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Atvērt qtum URI vai maksājuma pieprasījumu</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Atvērt anomaly URI vai maksājuma pieprasījumu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -563,7 +563,7 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation>Ieslēgt qtum &amp;kontroles funkcijas</translation>
+        <translation>Ieslēgt anomaly &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
@@ -1202,7 +1202,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Qtum Core</translation>

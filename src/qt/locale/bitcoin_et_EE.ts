@@ -758,7 +758,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Qtum Core</translation>

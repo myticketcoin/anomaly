@@ -180,7 +180,7 @@
         <translation>La monujo estas ĉifrita</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your anomalys from being stolen by malware infecting your computer.</source>
         <translation>%1 nun fermiĝos por fini la ĉifradon. Memoru, ke eĉ ĉifrado ne protektas kontraŭ ĉiu atako, ekz. se viruso infektus vian komputilon.</translation>
     </message>
     <message>
@@ -350,8 +350,8 @@
         <translation>Langeto-breto</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Peti pagon (kreas QR-kodojn kaj URI-ojn kun prefikso qtum:)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Peti pagon (kreas QR-kodojn kaj URI-ojn kun prefikso anomaly:)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -362,8 +362,8 @@
         <translation>Vidigi la liston de uzitaj ricevaj adresoj kaj etikedoj</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Malfermi qtum:-URI-on aŭ pagpeton</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Malfermi anomaly:-URI-on aŭ pagpeton</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1840,7 +1840,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Kerno de Bitmono</translation>

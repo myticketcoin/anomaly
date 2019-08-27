@@ -77,10 +77,10 @@ struct TokenData
 
 bool ToHash160(const std::string& strQtumAddress, std::string& strHash160)
 {
-    CTxDestination qtumAddress = DecodeDestination(strQtumAddress);
-    if(!IsValidDestination(qtumAddress))
+    CTxDestination anomalyAddress = DecodeDestination(strQtumAddress);
+    if(!IsValidDestination(anomalyAddress))
         return false;
-    const CKeyID * keyid = boost::get<CKeyID>(&qtumAddress);
+    const CKeyID * keyid = boost::get<CKeyID>(&anomalyAddress);
     if(keyid){
         strHash160 = HexStr(valtype(keyid->begin(),keyid->end()));
     }else{
@@ -93,9 +93,9 @@ bool ToQtumAddress(const std::string& strHash160, std::string& strQtumAddress)
 {
     uint160 key(ParseHex(strHash160.c_str()));
     CKeyID keyid(key);
-    CTxDestination qtumAddress = keyid;
-    if(IsValidDestination(qtumAddress)){
-        strQtumAddress = EncodeDestination(qtumAddress);
+    CTxDestination anomalyAddress = keyid;
+    if(IsValidDestination(anomalyAddress)){
+        strQtumAddress = EncodeDestination(anomalyAddress);
         return true;
     }
     return false;

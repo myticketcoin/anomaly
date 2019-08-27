@@ -41,10 +41,10 @@ from the root of the repository.
 Build Qtum Core
 ------------------------
 
-1. Clone the Qtum Core source code and cd into `qtum`
+1. Clone the Qtum Core source code and cd into `anomaly`
 
-        git clone --recursive https://github.com/qtumproject/qtum.git
-        cd qtum
+        git clone --recursive https://github.com/anomalyproject/anomaly.git
+        cd anomaly
         git submodule update --init --recursive
 
 2.  Build Qtum Core:
@@ -68,15 +68,15 @@ Build Qtum Core
 Running
 -------
 
-Qtum Core is now available at `./src/qtumd`
+Qtum Core is now available at `./src/anomalyd`
 
 Before running, it's recommended that you create an RPC configuration file.
 
-    echo -e "rpcuser=qtumrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Qtum/qtum.conf"
+    echo -e "rpcuser=anomalyrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Qtum/anomaly.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/Qtum/qtum.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Qtum/anomaly.conf"
 
-The first time you run qtumd, it will start downloading the blockchain. This process could take several hours.
+The first time you run anomalyd, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
@@ -85,9 +85,9 @@ You can monitor the download process by looking at the debug.log file:
 Other commands:
 -------
 
-    ./src/qtumd -daemon # Starts the qtum daemon.
-    ./src/qtum-cli --help # Outputs a list of command-line options.
-    ./src/qtum-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/anomalyd -daemon # Starts the anomaly daemon.
+    ./src/anomaly-cli --help # Outputs a list of command-line options.
+    ./src/anomaly-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Notes
 -----

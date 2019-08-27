@@ -14,7 +14,7 @@
 #include <vector>
 #include <crypto/common.h>
 
-//////////////////////////////////////// qtum
+//////////////////////////////////////// anomaly
 #include <libdevcore/Common.h>
 #include <libdevcore/CommonData.h>
 #include <libdevcore/FixedHash.h>
@@ -175,7 +175,7 @@ inline uint256 uint256S(const std::string& str)
     return rv;
 }
 
-////////////////////////////////////////////////////// qtum
+////////////////////////////////////////////////////// anomaly
 inline dev::h256 uintToh256(const uint256& in)
 {
     std::vector<unsigned char> vHashBlock;

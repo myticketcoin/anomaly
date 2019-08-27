@@ -307,7 +307,7 @@
     </message>
     <message>
         <source>Send coins to a Qtum address</source>
-        <translation>Slanje novca na qtum adresu</translation>
+        <translation>Slanje novca na anomaly adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -359,11 +359,11 @@
     </message>
     <message>
         <source>Sign messages with your Qtum addresses to prove you own them</source>
-        <translation>Poruku potpišemo s qtum adresom, kako bi dokazali vlasništvo nad tom adresom</translation>
+        <translation>Poruku potpišemo s anomaly adresom, kako bi dokazali vlasništvo nad tom adresom</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
-        <translation>Provjeravanje poruke, kao dokaz, da je potpisana navedenom qtum adresom</translation>
+        <translation>Provjeravanje poruke, kao dokaz, da je potpisana navedenom anomaly adresom</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -382,8 +382,8 @@
         <translation>Traka kartica</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Zatraži uplatu (stvara QR kod i qtum: URI adresu)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Zatraži uplatu (stvara QR kod i anomaly: URI adresu)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -394,8 +394,8 @@
         <translation>Prikaži popis korištenih adresa i oznaka za primanje novca</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Otvori qtum: URI adresu ili zahtjev za uplatu</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Otvori anomaly: URI adresu ili zahtjev za uplatu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -595,7 +595,7 @@
     </message>
     <message>
         <source>The label associated with this address list entry</source>
-        <translation>Oznaka qtum adrese</translation>
+        <translation>Oznaka anomaly adrese</translation>
     </message>
     <message>
         <source>The address associated with this address list entry. This can only be modified for sending addresses.</source>
@@ -619,7 +619,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid Qtum address.</source>
-        <translation>Upisana adresa "%1" nije valjana qtum adresa.</translation>
+        <translation>Upisana adresa "%1" nije valjana anomaly adresa.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -809,7 +809,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Izaberite željeni najmanji dio qtuma koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
+        <translation>Izaberite željeni najmanji dio anomalya koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -1628,7 +1628,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Qtum Core</translation>

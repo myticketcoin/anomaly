@@ -188,7 +188,7 @@
         <translation>הארנק מוצפן</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your anomalys from being stolen by malware infecting your computer.</source>
         <translation>%1 ייסגר כעת כדי לסיים את תהליך ההצפנה. נא לשים לב כי הצפנת הארנק שלך לא יכול להגן על הביטקוינים שלך מפני גניבה או נוזקה שתוקפת את מחשבך.</translation>
     </message>
     <message>
@@ -434,8 +434,8 @@
         <translation>סרגל כלים לשוניות</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>בקשת תשלומים (יצירה של קודים מסוג QR וסכימות כתובות משאב של :qtum)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>בקשת תשלומים (יצירה של קודים מסוג QR וסכימות כתובות משאב של :anomaly)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -446,7 +446,7 @@
         <translation>הצגת רשימת הכתובות והתוויות הנמצאות בשימוש</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
+        <source>Open a anomaly: URI or payment request</source>
         <translation>פתיחת ביטקוין: כתובת משאב או בקשת תשלום</translation>
     </message>
     <message>
@@ -900,11 +900,11 @@
         <translation>טופס</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the anomaly network, as detailed below.</source>
         <translation>ייתכן שהעברות שבוצעו לאחרונה לא יופיעו עדיין, ולכן המאזן בארנק שלך יהיה שגוי. המידע הנכון יוצג במלואו כאשר הארנק שלך יסיים להסתנכרן עם רשת הביטקוין, כמפורט למטה.</translation>
     </message>
     <message>
-        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend anomalys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>הרשת תסרב לקבל הוצאת ביטקוינים במידה והם כבר נמצאים בהעברות אשר לא מוצגות עדיין.</translation>
     </message>
     <message>
@@ -1304,16 +1304,16 @@
         <translation>שגיאת בקשת תשלום</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
-        <translation>לא ניתן להפעיל את המקשר qtum: click-to-pay</translation>
+        <source>Cannot start anomaly: click-to-pay handler</source>
+        <translation>לא ניתן להפעיל את המקשר anomaly: click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>טיפול בכתובות</translation>
     </message>
     <message>
-        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
-        <translation>'//:qtum' אינה כתובת URI תקינה. השתמשו במקום ב ':qtum'.</translation>
+        <source>'anomaly://' is not a valid URI. Use 'anomaly:' instead.</source>
+        <translation>'//:anomaly' אינה כתובת URI תקינה. השתמשו במקום ב ':anomaly'.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -2115,7 +2115,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>הסתר</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for anomaly transactions than the network can process.</source>
         <translation>זה בסדר לשלם את העמלה המינימלית כל עוד נפח הטרנזקציות קטן מנפח הבלוקים. אבל יש להיזהר כיוון שבמידה והעומס ברשת גדל, העיסקה עלולה לא להיות מאושרת לעולם.</translation>
     </message>
     <message>
@@ -2334,7 +2334,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>הסרת רשומה זו</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less anomalys than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>העמלה תנוכה מהסכום שנשלח. הנמען יקבל פחות ביטקוינים ממה שהזנת בשדה הסכום. אם נבחרו מספר נמענים, העמלה תחולק באופן שווה.</translation>
     </message>
     <message>
@@ -2362,7 +2362,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>יש להזין תווית עבור כתובת זו כדי להוסיף אותה לרשימת הכתובות בשימוש</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+        <source>A message that was attached to the anomaly: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
         <translation>הודעה שצורפה לביטקוין: כתובת שתאוחסן בהעברה לצורך מעקב מצדך. לתשומת לבך: הודעה זו לא תישלח ברשת הביטקוין.</translation>
     </message>
     <message>
@@ -2407,7 +2407,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>חתימה על הו&amp;דעה</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive anomalys sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>באפשרותך לחתום על הודעות/הסכמים באמצעות הכתובות שלך, כדי להוכיח שאתה יכול לקבל את הביטקוינים הנשלחים אליהן. היזהר לא לחתום על תוכן עמום או אקראי, מכיוון שתקיפות פישינג עשויות לנסות לגנוב את הזהות שלך. חתום רק על הצהרות מפורטות שאתה מסכים להן.</translation>
     </message>
     <message>
@@ -3062,7 +3062,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
 </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Error: A fatal internal error occurred, see debug.log for details</source>
         <translation>שגיאה: סניה קלמה קריטית פנימית קרטה, פנה ל debug.log לפרטים</translation>

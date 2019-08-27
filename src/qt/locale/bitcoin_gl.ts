@@ -210,8 +210,8 @@
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Solicitar pagos (xenera códigos QR e qtum: URIs)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Solicitar pagos (xenera códigos QR e anomaly: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -222,8 +222,8 @@
         <translation>Amosar a listaxe de etiquetas e direccións para recibir empregadas</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Abrir un qtum: URI ou solicitude de pago</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Abrir un anomaly: URI ou solicitude de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -998,7 +998,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Core de Qtum</translation>

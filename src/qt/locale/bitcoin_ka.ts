@@ -188,7 +188,7 @@
         <translation>საფულე დაშიფრულია</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your anomalys from being stolen by malware infecting your computer.</source>
         <translation>%1 ახლა დაიხურება დაშიფრვის პროცესის დასასრულებლად. გახსოვდეთ, რომ თქვენი საფული დაშიფრვა სრულად არ იცავს თქვენს ბიტკოინებს მოპარვისგან მავნე პროგრამების მიერ თქვენი კომპიუტერის ინფიცირების საშუალებით.</translation>
     </message>
     <message>
@@ -398,8 +398,8 @@
         <translation>ბარათების პანელი</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>გადახდის მოთხოვნა (შეიქმნება QR-კოდები და qtum: ბმულები)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>გადახდის მოთხოვნა (შეიქმნება QR-კოდები და anomaly: ბმულები)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -410,8 +410,8 @@
         <translation>გამოყენებული მიღების მისამართებისა და ნიშნულების სიის ჩვენება</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>qtum: URI-ის ან გადახდის მოთხოვნის გახსნა</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>anomaly: URI-ის ან გადახდის მოთხოვნის გახსნა</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1350,7 +1350,7 @@
         <translation>შეიყვანეთ ამ მისამართის ნიშნული გამოყენებული მისამართების სიაში დასამატებლად</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+        <source>A message that was attached to the anomaly: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
         <translation>მესიჯი, რომელიც თან ერთვის მონეტებს:  URI, რომელიც შეინახება ტრანსაქციასთან ერთად თქვენთვის. შენიშვნა: მესიჯი არ გაყვება გადახდას ბითქოინის ქსელში.</translation>
     </message>
     <message>
@@ -1522,7 +1522,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Qtum Core</translation>

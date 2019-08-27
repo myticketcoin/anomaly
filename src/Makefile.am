@@ -208,10 +208,10 @@ BITCOIN_CORE_H = \
   zmq/zmqnotificationinterface.h \
   zmq/zmqpublishnotifier.h \
   zmq/zmqrpc.h \
-  qtum/qtumstate.h \
-  qtum/qtumtransaction.h \
-  qtum/qtumDGP.h \
-  qtum/storageresults.h
+  anomaly/anomalystate.h \
+  anomaly/anomalytransaction.h \
+  anomaly/anomalyDGP.h \
+  anomaly/storageresults.h
 
 
 obj/build.h: FORCE
@@ -266,11 +266,11 @@ libbitcoin_server_a_SOURCES = \
   validation.cpp \
   validationinterface.cpp \
   versionbits.cpp \
-  qtum/qtumstate.cpp \
-  qtum/qtumtransaction.cpp \
-  qtum/qtumDGP.cpp \
+  anomaly/anomalystate.cpp \
+  anomaly/anomalytransaction.cpp \
+  anomaly/anomalyDGP.cpp \
   consensus/consensus.cpp \
-  qtum/storageresults.cpp \
+  anomaly/storageresults.cpp \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
@@ -622,8 +622,8 @@ libbitcoin_common_a_SOURCES = \
   cpp-ethereum/libethashseal/genesis/homesteadTest.cpp \
   cpp-ethereum/libethashseal/genesis/mainNetworkTest.cpp \
   cpp-ethereum/libethashseal/genesis/metropolisTest.cpp \
-  cpp-ethereum/libethashseal/genesis/qtumMainNetwork.cpp \
-  cpp-ethereum/libethashseal/genesis/qtumTestNetwork.cpp \
+  cpp-ethereum/libethashseal/genesis/anomalyMainNetwork.cpp \
+  cpp-ethereum/libethashseal/genesis/anomalyTestNetwork.cpp \
   cpp-ethereum/libethashseal/genesis/ropsten.cpp \
   cpp-ethereum/libethashseal/genesis/transitionnetTest.cpp \
   cpp-ethereum/libethash/ethash.h \

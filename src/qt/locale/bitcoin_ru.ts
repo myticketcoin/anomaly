@@ -450,7 +450,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Error initializing block database</source>
         <translation>Ошибка инициализации БД блоков</translation>

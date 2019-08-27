@@ -64,7 +64,7 @@
  * Global state
  */
 
- ////////////////////////////// qtum
+ ////////////////////////////// anomaly
 #include <iostream>
 #include <bitset>
 #include "pubkey.h"
@@ -743,16 +743,16 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
 
         dev::u256 txMinGasPrice = 0;
 
-        //////////////////////////////////////////////////////////// // qtum
+        //////////////////////////////////////////////////////////// // anomaly
         if(tx.HasCreateOrCall()){
 
             if(!CheckSenderScript(view, tx)){
                 return state.DoS(1, false, REJECT_INVALID, "bad-txns-invalid-sender-script");
             }
 
-            QtumDGP qtumDGP(globalState.get(), fGettingValuesDGP);
-            uint64_t minGasPrice = qtumDGP.getMinGasPrice(chainActive.Tip()->nHeight + 1);
-            uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(chainActive.Tip()->nHeight + 1);
+            QtumDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+            uint64_t minGasPrice = anomalyDGP.getMinGasPrice(chainActive.Tip()->nHeight + 1);
+            uint64_t blockGasLimit = anomalyDGP.getBlockGasLimit(chainActive.Tip()->nHeight + 1);
             size_t count = 0;
             for(const CTxOut& o : tx.vout)
                 count += o.scriptPubKey.HasOpCreate() || o.scriptPubKey.HasOpCall() ? 1 : 0;
@@ -761,13 +761,13 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
             if(!converter.extractionQtumTransactions(resultConverter)){
                 return state.DoS(100, error("AcceptToMempool(): Contract transaction of the wrong format"), REJECT_INVALID, "bad-tx-bad-contract-format");
             }
-            std::vector<QtumTransaction> qtumTransactions = resultConverter.first;
-            std::vector<EthTransactionParams> qtumETP = resultConverter.second;
+            std::vector<QtumTransaction> anomalyTransactions = resultConverter.first;
+            std::vector<EthTransactionParams> anomalyETP = resultConverter.second;
 
             dev::u256 sumGas = dev::u256(0);
             dev::u256 gasAllTxs = dev::u256(0);
-            for(QtumTransaction qtumTransaction : qtumTransactions){
-                sumGas += qtumTransaction.gas() * qtumTransaction.gasPrice();
+            for(QtumTransaction anomalyTransaction : anomalyTransactions){
+                sumGas += anomalyTransaction.gas() * anomalyTransaction.gasPrice();
 
                 if(sumGas > dev::u256(INT64_MAX)) {
                     return state.DoS(100, error("AcceptToMempool(): Transaction's gas stipend overflows"), REJECT_INVALID, "bad-tx-gas-stipend-overflow");
@@ -778,11 +778,11 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
                 }
 
                 if(txMinGasPrice != 0) {
-                    txMinGasPrice = std::min(txMinGasPrice, qtumTransaction.gasPrice());
+                    txMinGasPrice = std::min(txMinGasPrice, anomalyTransaction.gasPrice());
                 } else {
-                    txMinGasPrice = qtumTransaction.gasPrice();
+                    txMinGasPrice = anomalyTransaction.gasPrice();
                 }
-                VersionVM v = qtumTransaction.getVersion();
+                VersionVM v = anomalyTransaction.getVersion();
                 if(v.format!=0)
                     return state.DoS(100, error("AcceptToMempool(): Contract execution uses unknown version format"), REJECT_INVALID, "bad-tx-version-format");
                 if(v.rootVM != 1)
@@ -793,29 +793,29 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
                     return state.DoS(100, error("AcceptToMempool(): Contract execution uses unknown flag options"), REJECT_INVALID, "bad-tx-version-flags");
 
                 //check gas limit is not less than minimum mempool gas limit
-                if(qtumTransaction.gas() < gArgs.GetArg("-minmempoolgaslimit", MEMPOOL_MIN_GAS_LIMIT))
+                if(anomalyTransaction.gas() < gArgs.GetArg("-minmempoolgaslimit", MEMPOOL_MIN_GAS_LIMIT))
                     return state.DoS(100, error("AcceptToMempool(): Contract execution has lower gas limit than allowed to accept into mempool"), REJECT_INVALID, "bad-tx-too-little-mempool-gas");
 
                 //check gas limit is not less than minimum gas limit (unless it is a no-exec tx)
-                if(qtumTransaction.gas() < MINIMUM_GAS_LIMIT && v.rootVM != 0)
+                if(anomalyTransaction.gas() < MINIMUM_GAS_LIMIT && v.rootVM != 0)
                     return state.DoS(100, error("AcceptToMempool(): Contract execution has lower gas limit than allowed"), REJECT_INVALID, "bad-tx-too-little-gas");
 
-                if(qtumTransaction.gas() > UINT32_MAX)
+                if(anomalyTransaction.gas() > UINT32_MAX)
                     return state.DoS(100, error("AcceptToMempool(): Contract execution can not specify greater gas limit than can fit in 32-bits"), REJECT_INVALID, "bad-tx-too-much-gas");
 
-                gasAllTxs += qtumTransaction.gas();
+                gasAllTxs += anomalyTransaction.gas();
                 if(gasAllTxs > dev::u256(blockGasLimit))
                     return state.DoS(1, false, REJECT_INVALID, "bad-txns-gas-exceeds-blockgaslimit");
 
                 //don't allow less than DGP set minimum gas price to prevent MPoS greedy mining/spammers
-                if(v.rootVM!=0 && (uint64_t)qtumTransaction.gasPrice() < minGasPrice)
+                if(v.rootVM!=0 && (uint64_t)anomalyTransaction.gasPrice() < minGasPrice)
                     return state.DoS(100, error("AcceptToMempool(): Contract execution has lower gas price than allowed"), REJECT_INVALID, "bad-tx-low-gas-price");
             }
 
-            if(!CheckMinGasPrice(qtumETP, minGasPrice))
+            if(!CheckMinGasPrice(anomalyETP, minGasPrice))
                 return state.DoS(100, false, REJECT_INVALID, "bad-txns-small-gasprice");
 
-            if(count > qtumTransactions.size())
+            if(count > anomalyTransactions.size())
                 return state.DoS(100, false, REJECT_INVALID, "bad-txns-incorrect-format");
 
             if (rawTx && nAbsurdFee && dev::u256(nFees) > dev::u256(nAbsurdFee) + sumGas)
@@ -1810,8 +1810,8 @@ DisconnectResult CChainState::DisconnectBlock(const CBlock& block, const CBlockI
     // move best block pointer to prevout block
     view.SetBestBlock(pindex->pprev->GetBlockHash());
 
-    globalState->setRoot(uintToh256(pindex->pprev->hashStateRoot)); // qtum
-    globalState->setRootUTXO(uintToh256(pindex->pprev->hashUTXORoot)); // qtum
+    globalState->setRoot(uintToh256(pindex->pprev->hashStateRoot)); // anomaly
+    globalState->setRootUTXO(uintToh256(pindex->pprev->hashUTXORoot)); // anomaly
 
     if(pfClean == NULL && fLogEvents){
         pstorageresult->deleteResults(block.vtx);
@@ -1988,7 +1988,7 @@ static int64_t nTimeCallbacks = 0;
 static int64_t nTimeTotal = 0;
 static int64_t nBlocksTotal = 0;
 
-/////////////////////////////////////////////////////////////////////// qtum
+/////////////////////////////////////////////////////////////////////// anomaly
 bool CheckSenderScript(const CCoinsViewCache& view, const CTransaction& tx){
     CScript script = view.AccessCoin(tx.vin[0].prevout).out.scriptPubKey;
     if(!script.IsPayToPubkeyHash() && !script.IsPayToPubkey()){
@@ -2001,8 +2001,8 @@ std::vector<ResultExecute> CallContract(const dev::Address& addrContract, std::v
     CBlock block;
     CMutableTransaction tx;
 
-    QtumDGP qtumDGP(globalState.get(), fGettingValuesDGP);
-    uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(chainActive.Tip()->nHeight + 1);
+    QtumDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+    uint64_t blockGasLimit = anomalyDGP.getBlockGasLimit(chainActive.Tip()->nHeight + 1);
 
     if(gasLimit == 0){
         gasLimit = blockGasLimit - 1;
@@ -2186,12 +2186,12 @@ UniValue vmLogToJSON(const ResultExecute& execRes, const CTransaction& tx, const
 }
 
 void writeVMlog(const std::vector<ResultExecute>& res, const CTransaction& tx, const CBlock& block){
-    boost::filesystem::path qtumDir = GetDataDir() / "vmExecLogs.json";
+    boost::filesystem::path anomalyDir = GetDataDir() / "vmExecLogs.json";
     std::stringstream ss;
     if(fIsVMlogFile){
         ss << ",";
     } else {
-        std::ofstream file(qtumDir.string(), std::ios::out | std::ios::app);
+        std::ofstream file(anomalyDir.string(), std::ios::out | std::ios::app);
         file << "{\"logs\":[]}";
         file.close();
     }
@@ -2205,7 +2205,7 @@ void writeVMlog(const std::vector<ResultExecute>& res, const CTransaction& tx, c
         }
     }
     
-    std::ofstream file(qtumDir.string(), std::ios::in | std::ios::out);
+    std::ofstream file(anomalyDir.string(), std::ios::in | std::ios::out);
     file.seekp(-2, std::ios::end);
     file << ss.str();
     file.close();
@@ -2312,7 +2312,7 @@ dev::Address ByteCodeExec::EthAddrFromScript(const CScript& script){
     return dev::Address();
 }
 
-bool QtumTxConverter::extractionQtumTransactions(ExtractQtumTX& qtumtx){
+bool QtumTxConverter::extractionQtumTransactions(ExtractQtumTX& anomalytx){
     std::vector<QtumTransaction> resultTX;
     std::vector<EthTransactionParams> resultETP;
     for(size_t i = 0; i < txBit.vout.size(); i++){
@@ -2330,7 +2330,7 @@ bool QtumTxConverter::extractionQtumTransactions(ExtractQtumTX& qtumtx){
             }
         }
     }
-    qtumtx = std::make_pair(resultTX, resultETP);
+    anomalytx = std::make_pair(resultTX, resultETP);
     return true;
 }
 
@@ -2428,12 +2428,12 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     assert(*pindex->phashBlock == block.GetHash());
     int64_t nTimeStart = GetTimeMicros();
 
-    ///////////////////////////////////////////////// // qtum
-    QtumDGP qtumDGP(globalState.get(), fGettingValuesDGP);
-    globalSealEngine->setQtumSchedule(qtumDGP.getGasSchedule(pindex->nHeight + 1));
-    uint32_t sizeBlockDGP = qtumDGP.getBlockSize(pindex->nHeight + 1);
-    uint64_t minGasPrice = qtumDGP.getMinGasPrice(pindex->nHeight + 1);
-    uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(pindex->nHeight + 1);
+    ///////////////////////////////////////////////// // anomaly
+    QtumDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+    globalSealEngine->setQtumSchedule(anomalyDGP.getGasSchedule(pindex->nHeight + 1));
+    uint32_t sizeBlockDGP = anomalyDGP.getBlockSize(pindex->nHeight + 1);
+    uint64_t minGasPrice = anomalyDGP.getMinGasPrice(pindex->nHeight + 1);
+    uint64_t blockGasLimit = anomalyDGP.getBlockGasLimit(pindex->nHeight + 1);
     dgpMaxBlockSize = sizeBlockDGP ? sizeBlockDGP : dgpMaxBlockSize;
     updateBlockSizeParams(dgpMaxBlockSize);
     CBlock checkBlock(block.GetBlockHeader());
@@ -2443,7 +2443,7 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     /////////////////////////////////////////////////
 
     // Move this check from CheckBlock to ConnectBlock as it depends on DGP values
-    if (block.vtx.empty() || block.vtx.size() > dgpMaxBlockSize || ::GetSerializeSize(block, SER_NETWORK, PROTOCOL_VERSION | SERIALIZE_TRANSACTION_NO_WITNESS) > dgpMaxBlockSize) // qtum
+    if (block.vtx.empty() || block.vtx.size() > dgpMaxBlockSize || ::GetSerializeSize(block, SER_NETWORK, PROTOCOL_VERSION | SERIALIZE_TRANSACTION_NO_WITNESS) > dgpMaxBlockSize) // anomaly
         return state.DoS(100, false, REJECT_INVALID, "bad-blk-length", false, "size limits failed");
 
     // Move this check from ContextualCheckBlock to ConnectBlock as it depends on DGP values
@@ -2633,7 +2633,7 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     int64_t nSigOpsCost = 0;
     blockundo.vtxundo.reserve(block.vtx.size() - 1);
 
-    ///////////////////////////////////////////////////////// // qtum
+    ///////////////////////////////////////////////////////// // anomaly
     std::map<dev::Address, std::pair<CHeightTxIndexKey, std::vector<uint256>>> heightIndexes;
     /////////////////////////////////////////////////////////
 
@@ -2723,7 +2723,7 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
             nValueOut += nTxValueOut;
         }
 
-///////////////////////////////////////////////////////////////////////////////////////// qtum
+///////////////////////////////////////////////////////////////////////////////////////// anomaly
         if(!tx.HasOpSpend()){
             checkBlock.vtx.push_back(block.vtx[i]);
         }
@@ -2872,7 +2872,7 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     int64_t nTime4 = GetTimeMicros(); nTimeVerify += nTime4 - nTime2;
     LogPrint(BCLog::BENCH, "    - Verify %u txins: %.2fms (%.3fms/txin) [%.2fs (%.2fms/blk)]\n", nInputs - 1, MILLI * (nTime4 - nTime2), nInputs <= 1 ? 0 : MILLI * (nTime4 - nTime2) / (nInputs-1), nTimeVerify * MICRO, nTimeVerify * MILLI / nBlocksTotal);
 
-////////////////////////////////////////////////////////////////// // qtum
+////////////////////////////////////////////////////////////////// // anomaly
     checkBlock.hashMerkleRoot = BlockMerkleRoot(checkBlock);
     checkBlock.hashStateRoot = h256Touint(globalState->rootHash());
     checkBlock.hashUTXORoot = h256Touint(globalState->rootHashUTXO());
@@ -3360,8 +3360,8 @@ bool CChainState::ConnectTip(CValidationState& state, const CChainParams& chainp
     {
         CCoinsViewCache view(pcoinsTip.get());
 
-        dev::h256 oldHashStateRoot(globalState->rootHash()); // qtum
-        dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // qtum
+        dev::h256 oldHashStateRoot(globalState->rootHash()); // anomaly
+        dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // anomaly
 
         bool rv = ConnectBlock(blockConnecting, state, pindexNew, view, chainparams);
         GetMainSignals().BlockChecked(blockConnecting, state);
@@ -3369,8 +3369,8 @@ bool CChainState::ConnectTip(CValidationState& state, const CChainParams& chainp
             if (state.IsInvalid())
                 InvalidBlockFound(pindexNew, state);
 
-            globalState->setRoot(oldHashStateRoot); // qtum
-            globalState->setRootUTXO(oldHashUTXORoot); // qtum
+            globalState->setRoot(oldHashStateRoot); // anomaly
+            globalState->setRootUTXO(oldHashUTXORoot); // anomaly
             pstorageresult->clearCacheResult();
             return error("ConnectTip(): ConnectBlock %s failed", pindexNew->GetBlockHash().ToString());
         }
@@ -4788,13 +4788,13 @@ bool TestBlockValidity(CValidationState& state, const CChainParams& chainparams,
     if (!ContextualCheckBlock(block, state, chainparams.GetConsensus(), pindexPrev))
         return error("%s: Consensus::ContextualCheckBlock: %s", __func__, FormatStateMessage(state));
 
-    dev::h256 oldHashStateRoot(globalState->rootHash()); // qtum
-    dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // qtum
+    dev::h256 oldHashStateRoot(globalState->rootHash()); // anomaly
+    dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // anomaly
     
     if (!g_chainstate.ConnectBlock(block, state, &indexDummy, viewNew, chainparams, true)){
         
-        globalState->setRoot(oldHashStateRoot); // qtum
-        globalState->setRootUTXO(oldHashUTXORoot); // qtum
+        globalState->setRoot(oldHashStateRoot); // anomaly
+        globalState->setRootUTXO(oldHashUTXORoot); // anomaly
         pstorageresult->clearCacheResult();
         return false;
     }
@@ -5205,10 +5205,10 @@ bool CVerifyDB::VerifyDB(const CChainParams& chainparams, CCoinsView *coinsview,
     CValidationState state;
     int reportDone = 0;
 
-////////////////////////////////////////////////////////////////////////// // qtum
+////////////////////////////////////////////////////////////////////////// // anomaly
     dev::h256 oldHashStateRoot(globalState->rootHash());
     dev::h256 oldHashUTXORoot(globalState->rootHashUTXO());
-    QtumDGP qtumDGP(globalState.get(), fGettingValuesDGP);
+    QtumDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
 //////////////////////////////////////////////////////////////////////////
 
     LogPrintf("[0%%]..."); /* Continued */
@@ -5229,8 +5229,8 @@ bool CVerifyDB::VerifyDB(const CChainParams& chainparams, CCoinsView *coinsview,
             break;
         }
 
-        ///////////////////////////////////////////////////////////////////// // qtum
-        uint32_t sizeBlockDGP = qtumDGP.getBlockSize(pindex->nHeight);
+        ///////////////////////////////////////////////////////////////////// // anomaly
+        uint32_t sizeBlockDGP = anomalyDGP.getBlockSize(pindex->nHeight);
         dgpMaxBlockSize = sizeBlockDGP ? sizeBlockDGP : dgpMaxBlockSize;
         updateBlockSizeParams(dgpMaxBlockSize);
         /////////////////////////////////////////////////////////////////////
@@ -5286,20 +5286,20 @@ bool CVerifyDB::VerifyDB(const CChainParams& chainparams, CCoinsView *coinsview,
             if (!ReadBlockFromDisk(block, pindex, chainparams.GetConsensus()))
                 return error("VerifyDB(): *** ReadBlockFromDisk failed at %d, hash=%s", pindex->nHeight, pindex->GetBlockHash().ToString());
 
-            dev::h256 oldHashStateRoot(globalState->rootHash()); // qtum
-            dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // qtum
+            dev::h256 oldHashStateRoot(globalState->rootHash()); // anomaly
+            dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // anomaly
 
             if (!g_chainstate.ConnectBlock(block, state, pindex, coins, chainparams)){
 
-                globalState->setRoot(oldHashStateRoot); // qtum
-                globalState->setRootUTXO(oldHashUTXORoot); // qtum
+                globalState->setRoot(oldHashStateRoot); // anomaly
+                globalState->setRootUTXO(oldHashUTXORoot); // anomaly
                 pstorageresult->clearCacheResult();
                 return error("VerifyDB(): *** found unconnectable block at %d, hash=%s (%s)", pindex->nHeight, pindex->GetBlockHash().ToString(), FormatStateMessage(state));
             }
         }
     } else {
-        globalState->setRoot(oldHashStateRoot); // qtum
-        globalState->setRootUTXO(oldHashUTXORoot); // qtum
+        globalState->setRoot(oldHashStateRoot); // anomaly
+        globalState->setRootUTXO(oldHashUTXORoot); // anomaly
     }
 
     LogPrintf("[DONE].\n");

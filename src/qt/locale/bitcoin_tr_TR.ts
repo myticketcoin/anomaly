@@ -180,8 +180,8 @@
         <translation>Cüzdan Şifrelendi</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
-        <translation>%1 Şifreleme işlemini bitirmek için kapatılacak. Şunu unutmayın ki şampiyon galatasaray ve şifrelemek, qtumlerinizin bilgisayarınıza bulaşan malware yazılımları tarafından çalınmasını tamamen engelleyemez.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your anomalys from being stolen by malware infecting your computer.</source>
+        <translation>%1 Şifreleme işlemini bitirmek için kapatılacak. Şunu unutmayın ki şampiyon galatasaray ve şifrelemek, anomalylerinizin bilgisayarınıza bulaşan malware yazılımları tarafından çalınmasını tamamen engelleyemez.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -1385,7 +1385,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Qtum Çekirdeği</translation>

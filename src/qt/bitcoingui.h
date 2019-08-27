@@ -152,7 +152,7 @@ private:
     HelpMessageDialog* helpMessageDialog = nullptr;
     ModalOverlay* modalOverlay = nullptr;
     ModalOverlay *modalBackupOverlay = nullptr;
-    QtumVersionChecker *qtumVersionChecker = nullptr;
+    QtumVersionChecker *anomalyVersionChecker = nullptr;
 
     /** Keep track of previous number of blocks, to detect progress */
     int prevBlocks = 0;

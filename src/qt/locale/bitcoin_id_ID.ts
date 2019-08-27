@@ -188,7 +188,7 @@
         <translation>Dompet terenkripsi</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your anomalys from being stolen by malware infecting your computer.</source>
         <translation>%1 sekarang akan ditutup untuk menyelesaikan proses enkripsi. Ingatlah bahwa mengenkripsi dompet Anda tidak dapat sepenuhnya melindungi komputer Anda dari pencurian malware yang menginfeksi komputer Anda.</translation>
     </message>
     <message>
@@ -422,8 +422,8 @@
         <translation>Baris tab</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Permintaan pembayaran (membuat kode QR dan qtum: URIs)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Permintaan pembayaran (membuat kode QR dan anomaly: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -434,8 +434,8 @@
         <translation>Tampilkan daftar alamat dan label yang diterima</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Buka URI qtum: atau permintaan pembayaran</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Buka URI anomaly: atau permintaan pembayaran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -866,7 +866,7 @@
         <translation>Formulir</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the anomaly network, as detailed below.</source>
         <translation>Transaksi-transaksi terkini mungkin belum terlihat dan oleh karenanya, saldo dompet Anda mungkin tidak tepat. Informasi ini akan akurat ketika dompet Anda tersinkronisasi dengan jaringan Qtum, seperti rincian berikut.</translation>
     </message>
     <message>
@@ -1854,7 +1854,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Qtum Core</translation>

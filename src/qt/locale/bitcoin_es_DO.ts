@@ -164,7 +164,7 @@
         <translation>Monedero cifrado</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your anomalys from being stolen by malware infecting your computer.</source>
         <translation>%1 se cerrará ahora para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger de manera completa su Qtum de robo por malware que esté infectando su sistema.</translation>
     </message>
     </context>
@@ -326,7 +326,7 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
         <translation>Solicitar pagos (genera codigo QR y URL's de Qtum)</translation>
     </message>
     <message>
@@ -338,8 +338,8 @@
         <translation>Muestra la lista de direcciones de recepción y etiquetas</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Abrir un qtum: URI o petición de pago</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Abrir un anomaly: URI o petición de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1226,7 +1226,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Núcleo de Qtum</translation>

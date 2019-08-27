@@ -1302,10 +1302,10 @@ public:
     /* Remove token entry from the wallet */
     bool RemoveTokenEntry(const uint256& tokenHash, bool fFlushOnClose=true);
 
-    /* Start staking qtums */
+    /* Start staking anomalys */
     void StartStake(CConnman* connman) { StakeQtums(true, connman); }
 
-    /* Stop staking qtums */
+    /* Stop staking anomalys */
     void StopStake() { StakeQtums(false, 0); }
 };
 

@@ -370,12 +370,12 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja qtumi: URId)</translation>
+        <source>Request payments (generates QR codes and anomaly: URIs)</source>
+        <translation>Loo maksepäring (genereerib QR koodid ja anomalyi: URId)</translation>
     </message>
     <message>
-        <source>Open a qtum: URI or payment request</source>
-        <translation>Ava qtumi: URI või maksepäring</translation>
+        <source>Open a anomaly: URI or payment request</source>
+        <translation>Ava anomalyi: URI või maksepäring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1916,7 +1916,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>anomaly-core</name>
     <message>
         <source>Qtum Core</source>
         <translation>Qtumi tuumik</translation>

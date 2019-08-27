@@ -247,9 +247,9 @@ class NodeImpl : public Node
     {
         LOCK(::cs_main);
 
-        QtumDGP qtumDGP(globalState.get(), fGettingValuesDGP);
-        blockGasLimit = qtumDGP.getBlockGasLimit(chainActive.Height());
-        minGasPrice = CAmount(qtumDGP.getMinGasPrice(chainActive.Height()));
+        QtumDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+        blockGasLimit = anomalyDGP.getBlockGasLimit(chainActive.Height());
+        minGasPrice = CAmount(anomalyDGP.getMinGasPrice(chainActive.Height()));
         nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE)?minGasPrice:DEFAULT_GAS_PRICE;
     }
     std::unique_ptr<Handler> handleInitMessage(InitMessageFn fn) override
