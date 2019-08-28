@@ -19,8 +19,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Anomlay"
-            VALUE "FileDescription",    PACKAGE_NAME " (GUI node for Anomlay)"
+            VALUE "CompanyName",        "Anomaly"
+            VALUE "FileDescription",    PACKAGE_NAME " (GUI node for Anomaly)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "anomaly-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR

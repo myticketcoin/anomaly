@@ -4,9 +4,9 @@ void initState(){
     boost::filesystem::path pathTemp;		
     pathTemp = fs::temp_directory_path() / strprintf("test_bitcoin_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
     boost::filesystem::create_directories(pathTemp);
-    const std::string dirAnomlay = pathTemp.string();
+    const std::string dirAnomaly = pathTemp.string();
     const dev::h256 hashDB(dev::sha3(dev::rlp("")));
-    globalState = std::unique_ptr<AnomlayState>(new AnomlayState(dev::u256(0), AnomlayState::openDB(dirAnomlay, hashDB, dev::WithExisting::Trust), dirAnomlay + "/anomalyDB", dev::eth::BaseState::Empty));
+    globalState = std::unique_ptr<AnomalyState>(new AnomalyState(dev::u256(0), AnomalyState::openDB(dirAnomaly, hashDB, dev::WithExisting::Trust), dirAnomaly + "/anomalyDB", dev::eth::BaseState::Empty));
 
     globalState->setRootUTXO(dev::sha3(dev::rlp(""))); // temp
 }
@@ -20,7 +20,7 @@ CBlock generateBlock(){
     return block;
 }
 
-dev::Address createAnomlayAddress(dev::h256 hashTx, uint32_t voutNumber){
+dev::Address createAnomalyAddress(dev::h256 hashTx, uint32_t voutNumber){
     uint256 hashTXid(h256Touint(hashTx));
     std::vector<unsigned char> txIdAndVout(hashTXid.begin(), hashTXid.end());
     std::vector<unsigned char> voutNumberChrs;
@@ -38,12 +38,12 @@ dev::Address createAnomlayAddress(dev::h256 hashTx, uint32_t voutNumber){
 }
 
 
-AnomlayTransaction createAnomlayTransaction(valtype data, dev::u256 value, dev::u256 gasLimit, dev::u256 gasPrice, dev::h256 hashTransaction, dev::Address recipient, int32_t nvout){
-    AnomlayTransaction txEth;
+AnomalyTransaction createAnomalyTransaction(valtype data, dev::u256 value, dev::u256 gasLimit, dev::u256 gasPrice, dev::h256 hashTransaction, dev::Address recipient, int32_t nvout){
+    AnomalyTransaction txEth;
     if(recipient == dev::Address()){
-        txEth = AnomlayTransaction(value, gasPrice, gasLimit, data, dev::u256(0));
+        txEth = AnomalyTransaction(value, gasPrice, gasLimit, data, dev::u256(0));
     } else {
-        txEth = AnomlayTransaction(value, gasPrice, gasLimit, recipient, data, dev::u256(0));
+        txEth = AnomalyTransaction(value, gasPrice, gasLimit, recipient, data, dev::u256(0));
     }
     txEth.forceSender(dev::Address("0101010101010101010101010101010101010101"));
     txEth.setHashWith(hashTransaction);
@@ -52,9 +52,9 @@ AnomlayTransaction createAnomlayTransaction(valtype data, dev::u256 value, dev::
     return txEth;
 }
 
-std::pair<std::vector<ResultExecute>, ByteCodeExecResult> executeBC(std::vector<AnomlayTransaction> txs){
+std::pair<std::vector<ResultExecute>, ByteCodeExecResult> executeBC(std::vector<AnomalyTransaction> txs){
     CBlock block(generateBlock());
-    AnomlayDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+    AnomalyDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
     uint64_t blockGasLimit = anomalyDGP.getBlockGasLimit(chainActive.Tip()->nHeight + 1);
     ByteCodeExec exec(block, txs, blockGasLimit);
     exec.performByteCode();

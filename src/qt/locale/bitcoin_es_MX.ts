@@ -66,12 +66,12 @@
         <translation>Direcciones de recibo</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones de Anomlay para enviar pagos. Siempre revisa el monto y la dirección de envío antes de enviar monedas.</translation>
+        <source>These are your Anomaly addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones de Anomaly para enviar pagos. Siempre revisa el monto y la dirección de envío antes de enviar monedas.</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son sus direcciones de Anomlay para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
+        <source>These are your Anomaly addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son sus direcciones de Anomaly para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -120,7 +120,7 @@
     </message>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje</translation>
@@ -198,8 +198,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
-        <translation>Enviar monedas a una dirección Anomlay</translation>
+        <source>Send coins to a Anomaly address</source>
+        <translation>Enviar monedas a una dirección Anomaly</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -222,8 +222,8 @@
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -377,8 +377,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Error</source>
@@ -470,8 +470,8 @@
         <translation>Mensaje:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Anomlay network.</source>
-        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Anomlay.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Anomaly network.</source>
+        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Anomaly.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -656,8 +656,8 @@
 <context>
     <name>anomaly-core</name>
     <message>
-        <source>Anomlay Core</source>
-        <translation>nucleo Anomlay</translation>
+        <source>Anomaly Core</source>
+        <translation>nucleo Anomaly</translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

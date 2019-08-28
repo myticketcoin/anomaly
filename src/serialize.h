@@ -24,7 +24,7 @@
 #include <prevector.h>
 #include <span.h>
 
-static const unsigned int MAX_SIZE = 0x20000000; // Anomlay: Increase max serialized size to 512mb
+static const unsigned int MAX_SIZE = 0x20000000; // Anomaly: Increase max serialized size to 512mb
 
 /**
  * Dummy data type to identify deserializing constructors.

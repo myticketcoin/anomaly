@@ -1562,12 +1562,12 @@ bool AppInitMain()
                 }
 
                 dev::eth::Ethash::init();
-                fs::path anomalyStateDir = GetDataDir() / "stateAnomlay";
+                fs::path anomalyStateDir = GetDataDir() / "stateAnomaly";
                 bool fStatus = fs::exists(anomalyStateDir);
-                const std::string dirAnomlay(anomalyStateDir.string());
+                const std::string dirAnomaly(anomalyStateDir.string());
                 const dev::h256 hashDB(dev::sha3(dev::rlp("")));
-                dev::eth::BaseState existsAnomlaystate = fStatus ? dev::eth::BaseState::PreExisting : dev::eth::BaseState::Empty;
-                globalState = std::unique_ptr<AnomlayState>(new AnomlayState(dev::u256(0), AnomlayState::openDB(dirAnomlay, hashDB, dev::WithExisting::Trust), dirAnomlay, existsAnomlaystate));
+                dev::eth::BaseState existsAnomalystate = fStatus ? dev::eth::BaseState::PreExisting : dev::eth::BaseState::Empty;
+                globalState = std::unique_ptr<AnomalyState>(new AnomalyState(dev::u256(0), AnomalyState::openDB(dirAnomaly, hashDB, dev::WithExisting::Trust), dirAnomaly, existsAnomalystate));
                 dev::eth::ChainParams cp((dev::eth::genesisInfo(dev::eth::Network::anomalyMainNetwork)));
                 globalSealEngine = std::unique_ptr<dev::eth::SealEngineFace>(cp.createSealEngine());
 

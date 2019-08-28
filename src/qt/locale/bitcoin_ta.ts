@@ -52,7 +52,7 @@
     </message>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;கண்ணோட்டம்</translation>
@@ -90,8 +90,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -225,8 +225,8 @@
         <translation>நல்வரவு</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Error</source>
@@ -712,8 +712,8 @@
 <context>
     <name>anomaly-core</name>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Anomlay மையம்</translation>
+        <source>Anomaly Core</source>
+        <translation>Anomaly மையம்</translation>
     </message>
     <message>
         <source>Information</source>

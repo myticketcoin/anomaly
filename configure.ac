@@ -289,7 +289,7 @@ if test x$use_sanitizers != x; then
     [AC_MSG_ERROR([linker did not accept requested flags, you are missing required libraries])])
 fi
 
-CPPFLAGS="$CPPFLAGS -DAnomlay_BUILD"
+CPPFLAGS="$CPPFLAGS -DAnomaly_BUILD"
 
 ERROR_CXXFLAGS=
 if test "x$enable_werror" = "xyes"; then

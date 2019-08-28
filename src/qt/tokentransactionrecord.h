@@ -1,5 +1,5 @@
-#ifndef Anomlay_QT_TOKENTRANSACTIONRECORD_H
-#define Anomlay_QT_TOKENTRANSACTIONRECORD_H
+#ifndef Anomaly_QT_TOKENTRANSACTIONRECORD_H
+#define Anomaly_QT_TOKENTRANSACTIONRECORD_H
 
 #include <amount.h>
 #include <uint256.h>

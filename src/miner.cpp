@@ -218,8 +218,8 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     }
 
     //////////////////////////////////////////////////////// anomaly
-    AnomlayDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
-    globalSealEngine->setAnomlaySchedule(anomalyDGP.getGasSchedule(nHeight));
+    AnomalyDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+    globalSealEngine->setAnomalySchedule(anomalyDGP.getGasSchedule(nHeight));
     uint32_t blockSizeDGP = anomalyDGP.getBlockSize(nHeight);
     minGasPrice = anomalyDGP.getMinGasPrice(nHeight);
     if(gArgs.IsArgSet("-staker-min-tx-gas-price")) {
@@ -443,17 +443,17 @@ bool BlockAssembler::AttemptToAddContractToBlock(CTxMemPool::txiter iter, uint64
     uint64_t nBlockWeight = this->nBlockWeight;
     uint64_t nBlockSigOpsCost = this->nBlockSigOpsCost;
 
-    AnomlayTxConverter convert(iter->GetTx(), NULL, &pblock->vtx);
+    AnomalyTxConverter convert(iter->GetTx(), NULL, &pblock->vtx);
 
-    ExtractAnomlayTX resultConverter;
-    if(!convert.extractionAnomlayTransactions(resultConverter)){
+    ExtractAnomalyTX resultConverter;
+    if(!convert.extractionAnomalyTransactions(resultConverter)){
         //this check already happens when accepting txs into mempool
         //therefore, this can only be triggered by using raw transactions on the staker itself
         return false;
     }
-    std::vector<AnomlayTransaction> anomalyTransactions = resultConverter.first;
+    std::vector<AnomalyTransaction> anomalyTransactions = resultConverter.first;
     dev::u256 txGas = 0;
-    for(AnomlayTransaction anomalyTransaction : anomalyTransactions){
+    for(AnomalyTransaction anomalyTransaction : anomalyTransactions){
         txGas += anomalyTransaction.gas();
         if(txGas > txGasLimit) {
             // Limit the tx gas limit by the soft limit if such a limit has been specified.
@@ -1008,7 +1008,7 @@ void ThreadStakeMiner(CWallet *pwallet, CConnman* connman)
     }
 }
 
-void StakeAnomlays(bool fStake, CWallet *pwallet, CConnman* connman, boost::thread_group*& stakeThread)
+void StakeAnomalys(bool fStake, CWallet *pwallet, CConnman* connman, boost::thread_group*& stakeThread)
 {
     if (stakeThread != nullptr)
     {

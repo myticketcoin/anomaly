@@ -56,7 +56,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signa &amp;nuntium...</translation>
@@ -118,8 +118,8 @@
         <translation>Recreans indicem frustorum in disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
-        <translation>Mitte nummos ad inscriptionem Anomlay</translation>
+        <source>Send coins to a Anomaly address</source>
+        <translation>Mitte nummos ad inscriptionem Anomaly</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -142,8 +142,8 @@
         <translation>&amp;Verifica nuntium...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -170,12 +170,12 @@
         <translation>Cifra claves privatas quae cassidili tui sunt</translation>
     </message>
     <message>
-        <source>Sign messages with your Anomlay addresses to prove you own them</source>
-        <translation>Signa nuntios cum tuis inscriptionibus Anomlay ut demonstres te eas possidere</translation>
+        <source>Sign messages with your Anomaly addresses to prove you own them</source>
+        <translation>Signa nuntios cum tuis inscriptionibus Anomaly ut demonstres te eas possidere</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Anomlay addresses</source>
-        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus Anomlay</translation>
+        <source>Verify messages to ensure they were signed with specified Anomaly addresses</source>
+        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus Anomaly</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -297,8 +297,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Error</source>
@@ -346,8 +346,8 @@
         <translation>Cassidile</translation>
     </message>
     <message>
-        <source>Automatically open the Anomlay client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Aperi per se portam clientis Anomlay in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+        <source>Automatically open the Anomaly client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Aperi per se portam clientis Anomaly in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -429,8 +429,8 @@
         <translation>Schema</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomlay network after a connection is established, but this process has not completed yet.</source>
-        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete Anomlay postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomaly network after a connection is established, but this process has not completed yet.</source>
+        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete Anomaly postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
     </message>
     <message>
         <source>Immature:</source>
@@ -679,8 +679,8 @@
         <translation>Copia signationem in latibulum systematis</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Anomlay address</source>
-        <translation>Signa nuntium ut demonstres hanc inscriptionem Anomlay a te possessa esse</translation>
+        <source>Sign the message to prove you own this Anomaly address</source>
+        <translation>Signa nuntium ut demonstres hanc inscriptionem Anomaly a te possessa esse</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -699,8 +699,8 @@
         <translation>&amp;Verifica Nuntium</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Anomlay address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione Anomlay</translation>
+        <source>Verify the message to ensure it was signed with the specified Anomaly address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione Anomaly</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -752,8 +752,8 @@
 <context>
     <name>anomaly-core</name>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Anomlay Nucleus</translation>
+        <source>Anomaly Core</source>
+        <translation>Anomaly Nucleus</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

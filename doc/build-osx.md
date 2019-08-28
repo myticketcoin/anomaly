@@ -38,18 +38,18 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
-Build Anomlay Core
+Build Anomaly Core
 ------------------------
 
-1. Clone the Anomlay Core source code and cd into `anomaly`
+1. Clone the Anomaly Core source code and cd into `anomaly`
 
         git clone --recursive https://github.com/anomalyproject/anomaly.git
         cd anomaly
         git submodule update --init --recursive
 
-2.  Build Anomlay Core:
+2.  Build Anomaly Core:
 
-    Configure and build the headless Anomlay Core binaries as well as the GUI (if Qt is found).
+    Configure and build the headless Anomaly Core binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -68,19 +68,19 @@ Build Anomlay Core
 Running
 -------
 
-Anomlay Core is now available at `./src/anomalyd`
+Anomaly Core is now available at `./src/anomalyd`
 
 Before running, it's recommended that you create an RPC configuration file.
 
-    echo -e "rpcuser=anomalyrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Anomlay/anomaly.conf"
+    echo -e "rpcuser=anomalyrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Anomaly/anomaly.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/Anomlay/anomaly.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Anomaly/anomaly.conf"
 
 The first time you run anomalyd, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/Anomlay/debug.log
+    tail -f $HOME/Library/Application\ Support/Anomaly/debug.log
 
 Other commands:
 -------

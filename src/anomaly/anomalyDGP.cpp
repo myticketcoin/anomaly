@@ -1,6 +1,6 @@
 #include <anomaly/anomalyDGP.h>
 
-void AnomlayDGP::initDataEIP158(){
+void AnomalyDGP::initDataEIP158(){
     std::vector<uint32_t> tempData = {dev::eth::EIP158Schedule.tierStepGas[0], dev::eth::EIP158Schedule.tierStepGas[1], dev::eth::EIP158Schedule.tierStepGas[2],
                                       dev::eth::EIP158Schedule.tierStepGas[3], dev::eth::EIP158Schedule.tierStepGas[4], dev::eth::EIP158Schedule.tierStepGas[5],
                                       dev::eth::EIP158Schedule.tierStepGas[6], dev::eth::EIP158Schedule.tierStepGas[7], dev::eth::EIP158Schedule.expGas,
@@ -17,7 +17,7 @@ void AnomlayDGP::initDataEIP158(){
     dataEIP158Schedule = tempData;
 }
 
-bool AnomlayDGP::checkLimitSchedule(const std::vector<uint32_t>& defaultData, const std::vector<uint32_t>& checkData){
+bool AnomalyDGP::checkLimitSchedule(const std::vector<uint32_t>& defaultData, const std::vector<uint32_t>& checkData){
     if(defaultData.size() == 39 && checkData.size() == 39){
         for(size_t i = 0; i < defaultData.size(); i++){
             uint32_t max = defaultData[i] * 1000 > 0 ? defaultData[i] * 1000 : 1 * 1000;
@@ -31,7 +31,7 @@ bool AnomlayDGP::checkLimitSchedule(const std::vector<uint32_t>& defaultData, co
     return false;
 }
 
-dev::eth::EVMSchedule AnomlayDGP::getGasSchedule(unsigned int blockHeight){
+dev::eth::EVMSchedule AnomalyDGP::getGasSchedule(unsigned int blockHeight){
     clear();
     dev::eth::EVMSchedule schedule = dev::eth::EIP158Schedule;
     if(initStorages(GasScheduleDGP, blockHeight, ParseHex("26fadbe2"))){
@@ -40,7 +40,7 @@ dev::eth::EVMSchedule AnomlayDGP::getGasSchedule(unsigned int blockHeight){
     return schedule;
 }
 
-uint64_t AnomlayDGP::getUint64FromDGP(unsigned int blockHeight, const dev::Address& contract, std::vector<unsigned char> data){
+uint64_t AnomalyDGP::getUint64FromDGP(unsigned int blockHeight, const dev::Address& contract, std::vector<unsigned char> data){
     uint64_t value = 0;
     if(initStorages(contract, blockHeight, data)){
         if(!dgpevm){
@@ -52,7 +52,7 @@ uint64_t AnomlayDGP::getUint64FromDGP(unsigned int blockHeight, const dev::Addre
     return value;
 }
 
-uint32_t AnomlayDGP::getBlockSize(unsigned int blockHeight){
+uint32_t AnomalyDGP::getBlockSize(unsigned int blockHeight){
     clear();
     uint32_t result = DEFAULT_BLOCK_SIZE_DGP;
     uint32_t blockSize = getUint64FromDGP(blockHeight, BlockSizeDGP, ParseHex("92ac3c62"));
@@ -62,7 +62,7 @@ uint32_t AnomlayDGP::getBlockSize(unsigned int blockHeight){
     return result;
 }
 
-uint64_t AnomlayDGP::getMinGasPrice(unsigned int blockHeight){
+uint64_t AnomalyDGP::getMinGasPrice(unsigned int blockHeight){
     clear();
     uint64_t result = DEFAULT_MIN_GAS_PRICE_DGP;
     uint64_t minGasPrice = getUint64FromDGP(blockHeight, GasPriceDGP, ParseHex("3fb58819"));
@@ -72,7 +72,7 @@ uint64_t AnomlayDGP::getMinGasPrice(unsigned int blockHeight){
     return result;
 }
 
-uint64_t AnomlayDGP::getBlockGasLimit(unsigned int blockHeight){
+uint64_t AnomalyDGP::getBlockGasLimit(unsigned int blockHeight){
     clear();
     uint64_t result = DEFAULT_BLOCK_GAS_LIMIT_DGP;
     uint64_t blockGasLimit = getUint64FromDGP(blockHeight, BlockGasLimitDGP, ParseHex("2cc8377d"));
@@ -82,7 +82,7 @@ uint64_t AnomlayDGP::getBlockGasLimit(unsigned int blockHeight){
     return result;
 }
 
-bool AnomlayDGP::initStorages(const dev::Address& addr, unsigned int blockHeight, std::vector<unsigned char> data){
+bool AnomalyDGP::initStorages(const dev::Address& addr, unsigned int blockHeight, std::vector<unsigned char> data){
     initStorageDGP(addr);
     createParamsInstance();
     dev::Address address = getAddressForBlock(blockHeight);
@@ -97,19 +97,19 @@ bool AnomlayDGP::initStorages(const dev::Address& addr, unsigned int blockHeight
     return false;
 }
 
-void AnomlayDGP::initStorageDGP(const dev::Address& addr){
+void AnomalyDGP::initStorageDGP(const dev::Address& addr){
     storageDGP = state->storage(addr);
 }
 
-void AnomlayDGP::initStorageTemplate(const dev::Address& addr){
+void AnomalyDGP::initStorageTemplate(const dev::Address& addr){
     storageTemplate = state->storage(addr);
 }
 
-void AnomlayDGP::initDataTemplate(const dev::Address& addr, std::vector<unsigned char>& data){
+void AnomalyDGP::initDataTemplate(const dev::Address& addr, std::vector<unsigned char>& data){
     dataTemplate = CallContract(addr, data)[0].execRes.output;
 }
 
-void AnomlayDGP::createParamsInstance(){
+void AnomalyDGP::createParamsInstance(){
     dev::h256 paramsInstanceHash = sha3(dev::h256("0000000000000000000000000000000000000000000000000000000000000000"));
     if(storageDGP.count(paramsInstanceHash)){
         dev::u256 paramsInstanceSize = storageDGP.find(paramsInstanceHash)->second.second;
@@ -124,7 +124,7 @@ void AnomlayDGP::createParamsInstance(){
     }
 }
 
-dev::Address AnomlayDGP::getAddressForBlock(unsigned int blockHeight){
+dev::Address AnomalyDGP::getAddressForBlock(unsigned int blockHeight){
     for(auto i = paramsInstance.rbegin(); i != paramsInstance.rend(); i++){
         if(i->first <= blockHeight)
             return i->second;
@@ -136,7 +136,7 @@ static inline bool sortPairs(const std::pair<dev::u256, dev::u256>& a, const std
     return a.first < b.first;
 }
 
-void AnomlayDGP::parseStorageScheduleContract(std::vector<uint32_t>& uint32Values){
+void AnomalyDGP::parseStorageScheduleContract(std::vector<uint32_t>& uint32Values){
     std::vector<std::pair<dev::u256, dev::u256>> data;
     for(size_t i = 0; i < 5; i++){
         dev::h256 gasScheduleHash = sha3(dev::h256(dev::u256(i)));
@@ -162,7 +162,7 @@ void AnomlayDGP::parseStorageScheduleContract(std::vector<uint32_t>& uint32Value
     }
 }
 
-void AnomlayDGP::parseDataScheduleContract(std::vector<uint32_t>& uint32Values){
+void AnomalyDGP::parseDataScheduleContract(std::vector<uint32_t>& uint32Values){
     size_t size = dataTemplate.size() / 32;
     for(size_t i = 0; i < size; i++){
         std::vector<unsigned char> value = std::vector<unsigned char>(dataTemplate.begin() + (i * 32), dataTemplate.begin() + ((i+1) * 32));
@@ -171,20 +171,20 @@ void AnomlayDGP::parseDataScheduleContract(std::vector<uint32_t>& uint32Values){
     }
 }
 
-void AnomlayDGP::parseStorageOneUint64(uint64_t& value){
+void AnomalyDGP::parseStorageOneUint64(uint64_t& value){
     dev::h256 blockSizeHash = sha3(dev::h256(dev::u256(0)));
     if(storageTemplate.count(blockSizeHash)){
         value = uint64_t(storageTemplate.find(blockSizeHash)->second.second);
     }
 }
 
-void AnomlayDGP::parseDataOneUint64(uint64_t& value){
+void AnomalyDGP::parseDataOneUint64(uint64_t& value){
     if(dataTemplate.size() == 32){
         value = uint64_t(dev::u256(dev::h256(dataTemplate)));
     }
 }
 
-dev::eth::EVMSchedule AnomlayDGP::createEVMSchedule(){
+dev::eth::EVMSchedule AnomalyDGP::createEVMSchedule(){
     dev::eth::EVMSchedule schedule = dev::eth::EIP158Schedule;
     std::vector<uint32_t> uint32Values;
 
@@ -235,7 +235,7 @@ dev::eth::EVMSchedule AnomlayDGP::createEVMSchedule(){
     return schedule;
 }
 
-void AnomlayDGP::clear(){
+void AnomalyDGP::clear(){
     templateContract = dev::Address();
     storageDGP.clear();
     storageTemplate.clear();

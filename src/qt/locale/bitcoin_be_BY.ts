@@ -66,11 +66,11 @@
         <translation>адрасы Прымання</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Anomaly addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Тут знаходзяцца Біткойн-адрасы для высылання плацяжоў. Заўсёды спраўджвайце колькасць і адрас прызначэння перад здзяйсненнем транзакцыі.</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Anomaly addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Тут знаходзяцца Біткойн-адрасы для прымання плацяжоў. Пажадана выкарыстоўваць новы адрас для кожнай транзакцыі.</translation>
     </message>
     <message>
@@ -172,7 +172,7 @@
         <translation>Пацвердзіце шыфраванне гаманца</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomlayS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomalyS&lt;/b&gt;!</source>
         <translation>Увага: калі вы зашыфруеце свой гаманец і страціце парольную фразу, то &lt;b&gt;СТРАЦІЦЕ ЎСЕ СВАЕ БІТКОЙНЫ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -224,7 +224,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Падпісаць паведамленне...</translation>
@@ -302,7 +302,7 @@
         <translation>Пераіндэксацыя блокаў на дыску...</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
+        <source>Send coins to a Anomaly address</source>
         <translation>Даслаць манеты на Біткойн-адрас</translation>
     </message>
     <message>
@@ -326,7 +326,7 @@
         <translation>Праверыць паведамленне...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
+        <source>Anomaly</source>
         <translation>Біткойн</translation>
     </message>
     <message>
@@ -354,11 +354,11 @@
         <translation>Зашыфраваць прыватныя ключы, якия належаць вашаму гаманцу</translation>
     </message>
     <message>
-        <source>Sign messages with your Anomlay addresses to prove you own them</source>
+        <source>Sign messages with your Anomaly addresses to prove you own them</source>
         <translation>Падпісаць паведамленне з дапамогай Біткойн-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Anomlay addresses</source>
+        <source>Verify messages to ensure they were signed with specified Anomaly addresses</source>
         <translation>Спраўдзіць паведамленне з дапамогай Біткойн-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
@@ -659,7 +659,7 @@
         <translation>Вітаем</translation>
     </message>
     <message>
-        <source>Anomlay</source>
+        <source>Anomaly</source>
         <translation>Біткойн</translation>
     </message>
     <message>
@@ -1226,8 +1226,8 @@
 <context>
     <name>anomaly-core</name>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Anomlay Core</translation>
+        <source>Anomaly Core</source>
+        <translation>Anomaly Core</translation>
     </message>
     <message>
         <source>Do you want to rebuild the block database now?</source>

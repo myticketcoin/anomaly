@@ -222,7 +222,7 @@ public:
         consensus.BIP65Height = 1351; // BIP65 activated on regtest (Used in rpc activation tests)
         consensus.BIP66Height = 1251; // BIP66 activated on regtest (Used in rpc activation tests)
 
-        // Anomlay have 500 blocks of maturity, increased values for regtest in unit tests in order to correspond with it
+        // Anomaly have 500 blocks of maturity, increased values for regtest in unit tests in order to correspond with it
         consensus.nRuleChangeActivationThreshold = 558; // 75% for testchains
         consensus.nMinerConfirmationWindow = 744; // Faster than normal for regtest (744 instead of 2016)
     }

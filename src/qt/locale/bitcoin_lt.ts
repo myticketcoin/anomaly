@@ -84,7 +84,7 @@
     </message>
 </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Pasirašyti ži&amp;nutę...</translation>
@@ -170,8 +170,8 @@
         <translation>Blokai iš naujo indeksuojami...</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
-        <translation>Siųsti monetas Anomlay adresui</translation>
+        <source>Send coins to a Anomaly address</source>
+        <translation>Siųsti monetas Anomaly adresui</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -194,8 +194,8 @@
         <translation>&amp;Tikrinti žinutę...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -383,8 +383,8 @@
         <translation>Sveiki</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Error</source>
@@ -436,8 +436,8 @@
         <translation>Piniginė</translation>
     </message>
     <message>
-        <source>Automatically open the Anomlay client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatiškai atidaryti Anomlay kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
+        <source>Automatically open the Anomaly client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatiškai atidaryti Anomaly kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -885,7 +885,7 @@
         <translation>Įveskite pranešimą, kurį norite pasirašyti čia</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Anomlay address</source>
+        <source>Sign the message to prove you own this Anomaly address</source>
         <translation>Registruotis žinute įrodymuii, kad turite šį adresą</translation>
     </message>
     <message>
@@ -901,8 +901,8 @@
         <translation>&amp;Patikrinti žinutę</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Anomlay address</source>
-        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Anomlay adresas</translation>
+        <source>Verify the message to ensure it was signed with the specified Anomaly address</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Anomaly adresas</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -958,8 +958,8 @@
 <context>
     <name>anomaly-core</name>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Anomlay branduolys</translation>
+        <source>Anomaly Core</source>
+        <translation>Anomaly branduolys</translation>
     </message>
     <message>
         <source>Error opening block database</source>

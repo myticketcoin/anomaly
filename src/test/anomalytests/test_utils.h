@@ -5,15 +5,15 @@
 #include <boost/filesystem/operations.hpp>
 #include <fs.h>
 
-extern std::unique_ptr<AnomlayState> globalState;
+extern std::unique_ptr<AnomalyState> globalState;
 
 void initState();
 
 CBlock generateBlock();
 
-dev::Address createAnomlayAddress(dev::h256 hashTx, uint32_t voutNumber);
+dev::Address createAnomalyAddress(dev::h256 hashTx, uint32_t voutNumber);
 
-AnomlayTransaction createAnomlayTransaction(valtype data, dev::u256 value, dev::u256 gasLimit, dev::u256 gasPrice,
+AnomalyTransaction createAnomalyTransaction(valtype data, dev::u256 value, dev::u256 gasLimit, dev::u256 gasPrice,
     dev::h256 hashTransaction, dev::Address recipient, int32_t nvout = 0);
 
-std::pair<std::vector<ResultExecute>, ByteCodeExecResult> executeBC(std::vector<AnomlayTransaction> txs);
+std::pair<std::vector<ResultExecute>, ByteCodeExecResult> executeBC(std::vector<AnomalyTransaction> txs);

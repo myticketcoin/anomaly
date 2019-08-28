@@ -64,7 +64,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>I-sign ing &amp;mensayi</translation>
@@ -126,8 +126,8 @@
         <translation>Address king pamag-Tanggap</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
-        <translation>Magpadalang barya king Anomlay address</translation>
+        <source>Send coins to a Anomaly address</source>
+        <translation>Magpadalang barya king Anomaly address</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -150,8 +150,8 @@
         <translation>&amp;Beripikan ing message...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -285,8 +285,8 @@
         <translation>Malaus ka</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Error</source>
@@ -322,8 +322,8 @@
         <translation>&amp;Network</translation>
     </message>
     <message>
-        <source>Automatically open the Anomlay client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ibuklat yang antimanu ing Anomlay client port king router. Gagana yamu ini istung ing router mu susuporta yang UPnP at magsilbi ya.</translation>
+        <source>Automatically open the Anomaly client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ibuklat yang antimanu ing Anomaly client port king router. Gagana yamu ini istung ing router mu susuporta yang UPnP at magsilbi ya.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -401,8 +401,8 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomlay network after a connection is established, but this process has not completed yet.</source>
-        <translation>Ing makaltong impormasion mapalyaring luma ne. Ing kekang wallet otomatiku yang mag-synchronize keng Anomlay network istung mekakonekta ne king network, oneng ing prosesung ini ali ya pa kumpletu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomaly network after a connection is established, but this process has not completed yet.</source>
+        <translation>Ing makaltong impormasion mapalyaring luma ne. Ing kekang wallet otomatiku yang mag-synchronize keng Anomaly network istung mekakonekta ne king network, oneng ing prosesung ini ali ya pa kumpletu.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -663,8 +663,8 @@
         <translation>Kopyan ing kasalungsungan pirma king system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Anomlay address</source>
-        <translation>Pirman ing mensayi ban patune na keka ya ining Anomlay address</translation>
+        <source>Sign the message to prove you own this Anomaly address</source>
+        <translation>Pirman ing mensayi ban patune na keka ya ining Anomaly address</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -683,8 +683,8 @@
         <translation>&amp;Beripikan ing Mensayi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Anomlay address</source>
-        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling Anomlay address</translation>
+        <source>Verify the message to ensure it was signed with the specified Anomaly address</source>
+        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling Anomaly address</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -736,8 +736,8 @@
 <context>
     <name>anomaly-core</name>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Kapilubluban ning Anomlay</translation>
+        <source>Anomaly Core</source>
+        <translation>Kapilubluban ning Anomaly</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

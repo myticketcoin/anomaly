@@ -1,12 +1,12 @@
 UNIX BUILD NOTES
 ====================
-Some notes on how to build Anomlay Core in Unix.
+Some notes on how to build Anomaly Core in Unix.
 
 (For BSD specific instructions, see `build-*bsd.md` in this directory.)
 
 Note
 ---------------------
-Always use absolute paths to configure and compile Anomlay Core and the dependencies,
+Always use absolute paths to configure and compile Anomaly Core and the dependencies,
 for example, when specifying the path of the dependency:
 
 	../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
@@ -55,7 +55,7 @@ Memory Requirements
 --------------------
 
 C++ compilers are memory-hungry. It is recommended to have at least 1.5 GB of
-memory available when compiling Anomlay Core. On systems with less, gcc can be
+memory available when compiling Anomaly Core. On systems with less, gcc can be
 tuned to conserve memory with additional CXXFLAGS:
 
 
@@ -87,7 +87,7 @@ BerkeleyDB 5.1 or later, which break binary wallet compatibility with the distri
 are based on BerkeleyDB 4.8. If you do not care about wallet compatibility,
 pass `--with-incompatible-bdb` to configure.
 
-See the section "Disable-wallet mode" to build Anomlay Core without wallet.
+See the section "Disable-wallet mode" to build Anomaly Core without wallet.
 
 Optional (see --with-miniupnpc and --enable-upnp-default):
 
@@ -138,7 +138,7 @@ libqrencode (optional) can be installed with:
 Dependency Build Instructions: CentOS
 -------------------------------------
 
-You need to build boost manually, and if it's not in standard library paths, you need to add `/path/to/boost/lib` into `LD_LIBRARY_PATH` env when building Anomlay.
+You need to build boost manually, and if it's not in standard library paths, you need to add `/path/to/boost/lib` into `LD_LIBRARY_PATH` env when building Anomaly.
 
 Build requirements:
 
@@ -192,7 +192,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your Anomlay Core installation more secure by making certain attacks impossible to
+To help make your Anomaly Core installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, binaries are hardened by default.
 This can be disabled with:
 
@@ -225,7 +225,7 @@ Hardening enables the following features:
 
 * Non-executable Stack
     If the stack is executable then trivial stack-based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, Anomlay Core should be built with a non-executable stack,
+    vulnerable buffers are found. By default, Anomaly Core should be built with a non-executable stack,
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
@@ -241,7 +241,7 @@ Hardening enables the following features:
 
 Disable-wallet mode
 --------------------
-When the intention is to run only a P2P node without a wallet, Anomlay Core may be compiled in
+When the intention is to run only a P2P node without a wallet, Anomaly Core may be compiled in
 disable-wallet mode with:
 
     ./configure --disable-wallet

@@ -28,7 +28,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакциялар</translation>
@@ -38,8 +38,8 @@
         <translation>Билдирүүнү &amp;текшерүү...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -101,8 +101,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Error</source>

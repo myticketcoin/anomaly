@@ -66,11 +66,11 @@
         <translation>მიმღები მისამართი</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Anomaly addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>ეს არის თქვენი ბიტკოინ-მისამართები, რომელთაგანაც შეგიძლიათ გადახდა. აუცილებლად შეამოწმეთ თანხა და მიმღები მისამართი გაგზავნამდე.</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Anomaly addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>ეს არის თქვენი ბიტკოინ-მისამართები, რომლებზეც შეგიძლიათ მიიღოთ თანხები. რეკომენდებულია ყოველი ტრანსაქციისათვის ახალი მიმღები მისამართის გამოყენება.</translation>
     </message>
     <message>
@@ -176,7 +176,7 @@
         <translation>საფულის დაშიფრვის დადასტურება</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomlayS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomalyS&lt;/b&gt;!</source>
         <translation>გაფრთხილება: თუ თქვენ დაშიფრავთ თქვენს საფულეს და ამის შემდეგ დაკარგავთ გასაშიფრ ფრაზას, &lt;b&gt;თქვენ დაკარგავთ ყველა ბიტკოინს!&lt;/b&gt;</translation>
     </message>
     <message>
@@ -216,7 +216,7 @@
     </message>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>ხელ&amp;მოწერა</translation>
@@ -322,8 +322,8 @@
         <translation>დისკზე ბლოკების რეინდექსაცია...</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
-        <translation>მონეტების გაგზავნა Anomlay-მისამართზე</translation>
+        <source>Send coins to a Anomaly address</source>
+        <translation>მონეტების გაგზავნა Anomaly-მისამართზე</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -346,8 +346,8 @@
         <translation>&amp;ვერიფიკაცია</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -374,12 +374,12 @@
         <translation>თქვენი საფულის პირადი გასაღებების დაშიფრვა</translation>
     </message>
     <message>
-        <source>Sign messages with your Anomlay addresses to prove you own them</source>
-        <translation>მესიჯებზე ხელმოწერა თქვენი Anomlay-მისამართებით იმის დასტურად, რომ ის თქვენია</translation>
+        <source>Sign messages with your Anomaly addresses to prove you own them</source>
+        <translation>მესიჯებზე ხელმოწერა თქვენი Anomaly-მისამართებით იმის დასტურად, რომ ის თქვენია</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Anomlay addresses</source>
-        <translation>შეამოწმეთ, რომ მესიჯები ხელმოწერილია მითითებული Anomlay-მისამართით</translation>
+        <source>Verify messages to ensure they were signed with specified Anomaly addresses</source>
+        <translation>შეამოწმეთ, რომ მესიჯები ხელმოწერილია მითითებული Anomaly-მისამართით</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -685,8 +685,8 @@
         <translation>მითითებული კატალოგის გამოყენება:</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Error</source>
@@ -794,8 +794,8 @@
         <translation>დაუდასტურებელი ხურდის გამოყენების აკრძალვის შემდეგ მათი გამოყენება შეუძლებელი იქნება, სანამ ტრანსაქციას არ ექნება ერთი დასტური მაინც. ეს აისახება თქვენი ნაშთის დათვლაზეც.</translation>
     </message>
     <message>
-        <source>Automatically open the Anomlay client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>როუტერში Anomlay-კლიენტის პორტის ავტომატური გახსნა. მუშაობს, თუ თქვენს როუტერს ჩართული აქვს UPnP.</translation>
+        <source>Automatically open the Anomaly client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>როუტერში Anomaly-კლიენტის პორტის ავტომატური გახსნა. მუშაობს, თუ თქვენს როუტერს ჩართული აქვს UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -905,8 +905,8 @@
         <translation>ფორმა</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomlay network after a connection is established, but this process has not completed yet.</source>
-        <translation>ნაჩვენები ინფორმაცია შეიძლება მოძველებული იყოს. თქვენი საფულე ავტომატურად სინქრონიზდება Anomlay-ის ქსელთან კავშირის დამყარების შემდეგ, ეს პროცესი ჯერ არ არის დასრულებული.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomaly network after a connection is established, but this process has not completed yet.</source>
+        <translation>ნაჩვენები ინფორმაცია შეიძლება მოძველებული იყოს. თქვენი საფულე ავტომატურად სინქრონიზდება Anomaly-ის ქსელთან კავშირის დამყარების შემდეგ, ეს პროცესი ჯერ არ არის დასრულებული.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1098,7 +1098,7 @@
         <translation>&amp;მესიჯი:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Anomlay network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Anomaly network.</source>
         <translation>არააუცილებელი მესიჯი, რომელიც ერთვის გადახდის მოთხოვნას და ნაჩვენები იქნება მოთხოვნის გახსნისას. შენიშვნა: მესიჯი არ გაყვება გადახდას ბითქოინის ქსელში.</translation>
     </message>
     <message>
@@ -1350,7 +1350,7 @@
         <translation>შეიყვანეთ ამ მისამართის ნიშნული გამოყენებული მისამართების სიაში დასამატებლად</translation>
     </message>
     <message>
-        <source>A message that was attached to the anomaly: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Anomlay network.</source>
+        <source>A message that was attached to the anomaly: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Anomaly network.</source>
         <translation>მესიჯი, რომელიც თან ერთვის მონეტებს:  URI, რომელიც შეინახება ტრანსაქციასთან ერთად თქვენთვის. შენიშვნა: მესიჯი არ გაყვება გადახდას ბითქოინის ქსელში.</translation>
     </message>
     <message>
@@ -1411,7 +1411,7 @@
         <translation>მიმდინარე ხელმოწერის კოპირება კლიპბორდში</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Anomlay address</source>
+        <source>Sign the message to prove you own this Anomaly address</source>
         <translation>მოაწერეთ ხელი იმის დასადასტურებლად, რომ ეს მისამართი თქვენია</translation>
     </message>
     <message>
@@ -1431,8 +1431,8 @@
         <translation>მესიჯის &amp;ვერიფიკაცია</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Anomlay address</source>
-        <translation>შეამოწმეთ, რომ მესიჯი ხელმოწერილია მითითებული Anomlay-მისამართით</translation>
+        <source>Verify the message to ensure it was signed with the specified Anomaly address</source>
+        <translation>შეამოწმეთ, რომ მესიჯი ხელმოწერილია მითითებული Anomaly-მისამართით</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1524,8 +1524,8 @@
 <context>
     <name>anomaly-core</name>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Anomlay Core</translation>
+        <source>Anomaly Core</source>
+        <translation>Anomaly Core</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

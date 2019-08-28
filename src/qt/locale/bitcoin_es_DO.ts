@@ -62,12 +62,12 @@
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones Anomlay para enviar pagos. Compruebe siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
+        <source>These are your Anomaly addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones Anomaly para enviar pagos. Compruebe siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son sus direcciones de Anomlay para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
+        <source>These are your Anomaly addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son sus direcciones de Anomaly para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
     </message>
     <message>
         <source>Export Address List</source>
@@ -152,8 +152,8 @@
         <translation>Confirme cifrado del monedero</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomlayS&lt;/b&gt;!</source>
-        <translation>Atención: Si cifra su monedero y pierde la contraseña, perderá ¡&lt;b&gt;TODOS SUS AnomlayS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomalyS&lt;/b&gt;!</source>
+        <translation>Atención: Si cifra su monedero y pierde la contraseña, perderá ¡&lt;b&gt;TODOS SUS AnomalyS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -165,14 +165,14 @@
     </message>
     <message>
         <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your anomalys from being stolen by malware infecting your computer.</source>
-        <translation>%1 se cerrará ahora para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger de manera completa su Anomlay de robo por malware que esté infectando su sistema.</translation>
+        <translation>%1 se cerrará ahora para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger de manera completa su Anomaly de robo por malware que esté infectando su sistema.</translation>
     </message>
     </context>
 <context>
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje...</translation>
@@ -250,8 +250,8 @@
         <translation>Reindexando bloques en disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
-        <translation>Enviar monedas a una dirección Anomlay</translation>
+        <source>Send coins to a Anomaly address</source>
+        <translation>Enviar monedas a una dirección Anomaly</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -274,8 +274,8 @@
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -302,12 +302,12 @@
         <translation>Cifrar las claves privadas de su monedero</translation>
     </message>
     <message>
-        <source>Sign messages with your Anomlay addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones Anomlay para demostrar la propiedad</translation>
+        <source>Sign messages with your Anomaly addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones Anomaly para demostrar la propiedad</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Anomlay addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones Anomlay concretas</translation>
+        <source>Verify messages to ensure they were signed with specified Anomaly addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones Anomaly concretas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -327,7 +327,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and anomaly: URIs)</source>
-        <translation>Solicitar pagos (genera codigo QR y URL's de Anomlay)</translation>
+        <translation>Solicitar pagos (genera codigo QR y URL's de Anomaly)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -521,8 +521,8 @@
         <translation>Utilice un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Error</source>
@@ -598,8 +598,8 @@
         <translation>Experto</translation>
     </message>
     <message>
-        <source>Automatically open the Anomlay client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente Anomlay en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the Anomaly client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente Anomaly en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -697,8 +697,8 @@
         <translation>Desde</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomlay network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Anomlay después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomaly network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Anomaly después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -1131,8 +1131,8 @@
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Anomlay address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección Anomlay</translation>
+        <source>Sign the message to prove you own this Anomaly address</source>
+        <translation>Firmar el mensaje para demostrar que se posee esta dirección Anomaly</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1151,8 +1151,8 @@
         <translation>&amp;Verificar mensaje</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Anomlay address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Anomlay indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified Anomaly address</source>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Anomaly indicada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1228,8 +1228,8 @@
 <context>
     <name>anomaly-core</name>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Núcleo de Anomlay</translation>
+        <source>Anomaly Core</source>
+        <translation>Núcleo de Anomaly</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

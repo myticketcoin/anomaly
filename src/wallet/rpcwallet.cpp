@@ -154,7 +154,7 @@ static UniValue getnewaddress(const JSONRPCRequest& request)
     if (request.fHelp || request.params.size() > 2)
         throw std::runtime_error(
             "getnewaddress ( \"label\" \"address_type\" )\n"
-            "\nReturns a new Anomlay address for receiving payments.\n"
+            "\nReturns a new Anomaly address for receiving payments.\n"
             "If 'label' is specified, it is added to the address book \n"
             "so payments received with the address will be associated with 'label'.\n"
             "\nArguments:\n"
@@ -231,7 +231,7 @@ static UniValue getaccountaddress(const JSONRPCRequest& request)
     if (request.fHelp || request.params.size() != 1)
         throw std::runtime_error(
             "getaccountaddress \"account\"\n"
-            "\n\nDEPRECATED. Returns the current Anomlay address for receiving payments to this account.\n"
+            "\n\nDEPRECATED. Returns the current Anomaly address for receiving payments to this account.\n"
             "\nArguments:\n"
             "1. \"account\"       (string, required) The account for the address. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created and a new address created  if there is no account by the given name.\n"
             "\nResult:\n"
@@ -267,7 +267,7 @@ static UniValue getrawchangeaddress(const JSONRPCRequest& request)
     if (request.fHelp || request.params.size() > 1)
         throw std::runtime_error(
             "getrawchangeaddress ( \"address_type\" )\n"
-            "\nReturns a new Anomlay address, for receiving change.\n"
+            "\nReturns a new Anomaly address, for receiving change.\n"
             "This is for use with raw transactions, NOT normal use.\n"
             "\nArguments:\n"
             "1. \"address_type\"           (string, optional) The address type to use. Options are \"legacy\", \"p2sh-segwit\", and \"bech32\". Default is set by -changetype.\n"
@@ -341,7 +341,7 @@ static UniValue setlabel(const JSONRPCRequest& request)
 
     CTxDestination dest = DecodeDestination(request.params[0].get_str());
     if (!IsValidDestination(dest)) {
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomlay address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomaly address");
     }
 
     std::string old_label = pwallet->mapAddressBook[dest].name;
@@ -408,7 +408,7 @@ static UniValue getaccount(const JSONRPCRequest& request)
 
     CTxDestination dest = DecodeDestination(request.params[0].get_str());
     if (!IsValidDestination(dest)) {
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomlay address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomaly address");
     }
 
     std::string strAccount;
@@ -565,7 +565,7 @@ static UniValue sendtoaddress(const JSONRPCRequest& request)
 
     CTxDestination dest = DecodeDestination(request.params[0].get_str());
     if (!IsValidDestination(dest)) {
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomlay address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomaly address");
     }
 
     // Amount
@@ -605,7 +605,7 @@ static UniValue sendtoaddress(const JSONRPCRequest& request)
     if (request.params.size() > 8 && !request.params[8].isNull()){
     senderAddress = DecodeDestination(request.params[8].get_str());
         if (!IsValidDestination(senderAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomlay address to send from");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomaly address to send from");
         else
             fHasSender=true;
     }
@@ -664,7 +664,7 @@ static UniValue createcontract(const JSONRPCRequest& request){
     }
 
     LOCK2(cs_main, pwallet->cs_wallet);
-    AnomlayDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+    AnomalyDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
     uint64_t blockGasLimit = anomalyDGP.getBlockGasLimit(chainActive.Height());
     uint64_t minGasPrice = CAmount(anomalyDGP.getMinGasPrice(chainActive.Height()));
     CAmount nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE)?minGasPrice:DEFAULT_GAS_PRICE;
@@ -677,7 +677,7 @@ static UniValue createcontract(const JSONRPCRequest& request){
                 "\nArguments:\n"
                 "1. \"bytecode\"  (string, required) contract bytcode.\n"
                 "2. gasLimit  (numeric or string, optional) gasLimit, default: "+i64tostr(DEFAULT_GAS_LIMIT_OP_CREATE)+", max: "+i64tostr(blockGasLimit)+"\n"
-                "3. gasPrice  (numeric or string, optional) gasPrice Anomlay price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)+"\n"
+                "3. gasPrice  (numeric or string, optional) gasPrice Anomaly price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)+"\n"
                 "4. \"senderaddress\" (string, optional) The quantum address that will be used to create the contract.\n"
                 "5. \"broadcast\" (bool, optional, default=true) Whether to broadcast the transaction or not.\n"
                 "6. \"changeToSender\" (bool, optional, default=true) Return the change to the sender.\n"
@@ -728,7 +728,7 @@ static UniValue createcontract(const JSONRPCRequest& request){
     if (request.params.size() > 3){
         senderAddress = DecodeDestination(request.params[3].get_str());
         if (!IsValidDestination(senderAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomlay address to send from");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomaly address to send from");
         else
             fHasSender=true;
     }
@@ -865,7 +865,7 @@ static UniValue sendtocontract(const JSONRPCRequest& request){
     }
 
     LOCK2(cs_main, pwallet->cs_wallet);
-    AnomlayDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+    AnomalyDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
     uint64_t blockGasLimit = anomalyDGP.getBlockGasLimit(chainActive.Height());
     uint64_t minGasPrice = CAmount(anomalyDGP.getMinGasPrice(chainActive.Height()));
     CAmount nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE)?minGasPrice:DEFAULT_GAS_PRICE;
@@ -880,7 +880,7 @@ static UniValue sendtocontract(const JSONRPCRequest& request){
                 "2. \"datahex\"  (string, required) data to send.\n"
                 "3. \"amount\"      (numeric or string, optional) The amount in " + CURRENCY_UNIT + " to send. eg 0.1, default: 0\n"
                 "4. gasLimit  (numeric or string, optional) gasLimit, default: "+i64tostr(DEFAULT_GAS_LIMIT_OP_SEND)+", max: "+i64tostr(blockGasLimit)+"\n"
-                "5. gasPrice  (numeric or string, optional) gasPrice Anomlay price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)+"\n"
+                "5. gasPrice  (numeric or string, optional) gasPrice Anomaly price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)+"\n"
                 "6. \"senderaddress\" (string, optional) The quantum address that will be used as sender.\n"
                 "7. \"broadcast\" (bool, optional, default=true) Whether to broadcast the transaction or not.\n"
                 "8. \"changeToSender\" (bool, optional, default=true) Return the change to the sender.\n"
@@ -944,7 +944,7 @@ static UniValue sendtocontract(const JSONRPCRequest& request){
     if (request.params.size() > 5){
         senderAddress = DecodeDestination(request.params[5].get_str());
         if (!IsValidDestination(senderAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomlay address to send from");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomaly address to send from");
         else
             fHasSender=true;
     }
@@ -1218,7 +1218,7 @@ static UniValue getreceivedbyaddress(const JSONRPCRequest& request)
     // Bitcoin address
     CTxDestination dest = DecodeDestination(request.params[0].get_str());
     if (!IsValidDestination(dest)) {
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomlay address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomaly address");
     }
     CScript scriptPubKey = GetScriptForDestination(dest);
     if (!IsMine(*pwallet, scriptPubKey)) {
@@ -1549,7 +1549,7 @@ static UniValue sendfrom(const JSONRPCRequest& request)
     std::string strAccount = LabelFromValue(request.params[0]);
     CTxDestination dest = DecodeDestination(request.params[1].get_str());
     if (!IsValidDestination(dest)) {
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomlay address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomaly address");
     }
     CAmount nAmount = AmountFromValue(request.params[2]);
     if (nAmount <= 0)
@@ -1721,7 +1721,7 @@ static UniValue sendmany(const JSONRPCRequest& request)
     for (const std::string& name_ : keys) {
         CTxDestination dest = DecodeDestination(name_);
         if (!IsValidDestination(dest)) {
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Anomlay address: ") + name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Anomaly address: ") + name_);
         }
 
         if (destinations.count(dest)) {
@@ -1849,7 +1849,7 @@ static UniValue sendmanywithdupes(const JSONRPCRequest& request)
     {
         CTxDestination address = DecodeDestination(name_);
         if (!IsValidDestination(address))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Anomlay address: ")+name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Anomaly address: ")+name_);
 
         setAddress.insert(address);
 
@@ -1908,7 +1908,7 @@ static UniValue addmultisigaddress(const JSONRPCRequest& request)
     if (request.fHelp || request.params.size() < 2 || request.params.size() > 4) {
         std::string msg = "addmultisigaddress nrequired [\"key\",...] ( \"label\" \"address_type\" )\n"
             "\nAdd a nrequired-to-sign multisignature address to the wallet. Requires a new wallet backup.\n"
-            "Each key is a Anomlay address or hex-encoded public key.\n"
+            "Each key is a Anomaly address or hex-encoded public key.\n"
             "This functionality is only intended for use with non-watchonly addresses.\n"
             "See `importaddress` for watchonly p2sh address support.\n"
             "If 'label' is specified, assign address to that label.\n"
@@ -2067,7 +2067,7 @@ static UniValue addwitnessaddress(const JSONRPCRequest& request)
 
     CTxDestination dest = DecodeDestination(request.params[0].get_str());
     if (!IsValidDestination(dest)) {
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomlay address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomaly address");
     }
 
     bool p2sh = true;
@@ -3415,7 +3415,7 @@ static UniValue encryptwallet(const JSONRPCRequest& request)
     // slack space in .dat files; that is bad if the old data is
     // unencrypted private keys. So:
     StartShutdown();
-    return "wallet encrypted; Anomlay server stopping, restart to run with encrypted wallet. The keypool has been flushed and a new HD seed was generated (if you are using HD). You need to make a new backup.";
+    return "wallet encrypted; Anomaly server stopping, restart to run with encrypted wallet. The keypool has been flushed and a new HD seed was generated (if you are using HD). You need to make a new backup.";
 }
 
 static UniValue reservebalance(const JSONRPCRequest& request)
@@ -4065,7 +4065,7 @@ static UniValue listunspent(const JSONRPCRequest& request)
             const UniValue& input = inputs[idx];
             CTxDestination dest = DecodeDestination(input.get_str());
             if (!IsValidDestination(dest)) {
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Anomlay address: ") + input.get_str());
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Anomaly address: ") + input.get_str());
             }
             if (!destinations.insert(dest).second) {
                 throw JSONRPCError(RPC_INVALID_PARAMETER, std::string("Invalid parameter, duplicated address: ") + input.get_str());

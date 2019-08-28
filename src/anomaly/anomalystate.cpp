@@ -8,23 +8,23 @@ using namespace std;
 using namespace dev;
 using namespace dev::eth;
 
-AnomlayState::AnomlayState(u256 const& _accountStartNonce, OverlayDB const& _db, const string& _path, BaseState _bs) :
+AnomalyState::AnomalyState(u256 const& _accountStartNonce, OverlayDB const& _db, const string& _path, BaseState _bs) :
         State(_accountStartNonce, _db, _bs) {
-            dbUTXO = AnomlayState::openDB(_path + "/anomalyDB", sha3(rlp("")), WithExisting::Trust);
+            dbUTXO = AnomalyState::openDB(_path + "/anomalyDB", sha3(rlp("")), WithExisting::Trust);
 	        stateUTXO = SecureTrieDB<Address, OverlayDB>(&dbUTXO);
 }
 
-AnomlayState::AnomlayState() : dev::eth::State(dev::Invalid256, dev::OverlayDB(), dev::eth::BaseState::PreExisting) {
+AnomalyState::AnomalyState() : dev::eth::State(dev::Invalid256, dev::OverlayDB(), dev::eth::BaseState::PreExisting) {
     dbUTXO = OverlayDB();
     stateUTXO = SecureTrieDB<Address, OverlayDB>(&dbUTXO);
 }
 
-ResultExecute AnomlayState::execute(EnvInfo const& _envInfo, SealEngineFace const& _sealEngine, AnomlayTransaction const& _t, Permanence _p, OnOpFunc const& _onOp){
+ResultExecute AnomalyState::execute(EnvInfo const& _envInfo, SealEngineFace const& _sealEngine, AnomalyTransaction const& _t, Permanence _p, OnOpFunc const& _onOp){
 
     assert(_t.getVersion().toRaw() == VersionVM::GetEVMDefault().toRaw());
 
     addBalance(_t.sender(), _t.value() + (_t.gas() * _t.gasPrice()));
-    newAddress = _t.isCreation() ? createAnomlayAddress(_t.getHashWith(), _t.getNVout()) : dev::Address();
+    newAddress = _t.isCreation() ? createAnomalyAddress(_t.getHashWith(), _t.getNVout()) : dev::Address();
 
     _sealEngine.deleteAddresses.insert({_t.sender(), _envInfo.author()});
 
@@ -122,7 +122,7 @@ ResultExecute AnomlayState::execute(EnvInfo const& _envInfo, SealEngineFace cons
     }
 }
 
-std::unordered_map<dev::Address, Vin> AnomlayState::vins() const // temp
+std::unordered_map<dev::Address, Vin> AnomalyState::vins() const // temp
 {
     std::unordered_map<dev::Address, Vin> ret;
     for (auto& i: cacheUTXO)
@@ -136,19 +136,19 @@ std::unordered_map<dev::Address, Vin> AnomlayState::vins() const // temp
     return ret;
 }
 
-void AnomlayState::transferBalance(dev::Address const& _from, dev::Address const& _to, dev::u256 const& _value) {
+void AnomalyState::transferBalance(dev::Address const& _from, dev::Address const& _to, dev::u256 const& _value) {
     subBalance(_from, _value);
     addBalance(_to, _value);
     if (_value > 0)
         transfers.push_back({_from, _to, _value});
 }
 
-Vin const* AnomlayState::vin(dev::Address const& _a) const
+Vin const* AnomalyState::vin(dev::Address const& _a) const
 {
-    return const_cast<AnomlayState*>(this)->vin(_a);
+    return const_cast<AnomalyState*>(this)->vin(_a);
 }
 
-Vin* AnomlayState::vin(dev::Address const& _addr)
+Vin* AnomalyState::vin(dev::Address const& _addr)
 {
     auto it = cacheUTXO.find(_addr);
     if (it == cacheUTXO.end()){
@@ -167,7 +167,7 @@ Vin* AnomlayState::vin(dev::Address const& _addr)
     return &it->second;
 }
 
-// void AnomlayState::commit(CommitBehaviour _commitBehaviour)
+// void AnomalyState::commit(CommitBehaviour _commitBehaviour)
 // {
 //     if (_commitBehaviour == CommitBehaviour::RemoveEmptyAccounts)
 //         removeEmptyAccounts();
@@ -181,7 +181,7 @@ Vin* AnomlayState::vin(dev::Address const& _addr)
 //     m_unchangedCacheEntries.clear();
 // }
 
-void AnomlayState::kill(dev::Address _addr)
+void AnomalyState::kill(dev::Address _addr)
 {
     // If the account is not in the db, nothing to kill.
     if (auto a = account(_addr))
@@ -190,7 +190,7 @@ void AnomlayState::kill(dev::Address _addr)
         v->alive = 0;
 }
 
-void AnomlayState::addBalance(dev::Address const& _id, dev::u256 const& _amount)
+void AnomalyState::addBalance(dev::Address const& _id, dev::u256 const& _amount)
 {
     if (dev::eth::Account* a = account(_id))
     {
@@ -221,7 +221,7 @@ void AnomlayState::addBalance(dev::Address const& _id, dev::u256 const& _amount)
         m_changeLog.emplace_back(dev::eth::detail::Change::Balance, _id, _amount);
 }
 
-dev::Address AnomlayState::createAnomlayAddress(dev::h256 hashTx, uint32_t voutNumber){
+dev::Address AnomalyState::createAnomalyAddress(dev::h256 hashTx, uint32_t voutNumber){
     uint256 hashTXid(h256Touint(hashTx));
 	std::vector<unsigned char> txIdAndVout(hashTXid.begin(), hashTXid.end());
 	std::vector<unsigned char> voutNumberChrs;
@@ -238,7 +238,7 @@ dev::Address AnomlayState::createAnomlayAddress(dev::h256 hashTx, uint32_t voutN
 	return dev::Address(hashTxIdAndVout);
 }
 
-void AnomlayState::deleteAccounts(std::set<dev::Address>& addrs){
+void AnomalyState::deleteAccounts(std::set<dev::Address>& addrs){
     for(dev::Address addr : addrs){
         dev::eth::Account* acc = const_cast<dev::eth::Account*>(account(addr));
         if(acc)
@@ -249,7 +249,7 @@ void AnomlayState::deleteAccounts(std::set<dev::Address>& addrs){
     }
 }
 
-void AnomlayState::updateUTXO(const std::unordered_map<dev::Address, Vin>& vins){
+void AnomalyState::updateUTXO(const std::unordered_map<dev::Address, Vin>& vins){
     for(auto& v : vins){
         Vin* vi = const_cast<Vin*>(vin(v.first));
 
@@ -264,7 +264,7 @@ void AnomlayState::updateUTXO(const std::unordered_map<dev::Address, Vin>& vins)
     }
 }
 
-void AnomlayState::printfErrorLog(const dev::eth::TransactionException er){
+void AnomalyState::printfErrorLog(const dev::eth::TransactionException er){
     std::stringstream ss;
     ss << er;
     clog(ExecutiveWarnChannel) << "VM exception:" << ss.str();

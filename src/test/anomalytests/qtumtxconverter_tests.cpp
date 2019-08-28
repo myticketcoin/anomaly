@@ -23,7 +23,7 @@ CMutableTransaction createTX(std::vector<CTxOut> vout, uint256 hashprev = uint25
     return tx;
 }
 
-void checkResult(bool isCreation, std::vector<AnomlayTransaction> results, uint256 hash){
+void checkResult(bool isCreation, std::vector<AnomalyTransaction> results, uint256 hash){
     for(size_t i = 0; i < results.size(); i++){
         if(isCreation){
             BOOST_CHECK(results[i].isCreation());
@@ -64,10 +64,10 @@ void runTest(bool isCreation, size_t n, CScript& script1, CScript script2 = CScr
     }    
     tx2 = createTX(outs2, hashParentTx);
     CTransaction transaction(tx2);
-    AnomlayTxConverter converter(transaction, NULL);
-    ExtractAnomlayTX anomalyTx;
-    BOOST_CHECK(converter.extractionAnomlayTransactions(anomalyTx));
-    std::vector<AnomlayTransaction> result = anomalyTx.first;
+    AnomalyTxConverter converter(transaction, NULL);
+    ExtractAnomalyTX anomalyTx;
+    BOOST_CHECK(converter.extractionAnomalyTransactions(anomalyTx));
+    std::vector<AnomalyTransaction> result = anomalyTx.first;
     if(script2 == CScript()){
         BOOST_CHECK(result.size() == n);
     } else {
@@ -98,9 +98,9 @@ void runFailingTest(bool isCreation, size_t n, CScript& script1, CScript script2
     }
     tx2 = createTX(outs2, hashParentTx);
     CTransaction transaction(tx2);
-    AnomlayTxConverter converter(transaction, NULL);
-    ExtractAnomlayTX anomalyTx;
-    BOOST_CHECK(!converter.extractionAnomlayTransactions(anomalyTx));
+    AnomalyTxConverter converter(transaction, NULL);
+    ExtractAnomalyTX anomalyTx;
+    BOOST_CHECK(!converter.extractionAnomalyTransactions(anomalyTx));
 }
 
 BOOST_FIXTURE_TEST_SUITE(anomalytxconverter_tests, TestingSetup)

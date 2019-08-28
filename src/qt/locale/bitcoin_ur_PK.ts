@@ -80,7 +80,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Error</source>
         <translation>نقص</translation>

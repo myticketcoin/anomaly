@@ -54,7 +54,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "Anomlay cannot be compiled without assertions."
+# error "Anomaly cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -70,7 +70,7 @@
 #include "pubkey.h"
 #include <univalue.h>
 
-std::unique_ptr<AnomlayState> globalState;
+std::unique_ptr<AnomalyState> globalState;
 std::shared_ptr<dev::eth::SealEngineFace> globalSealEngine;
 bool fRecordLogOpcodes = false;
 bool fIsVMlogFile = false;
@@ -271,7 +271,7 @@ std::atomic_bool g_is_mempool_loaded{false};
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "Anomlay Signed Message:\n";
+const std::string strMessageMagic = "Anomaly Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -750,23 +750,23 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
                 return state.DoS(1, false, REJECT_INVALID, "bad-txns-invalid-sender-script");
             }
 
-            AnomlayDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+            AnomalyDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
             uint64_t minGasPrice = anomalyDGP.getMinGasPrice(chainActive.Tip()->nHeight + 1);
             uint64_t blockGasLimit = anomalyDGP.getBlockGasLimit(chainActive.Tip()->nHeight + 1);
             size_t count = 0;
             for(const CTxOut& o : tx.vout)
                 count += o.scriptPubKey.HasOpCreate() || o.scriptPubKey.HasOpCall() ? 1 : 0;
-            AnomlayTxConverter converter(tx, NULL);
-            ExtractAnomlayTX resultConverter;
-            if(!converter.extractionAnomlayTransactions(resultConverter)){
+            AnomalyTxConverter converter(tx, NULL);
+            ExtractAnomalyTX resultConverter;
+            if(!converter.extractionAnomalyTransactions(resultConverter)){
                 return state.DoS(100, error("AcceptToMempool(): Contract transaction of the wrong format"), REJECT_INVALID, "bad-tx-bad-contract-format");
             }
-            std::vector<AnomlayTransaction> anomalyTransactions = resultConverter.first;
+            std::vector<AnomalyTransaction> anomalyTransactions = resultConverter.first;
             std::vector<EthTransactionParams> anomalyETP = resultConverter.second;
 
             dev::u256 sumGas = dev::u256(0);
             dev::u256 gasAllTxs = dev::u256(0);
-            for(AnomlayTransaction anomalyTransaction : anomalyTransactions){
+            for(AnomalyTransaction anomalyTransaction : anomalyTransactions){
                 sumGas += anomalyTransaction.gas() * anomalyTransaction.gasPrice();
 
                 if(sumGas > dev::u256(INT64_MAX)) {
@@ -1067,7 +1067,7 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
         // Remove conflicting transactions from the mempool
         for (CTxMemPool::txiter it : allConflicting)
         {
-            LogPrint(BCLog::MEMPOOL, "replacing tx %s with %s for %s Anomlay additional fees, %d delta bytes\n",
+            LogPrint(BCLog::MEMPOOL, "replacing tx %s with %s for %s Anomaly additional fees, %d delta bytes\n",
                     it->GetTx().GetHash().ToString(),
                     hash.ToString(),
                     FormatMoney(nModifiedFees - nConflictingFees),
@@ -2001,7 +2001,7 @@ std::vector<ResultExecute> CallContract(const dev::Address& addrContract, std::v
     CBlock block;
     CMutableTransaction tx;
 
-    AnomlayDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+    AnomalyDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
     uint64_t blockGasLimit = anomalyDGP.getBlockGasLimit(chainActive.Tip()->nHeight + 1);
 
     if(gasLimit == 0){
@@ -2011,12 +2011,12 @@ std::vector<ResultExecute> CallContract(const dev::Address& addrContract, std::v
     tx.vout.push_back(CTxOut(0, CScript() << OP_DUP << OP_HASH160 << senderAddress.asBytes() << OP_EQUALVERIFY << OP_CHECKSIG));
     block.vtx.push_back(MakeTransactionRef(CTransaction(tx)));
  
-    AnomlayTransaction callTransaction(0, 1, dev::u256(gasLimit), addrContract, opcode, dev::u256(0));
+    AnomalyTransaction callTransaction(0, 1, dev::u256(gasLimit), addrContract, opcode, dev::u256(0));
     callTransaction.forceSender(senderAddress);
     callTransaction.setVersion(VersionVM::GetEVMDefault());
 
     
-    ByteCodeExec exec(block, std::vector<AnomlayTransaction>(1, callTransaction), blockGasLimit);
+    ByteCodeExec exec(block, std::vector<AnomalyTransaction>(1, callTransaction), blockGasLimit);
     exec.performByteCode(dev::eth::Permanence::Reverted);
     return exec.getResult();
 }
@@ -2213,7 +2213,7 @@ void writeVMlog(const std::vector<ResultExecute>& res, const CTransaction& tx, c
 }
 
 bool ByteCodeExec::performByteCode(dev::eth::Permanence type){
-    for(AnomlayTransaction& tx : txs){
+    for(AnomalyTransaction& tx : txs){
         //validate VM version
         if(tx.getVersion().toRaw() != VersionVM::GetEVMDefault().toRaw()){
             return false;
@@ -2312,8 +2312,8 @@ dev::Address ByteCodeExec::EthAddrFromScript(const CScript& script){
     return dev::Address();
 }
 
-bool AnomlayTxConverter::extractionAnomlayTransactions(ExtractAnomlayTX& anomalytx){
-    std::vector<AnomlayTransaction> resultTX;
+bool AnomalyTxConverter::extractionAnomalyTransactions(ExtractAnomalyTX& anomalytx){
+    std::vector<AnomalyTransaction> resultTX;
     std::vector<EthTransactionParams> resultETP;
     for(size_t i = 0; i < txBit.vout.size(); i++){
         if(txBit.vout[i].scriptPubKey.HasOpCreate() || txBit.vout[i].scriptPubKey.HasOpCall()){
@@ -2334,7 +2334,7 @@ bool AnomlayTxConverter::extractionAnomlayTransactions(ExtractAnomlayTX& anomaly
     return true;
 }
 
-bool AnomlayTxConverter::receiveStack(const CScript& scriptPubKey){
+bool AnomalyTxConverter::receiveStack(const CScript& scriptPubKey){
     EvalScript(stack, scriptPubKey, SCRIPT_EXEC_BYTE_CODE, BaseSignatureChecker(), SigVersion::BASE, nullptr);
     if (stack.empty())
         return false;
@@ -2351,7 +2351,7 @@ bool AnomlayTxConverter::receiveStack(const CScript& scriptPubKey){
     return true;
 }
 
-bool AnomlayTxConverter::parseEthTXParams(EthTransactionParams& params){
+bool AnomalyTxConverter::parseEthTXParams(EthTransactionParams& params){
     try{
         dev::Address receiveAddress;
         valtype vecAddr;
@@ -2399,13 +2399,13 @@ bool AnomlayTxConverter::parseEthTXParams(EthTransactionParams& params){
     }
 }
 
-AnomlayTransaction AnomlayTxConverter::createEthTX(const EthTransactionParams& etp, uint32_t nOut){
-    AnomlayTransaction txEth;
+AnomalyTransaction AnomalyTxConverter::createEthTX(const EthTransactionParams& etp, uint32_t nOut){
+    AnomalyTransaction txEth;
     if (etp.receiveAddress == dev::Address() && opcode != OP_CALL){
-        txEth = AnomlayTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.code, dev::u256(0));
+        txEth = AnomalyTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.code, dev::u256(0));
     }
     else{
-        txEth = AnomlayTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.receiveAddress, etp.code, dev::u256(0));
+        txEth = AnomalyTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.receiveAddress, etp.code, dev::u256(0));
     }
     dev::Address sender(GetSenderAddress(txBit, view, blockTransactions));
     txEth.forceSender(sender);
@@ -2429,8 +2429,8 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     int64_t nTimeStart = GetTimeMicros();
 
     ///////////////////////////////////////////////// // anomaly
-    AnomlayDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
-    globalSealEngine->setAnomlaySchedule(anomalyDGP.getGasSchedule(pindex->nHeight + 1));
+    AnomalyDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+    globalSealEngine->setAnomalySchedule(anomalyDGP.getGasSchedule(pindex->nHeight + 1));
     uint32_t sizeBlockDGP = anomalyDGP.getBlockSize(pindex->nHeight + 1);
     uint64_t minGasPrice = anomalyDGP.getMinGasPrice(pindex->nHeight + 1);
     uint64_t blockGasLimit = anomalyDGP.getBlockGasLimit(pindex->nHeight + 1);
@@ -2733,25 +2733,25 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
                 return state.DoS(100, false, REJECT_INVALID, "bad-txns-invalid-sender-script");
             }
 
-            AnomlayTxConverter convert(tx, &view, &block.vtx);
+            AnomalyTxConverter convert(tx, &view, &block.vtx);
 
-            ExtractAnomlayTX resultConvertAnomlayTX;
-            if(!convert.extractionAnomlayTransactions(resultConvertAnomlayTX)){
+            ExtractAnomalyTX resultConvertAnomalyTX;
+            if(!convert.extractionAnomalyTransactions(resultConvertAnomalyTX)){
                 return state.DoS(100, error("ConnectBlock(): Contract transaction of the wrong format"), REJECT_INVALID, "bad-tx-bad-contract-format");
             }
-            if(!CheckMinGasPrice(resultConvertAnomlayTX.second, minGasPrice))
+            if(!CheckMinGasPrice(resultConvertAnomalyTX.second, minGasPrice))
                 return state.DoS(100, error("ConnectBlock(): Contract execution has lower gas price than allowed"), REJECT_INVALID, "bad-tx-low-gas-price");
 
 
             dev::u256 gasAllTxs = dev::u256(0);
-            ByteCodeExec exec(block, resultConvertAnomlayTX.first, blockGasLimit);
+            ByteCodeExec exec(block, resultConvertAnomalyTX.first, blockGasLimit);
             //validate VM version and other ETH params before execution
             //Reject anything unknown (could be changed later by DGP)
             //TODO evaluate if this should be relaxed for soft-fork purposes
             bool nonZeroVersion=false;
             dev::u256 sumGas = dev::u256(0);
             CAmount nTxFee = view.GetValueIn(tx)-tx.GetValueOut();
-            for(AnomlayTransaction& qtx : resultConvertAnomlayTX.first){
+            for(AnomalyTransaction& qtx : resultConvertAnomalyTX.first){
                 sumGas += qtx.gas() * qtx.gasPrice();
 
                 if(sumGas > dev::u256(INT64_MAX)) {
@@ -2817,13 +2817,13 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
             std::vector<TransactionReceiptInfo> tri;
             if (fLogEvents && !fJustCheck)
             {
-                for(size_t k = 0; k < resultConvertAnomlayTX.first.size(); k ++){
+                for(size_t k = 0; k < resultConvertAnomalyTX.first.size(); k ++){
                     dev::Address key = resultExec[k].execRes.newAddress;
                     if(!heightIndexes.count(key)){
                         heightIndexes[key].first = CHeightTxIndexKey(pindex->nHeight, resultExec[k].execRes.newAddress);
                     }
                     heightIndexes[key].second.push_back(tx.GetHash());
-                    tri.push_back(TransactionReceiptInfo{block.GetHash(), uint32_t(pindex->nHeight), tx.GetHash(), uint32_t(i), resultConvertAnomlayTX.first[k].from(), resultConvertAnomlayTX.first[k].to(),
+                    tri.push_back(TransactionReceiptInfo{block.GetHash(), uint32_t(pindex->nHeight), tx.GetHash(), uint32_t(i), resultConvertAnomalyTX.first[k].from(), resultConvertAnomalyTX.first[k].to(),
                                 countCumulativeGasUsed, uint64_t(resultExec[k].execRes.gasUsed), resultExec[k].execRes.newAddress, resultExec[k].txRec.log(), resultExec[k].execRes.excepted});
                 }
 
@@ -5208,7 +5208,7 @@ bool CVerifyDB::VerifyDB(const CChainParams& chainparams, CCoinsView *coinsview,
 ////////////////////////////////////////////////////////////////////////// // anomaly
     dev::h256 oldHashStateRoot(globalState->rootHash());
     dev::h256 oldHashUTXORoot(globalState->rootHashUTXO());
-    AnomlayDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+    AnomalyDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
 //////////////////////////////////////////////////////////////////////////
 
     LogPrintf("[0%%]..."); /* Continued */
@@ -5674,7 +5674,7 @@ bool LoadExternalBlockFile(const CChainParams& chainparams, FILE* fileIn, CDiskB
                 }
 
                 // In Bitcoin this only needed to be done for genesis and at the end of block indexing
-                // But for Anomlay PoS we need to sync this after every block to ensure txdb is populated for
+                // But for Anomaly PoS we need to sync this after every block to ensure txdb is populated for
                 // validating PoS proofs
                 {
                     CValidationState state;

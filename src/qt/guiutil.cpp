@@ -112,7 +112,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
     widget->setFont(fixedPitchFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Anomlay address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a Anomaly address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
@@ -539,10 +539,10 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Anomlay.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Anomaly.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Anomlay (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Anomlay (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Anomaly (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Anomaly (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -682,9 +682,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=Anomlay\n";
+            optionFile << "Name=Anomaly\n";
         else
-            optionFile << strprintf("Name=Anomlay (%s)\n", chain);
+            optionFile << strprintf("Name=Anomaly (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

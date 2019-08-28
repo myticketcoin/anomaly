@@ -62,12 +62,12 @@
         <translation>Alınan Adresler</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödeme göndermek için gereken Anomlay adreslerinizdir. Para göndermeden önce her zaman miktarı ve alıcı adresi kontrol edin.</translation>
+        <source>These are your Anomaly addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödeme göndermek için gereken Anomaly adreslerinizdir. Para göndermeden önce her zaman miktarı ve alıcı adresi kontrol edin.</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödeme almak için kullanılacak Anomlay adreslerinizdir. Her işlem için yeni bir ödeme alma adresi kullanılması tavsiye edilir.</translation>
+        <source>These are your Anomaly addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Bunlar ödeme almak için kullanılacak Anomaly adreslerinizdir. Her işlem için yeni bir ödeme alma adresi kullanılması tavsiye edilir.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Cüzdan Şifrelemesini Onaylayın</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomlayS&lt;/b&gt;!</source>
-        <translation>Uyarı: Eğer cüzdanınızı şifreleyip parolanızı kaybederseniz (unutursanız) , &lt;b&gt;BÜTÜN Anomlay'LERINIZI KAYBEDECEKSINIZ&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomalyS&lt;/b&gt;!</source>
+        <translation>Uyarı: Eğer cüzdanınızı şifreleyip parolanızı kaybederseniz (unutursanız) , &lt;b&gt;BÜTÜN Anomaly'LERINIZI KAYBEDECEKSINIZ&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -208,7 +208,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>İmza &amp;mesaj</translation>
@@ -286,8 +286,8 @@
         <translation>Bloklar disk üzerinde yeniden indeksleniyor...</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
-        <translation>Anomlay adresine madeni para gönderin</translation>
+        <source>Send coins to a Anomaly address</source>
+        <translation>Anomaly adresine madeni para gönderin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -302,8 +302,8 @@
         <translation>Onay mesajı...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay
+        <source>Anomaly</source>
+        <translation>Anomaly
 </translation>
     </message>
     <message>
@@ -458,8 +458,8 @@
         <translation>Gönderim adresini düzenleyin</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Anomlay address.</source>
-        <translation>Girilen adres "%1" Anomlay adresiyle eşleşmiyor.</translation>
+        <source>The entered address "%1" is not a valid Anomaly address.</source>
+        <translation>Girilen adres "%1" Anomaly adresiyle eşleşmiyor.</translation>
     </message>
     <message>
         <source>New key generation failed.</source>
@@ -495,8 +495,8 @@
         <translation>Hoş geldiniz</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay
+        <source>Anomaly</source>
+        <translation>Anomaly
 </translation>
     </message>
     <message>
@@ -628,7 +628,7 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomlay network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomaly network after a connection is established, but this process has not completed yet.</source>
         <translation>Gösterilen bilgi geçerli olmayabilir. Bağlantı tekrar sağlandıktan sonra cüzdanınız otomatik olarak senkronize olacaktır. Henüz senkronize olma işlemi tamamlanmadı.</translation>
     </message>
     <message>
@@ -709,8 +709,8 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Enter a Anomlay address (e.g. %1)</source>
-        <translation>Anomlay adresinizi girin (örneğin %1)</translation>
+        <source>Enter a Anomaly address (e.g. %1)</source>
+        <translation>Anomaly adresinizi girin (örneğin %1)</translation>
     </message>
     <message>
         <source>N/A</source>
@@ -1094,8 +1094,8 @@
         <translation>Coin gönderimini onaylayın</translation>
     </message>
     <message>
-        <source>Warning: Invalid Anomlay address</source>
-        <translation>Uyarı: Hatalı Anomlay adresi</translation>
+        <source>Warning: Invalid Anomaly address</source>
+        <translation>Uyarı: Hatalı Anomaly adresi</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1387,8 +1387,8 @@
 <context>
     <name>anomaly-core</name>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Anomlay Çekirdeği</translation>
+        <source>Anomaly Core</source>
+        <translation>Anomaly Çekirdeği</translation>
     </message>
     <message>
         <source>Copyright (C) %i-%i</source>

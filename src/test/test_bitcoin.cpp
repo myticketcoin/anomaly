@@ -99,7 +99,7 @@ TestingSetup::TestingSetup(const std::string& chainName) : BasicTestingSetup(cha
         boost::filesystem::path pathTemp = fs::temp_directory_path() / strprintf("test_bitcoin_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
         boost::filesystem::create_directories(pathTemp);
         const dev::h256 hashDB(dev::sha3(dev::rlp("")));
-        globalState = std::unique_ptr<AnomlayState>(new AnomlayState(dev::u256(0), AnomlayState::openDB(pathTemp.string(), hashDB, dev::WithExisting::Trust), pathTemp.string(), dev::eth::BaseState::Empty));
+        globalState = std::unique_ptr<AnomalyState>(new AnomalyState(dev::u256(0), AnomalyState::openDB(pathTemp.string(), hashDB, dev::WithExisting::Trust), pathTemp.string(), dev::eth::BaseState::Empty));
         dev::eth::ChainParams cp((dev::eth::genesisInfo(dev::eth::Network::anomalyTestNetwork)));
         globalSealEngine = std::unique_ptr<dev::eth::SealEngineFace>(cp.createSealEngine());
         globalState->populateFrom(cp.genesisState);

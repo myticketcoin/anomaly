@@ -58,12 +58,12 @@
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones Anomlay para realizar pagos. Verifica siempre el monto y la dirección de recepción antes de enviar monedas. </translation>
+        <source>These are your Anomaly addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones Anomaly para realizar pagos. Verifica siempre el monto y la dirección de recepción antes de enviar monedas. </translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son tus direcciones Anomlay para recibir pagos. Es recomendable usar una nueva dirección de recibo para cada transacción.</translation>
+        <source>These are your Anomaly addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son tus direcciones Anomaly para recibir pagos. Es recomendable usar una nueva dirección de recibo para cada transacción.</translation>
     </message>
     <message>
         <source>Copy &amp;Label</source>
@@ -108,7 +108,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje...</translation>
@@ -154,8 +154,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
-        <translation>Enviar monedas a una dirección Anomlay</translation>
+        <source>Send coins to a Anomaly address</source>
+        <translation>Enviar monedas a una dirección Anomaly</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -170,8 +170,8 @@
         <translation>Abre la consola de depuración y diágnostico</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -198,12 +198,12 @@
         <translation>Encriptar las llaves privadas que pertenecen a tu billetera</translation>
     </message>
     <message>
-        <source>Sign messages with your Anomlay addresses to prove you own them</source>
-        <translation>Firma mensajes con tus direcciones Anomlay para probar que eres dueño de ellas</translation>
+        <source>Sign messages with your Anomaly addresses to prove you own them</source>
+        <translation>Firma mensajes con tus direcciones Anomaly para probar que eres dueño de ellas</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Anomlay addresses</source>
-        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Anomlay especificas</translation>
+        <source>Verify messages to ensure they were signed with specified Anomaly addresses</source>
+        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Anomaly especificas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -441,8 +441,8 @@
         <translation>Usa un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -692,8 +692,8 @@
 <context>
     <name>anomaly-core</name>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Anomlay Core</translation>
+        <source>Anomaly Core</source>
+        <translation>Anomaly Core</translation>
     </message>
     <message>
         <source>Information</source>

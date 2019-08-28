@@ -40,7 +40,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>&amp;Send</source>
         <translation>&amp;ناردن</translation>

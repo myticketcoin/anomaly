@@ -1,5 +1,5 @@
-#ifndef AnomlayDGP_H
-#define AnomlayDGP_H
+#ifndef AnomalyDGP_H
+#define AnomalyDGP_H
 
 #include <anomaly/anomalystate.h>
 #include <primitives/block.h>
@@ -24,11 +24,11 @@ static const uint64_t MIN_BLOCK_GAS_LIMIT_DGP = 1000000;
 static const uint64_t MAX_BLOCK_GAS_LIMIT_DGP = 1000000000;
 static const uint64_t DEFAULT_BLOCK_GAS_LIMIT_DGP = 40000000;
 
-class AnomlayDGP {
+class AnomalyDGP {
     
 public:
 
-    AnomlayDGP(AnomlayState* _state, bool _dgpevm = true) : dgpevm(_dgpevm), state(_state) { initDataEIP158(); }
+    AnomalyDGP(AnomalyState* _state, bool _dgpevm = true) : dgpevm(_dgpevm), state(_state) { initDataEIP158(); }
 
     dev::eth::EVMSchedule getGasSchedule(unsigned int blockHeight);
 
@@ -74,7 +74,7 @@ private:
 
     bool dgpevm;
 
-    const AnomlayState* state;
+    const AnomalyState* state;
 
     dev::Address templateContract;
 

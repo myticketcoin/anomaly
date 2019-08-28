@@ -66,11 +66,11 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Anomaly addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Это ваши биткойн адреса для отправки платежа. Всегда проверяйте сумму и адрес получателя перед отправкой платежа.</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Anomaly addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Это ваши биткойн адреса для получения платежей. Настоятельно рекомендуем использовать новые адреса для получения каждой транзакции.</translation>
     </message>
     <message>
@@ -172,7 +172,7 @@
         <translation>Подтвердите шифрование бумажника</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomlayS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomalyS&lt;/b&gt;!</source>
         <translation>Внимание: если вы зашифруете ваш кошелек и потеряете ваш пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ БИТКОЙНЫ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -232,7 +232,7 @@
     </message>
 </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Подписать &amp;сообщение...</translation>
@@ -346,7 +346,7 @@
         <translation>Реиндексация блоков на диске...</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
+        <source>Send coins to a Anomaly address</source>
         <translation>Послать средства на биткойн адрес</translation>
     </message>
     <message>
@@ -370,8 +370,8 @@
         <translation>&amp;Проверить сообщение...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay Core</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -398,12 +398,12 @@
         <translation>Зашифровать приватные ключи, принадлежащие вашему кошельку</translation>
     </message>
     <message>
-        <source>Sign messages with your Anomlay addresses to prove you own them</source>
-        <translation>Подписывайте сообщения Anomlay адресами чтобы подтвердить что это написали именно Вы</translation>
+        <source>Sign messages with your Anomaly addresses to prove you own them</source>
+        <translation>Подписывайте сообщения Anomaly адресами чтобы подтвердить что это написали именно Вы</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Anomlay addresses</source>
-        <translation>Проверяйте сообщения чтобы убедиться что они подписаны конкретными Anomlay адресами</translation>
+        <source>Verify messages to ensure they were signed with specified Anomaly addresses</source>
+        <translation>Проверяйте сообщения чтобы убедиться что они подписаны конкретными Anomaly адресами</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -534,8 +534,8 @@
         <translation>Кошелек &lt;b&gt;зашифрован&lt;/b&gt; и сейчас &lt;b&gt;заблокирован&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Anomlay can no longer continue safely and will quit.</source>
-        <translation>Произошла критическая ошибка. Anomlay больше не может продолжать безопасную работу и будет закрыт.</translation>
+        <source>A fatal error occurred. Anomaly can no longer continue safely and will quit.</source>
+        <translation>Произошла критическая ошибка. Anomaly больше не может продолжать безопасную работу и будет закрыт.</translation>
     </message>
 </context>
 <context>
@@ -749,8 +749,8 @@
         <translation>Использовать пользовательскую директорию данных</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay Core</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly Core</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -918,8 +918,8 @@
         <translation>Разрешить входящие соединения</translation>
     </message>
     <message>
-        <source>Connect to the Anomlay network through a SOCKS5 proxy.</source>
-        <translation>Подключится к сети Anomlay через SOCKS5 прокси.</translation>
+        <source>Connect to the Anomaly network through a SOCKS5 proxy.</source>
+        <translation>Подключится к сети Anomaly через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1126,7 +1126,7 @@
         <translation>Количество</translation>
     </message>
     <message>
-        <source>Enter a Anomlay address (e.g. %1)</source>
+        <source>Enter a Anomaly address (e.g. %1)</source>
         <translation>Введите биткоин-адрес (напр. %1)</translation>
     </message>
     <message>
@@ -2152,8 +2152,8 @@
         <translation>Невозможно запустить HTTP-сервер. Для получения более детальной информации необходимо обратиться к журналу отладки.</translation>
     </message>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Anomlay Core</translation>
+        <source>Anomaly Core</source>
+        <translation>Anomaly Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

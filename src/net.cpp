@@ -1524,7 +1524,7 @@ static void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "Anomlay " + FormatFullVersion();
+        std::string strDesc = "Anomaly " + FormatFullVersion();
 
         do {
 #ifndef UPNPDISCOVER_SUCCESS

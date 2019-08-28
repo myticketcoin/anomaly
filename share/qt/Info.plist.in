@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Anomlay-Qt</string>
+  <string>Anomaly-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Anomlay-Qt</string>
+  <string>Anomaly-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.anomalyproject.Anomlay-Qt</string>
+  <string>org.anomalyproject.Anomaly-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.anomaly.AnomlayPayment</string>
+      <string>org.anomaly.AnomalyPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>anomaly</string>
@@ -60,7 +60,7 @@
       <key>UTTypeIdentifier</key>
       <string>org.anomaly.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Anomlay payment request</string>
+      <string>Anomaly payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

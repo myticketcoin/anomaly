@@ -1,4 +1,4 @@
-This document describes breaking changes between Anomlay releases for both RPC APIs and for blockchain consensus.
+This document describes breaking changes between Anomaly releases for both RPC APIs and for blockchain consensus.
 
 # Sparknet (Testnet v1)
 

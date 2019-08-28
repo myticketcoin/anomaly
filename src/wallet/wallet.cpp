@@ -5356,7 +5356,7 @@ bool CWallet::LoadContractData(const std::string &address, const std::string &ke
     return ret;
 }
 
-void CWallet::StakeAnomlays(bool fStake, CConnman* connman)
+void CWallet::StakeAnomalys(bool fStake, CConnman* connman)
 {
-    ::StakeAnomlays(fStake, this, connman, stakeThread);
+    ::StakeAnomalys(fStake, this, connman, stakeThread);
 }

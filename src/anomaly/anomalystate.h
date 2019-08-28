@@ -56,15 +56,15 @@ namespace anomaly{
 
 class CondensingTX;
 
-class AnomlayState : public dev::eth::State {
+class AnomalyState : public dev::eth::State {
     
 public:
 
-    AnomlayState();
+    AnomalyState();
 
-    AnomlayState(dev::u256 const& _accountStartNonce, dev::OverlayDB const& _db, const std::string& _path, dev::eth::BaseState _bs = dev::eth::BaseState::PreExisting);
+    AnomalyState(dev::u256 const& _accountStartNonce, dev::OverlayDB const& _db, const std::string& _path, dev::eth::BaseState _bs = dev::eth::BaseState::PreExisting);
 
-    ResultExecute execute(dev::eth::EnvInfo const& _envInfo, dev::eth::SealEngineFace const& _sealEngine, AnomlayTransaction const& _t, dev::eth::Permanence _p = dev::eth::Permanence::Committed, dev::eth::OnOpFunc const& _onOp = OnOpFunc());
+    ResultExecute execute(dev::eth::EnvInfo const& _envInfo, dev::eth::SealEngineFace const& _sealEngine, AnomalyTransaction const& _t, dev::eth::Permanence _p = dev::eth::Permanence::Committed, dev::eth::OnOpFunc const& _onOp = OnOpFunc());
 
     void setRootUTXO(dev::h256 const& _r) { cacheUTXO.clear(); stateUTXO.setRoot(_r); }
 
@@ -78,7 +78,7 @@ public:
 
 	dev::OverlayDB& dbUtxo() { return dbUTXO; }
 
-    virtual ~AnomlayState(){}
+    virtual ~AnomalyState(){}
 
     friend CondensingTX;
 
@@ -96,7 +96,7 @@ private:
 
     void addBalance(dev::Address const& _id, dev::u256 const& _amount);
 
-    dev::Address createAnomlayAddress(dev::h256 hashTx, uint32_t voutNumber);
+    dev::Address createAnomalyAddress(dev::h256 hashTx, uint32_t voutNumber);
 
     void deleteAccounts(std::set<dev::Address>& addrs);
 
@@ -117,11 +117,11 @@ private:
 
 
 struct TemporaryState{
-    std::unique_ptr<AnomlayState>& globalStateRef;
+    std::unique_ptr<AnomalyState>& globalStateRef;
     dev::h256 oldHashStateRoot;
     dev::h256 oldHashUTXORoot;
 
-    TemporaryState(std::unique_ptr<AnomlayState>& _globalStateRef) : 
+    TemporaryState(std::unique_ptr<AnomalyState>& _globalStateRef) : 
         globalStateRef(_globalStateRef),
         oldHashStateRoot(globalStateRef->rootHash()), 
         oldHashUTXORoot(globalStateRef->rootHashUTXO()) {}
@@ -149,7 +149,7 @@ class CondensingTX{
 
 public:
 
-    CondensingTX(AnomlayState* _state, const std::vector<TransferInfo>& _transfers, const AnomlayTransaction& _transaction, std::set<dev::Address> _deleteAddresses = std::set<dev::Address>()) : transfers(_transfers), deleteAddresses(_deleteAddresses), transaction(_transaction), state(_state){}
+    CondensingTX(AnomalyState* _state, const std::vector<TransferInfo>& _transfers, const AnomalyTransaction& _transaction, std::set<dev::Address> _deleteAddresses = std::set<dev::Address>()) : transfers(_transfers), deleteAddresses(_deleteAddresses), transaction(_transaction), state(_state){}
 
     CTransaction createCondensingTX();
 
@@ -185,9 +185,9 @@ private:
     //So, making this unordered_set could be an attack vector
     const std::set<dev::Address> deleteAddresses;
 
-    const AnomlayTransaction& transaction;
+    const AnomalyTransaction& transaction;
 
-    AnomlayState* state;
+    AnomalyState* state;
 
     bool voutOverflow = false;
 

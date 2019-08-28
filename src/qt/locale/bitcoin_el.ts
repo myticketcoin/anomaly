@@ -32,7 +32,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Quit application</source>
         <translation>Κλείσιμο εφαρμογής</translation>

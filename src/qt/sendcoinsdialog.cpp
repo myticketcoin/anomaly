@@ -777,7 +777,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString& text)
         }
         else if (!IsValidDestination(dest)) // Invalid address
         {
-            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Anomlay address"));
+            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Anomaly address"));
         }
         else // Valid address
         {

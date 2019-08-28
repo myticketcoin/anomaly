@@ -1,5 +1,5 @@
-#ifndef Anomlay_QT_TOKENTOKENTRANSACTIONTABLEMODEL_H
-#define Anomlay_QT_TOKENTOKENTRANSACTIONTABLEMODEL_H
+#ifndef Anomaly_QT_TOKENTOKENTRANSACTIONTABLEMODEL_H
+#define Anomaly_QT_TOKENTOKENTRANSACTIONTABLEMODEL_H
 
 #include <qt/bitcoinunits.h>
 
@@ -116,4 +116,4 @@ public Q_SLOTS:
     friend class TokenTransactionTablePriv;
 };
 
-#endif // Anomlay_QT_TOKENTOKENTRANSACTIONTABLEMODEL_H
+#endif // Anomaly_QT_TOKENTOKENTRANSACTIONTABLEMODEL_H

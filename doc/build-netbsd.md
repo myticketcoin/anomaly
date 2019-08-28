@@ -30,7 +30,7 @@ git clone https://github.com/anomalyproject/anomaly --recursive
 
 See [dependencies.md](dependencies.md) for a complete overview.
 
-### Building Anomlay Core
+### Building Anomaly Core
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).
 

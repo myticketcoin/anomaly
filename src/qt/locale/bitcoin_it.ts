@@ -66,12 +66,12 @@
         <translation>Indirizzi di ricezione</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono i tuoi indirizzi Anomlay per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo del beneficiario prima di inviare anomaly.</translation>
+        <source>These are your Anomaly addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Questi sono i tuoi indirizzi Anomaly per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo del beneficiario prima di inviare anomaly.</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono i tuoi indirizzi Anomlay per la ricezione di pagamenti. Si raccomanda di usare un nuovo indirizzo di ricezione per ogni transazione.</translation>
+        <source>These are your Anomaly addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Questi sono i tuoi indirizzi Anomaly per la ricezione di pagamenti. Si raccomanda di usare un nuovo indirizzo di ricezione per ogni transazione.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Conferma la cifratura del portafoglio</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomlayS&lt;/b&gt;!</source>
-        <translation>Attenzione: perdendo la passphrase di un portamonete cifrato &lt;b&gt;TUTTI I PROPRI Anomlay ANDRANNO PERSI&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomalyS&lt;/b&gt;!</source>
+        <translation>Attenzione: perdendo la passphrase di un portamonete cifrato &lt;b&gt;TUTTI I PROPRI Anomaly ANDRANNO PERSI&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -240,7 +240,7 @@
     </message>
 </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firma &amp;messaggio...</translation>
@@ -358,8 +358,8 @@
         <translation>Il Proxy è &lt;b&gt;enabled&lt;/b&gt;:%1</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
-        <translation>Invia fondi ad un indirizzo Anomlay</translation>
+        <source>Send coins to a Anomaly address</source>
+        <translation>Invia fondi ad un indirizzo Anomaly</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -382,8 +382,8 @@
         <translation>&amp;Verifica messaggio...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -410,12 +410,12 @@
         <translation>Cifra le chiavi private che appartengono al tuo portamonete</translation>
     </message>
     <message>
-        <source>Sign messages with your Anomlay addresses to prove you own them</source>
-        <translation>Firma messaggi con i tuoi indirizzi Anomlay per dimostrarne il possesso</translation>
+        <source>Sign messages with your Anomaly addresses to prove you own them</source>
+        <translation>Firma messaggi con i tuoi indirizzi Anomaly per dimostrarne il possesso</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Anomlay addresses</source>
-        <translation>Verifica che i messaggi siano stati firmati con gli indirizzi Anomlay specificati</translation>
+        <source>Verify messages to ensure they were signed with specified Anomaly addresses</source>
+        <translation>Verifica che i messaggi siano stati firmati con gli indirizzi Anomaly specificati</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -454,8 +454,8 @@
         <translation>Opzioni della riga di &amp;comando</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Anomlay network</source>
-        <translation><numerusform>%n connessione attiva alla rete Anomlay</numerusform><numerusform>%n connessioni alla rete Anomlay attive</numerusform></translation>
+        <source>%n active connection(s) to Anomaly network</source>
+        <translation><numerusform>%n connessione attiva alla rete Anomaly</numerusform><numerusform>%n connessioni alla rete Anomaly attive</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -498,8 +498,8 @@
         <translation>Aggiornato</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Anomlay command-line options</source>
-        <translation>Mostra il messaggio di aiuto di %1 per ottenere una lista di opzioni di comando per Anomlay </translation>
+        <source>Show the %1 help message to get a list with possible Anomaly command-line options</source>
+        <translation>Mostra il messaggio di aiuto di %1 per ottenere una lista di opzioni di comando per Anomaly </translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -574,8 +574,8 @@
         <translation>Il portamonete è &lt;b&gt;cifrato&lt;/b&gt; ed attualmente &lt;b&gt;bloccato&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Anomlay can no longer continue safely and will quit.</source>
-        <translation>Si è verificato un errore critico. Anomlay non può più funzionare in maniera sicura e verrà chiuso.</translation>
+        <source>A fatal error occurred. Anomaly can no longer continue safely and will quit.</source>
+        <translation>Si è verificato un errore critico. Anomaly non può più funzionare in maniera sicura e verrà chiuso.</translation>
     </message>
 </context>
 <context>
@@ -764,7 +764,7 @@
         <translation>Modifica indirizzo d'invio</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Anomlay address.</source>
+        <source>The entered address "%1" is not a valid Anomaly address.</source>
         <translation>L'indirizzo inserito "%1" non è un indirizzo anomaly valido.</translation>
     </message>
     <message>
@@ -853,8 +853,8 @@
         <translation>Usa una cartella dati personalizzata:</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -865,8 +865,8 @@
         <translation>Verranno salvati circa %1 GB di dati in questa cartella.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Anomlay block chain.</source>
-        <translation>%1 scaricherà e salverà una copia della block chain di Anomlay.</translation>
+        <source>%1 will download and store a copy of the Anomaly block chain.</source>
+        <translation>%1 scaricherà e salverà una copia della block chain di Anomaly.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1087,8 +1087,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>&amp;Spendi resti non confermati</translation>
     </message>
     <message>
-        <source>Automatically open the Anomlay client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Apri automaticamente la porta del client Anomlay sul router. Il protocollo UPnP deve essere supportato da parte del router ed attivo.</translation>
+        <source>Automatically open the Anomaly client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Apri automaticamente la porta del client Anomaly sul router. Il protocollo UPnP deve essere supportato da parte del router ed attivo.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1103,8 +1103,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Accetta connessioni in entrata</translation>
     </message>
     <message>
-        <source>Connect to the Anomlay network through a SOCKS5 proxy.</source>
-        <translation>Connessione alla rete Anomlay attraverso un proxy SOCKS5.</translation>
+        <source>Connect to the Anomaly network through a SOCKS5 proxy.</source>
+        <translation>Connessione alla rete Anomaly attraverso un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1139,8 +1139,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Anomlay network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Connette alla rete Anomlay attraverso un proxy SOCKS5 separato per Tor.</translation>
+        <source>Connect to the Anomaly network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Connette alla rete Anomaly attraverso un proxy SOCKS5 separato per Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1246,8 +1246,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomlay network after a connection is established, but this process has not completed yet.</source>
-        <translation>Le informazioni visualizzate potrebbero non essere aggiornate. Il portamonete si sincronizza automaticamente con la rete Anomlay una volta stabilita una connessione, ma questo processo non è ancora stato completato.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomaly network after a connection is established, but this process has not completed yet.</source>
+        <translation>Le informazioni visualizzate potrebbero non essere aggiornate. Il portamonete si sincronizza automaticamente con la rete Anomaly una volta stabilita una connessione, ma questo processo non è ancora stato completato.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1341,8 +1341,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Indirizzo di pagamento non valido %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Anomlay address or malformed URI parameters.</source>
-        <translation>Impossibile interpretare l'URI! I parametri dell'URI o l'indirizzo Anomlay potrebbero non essere corretti.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Anomaly address or malformed URI parameters.</source>
+        <translation>Impossibile interpretare l'URI! I parametri dell'URI o l'indirizzo Anomaly potrebbero non essere corretti.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1443,8 +1443,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Importo</translation>
     </message>
     <message>
-        <source>Enter a Anomlay address (e.g. %1)</source>
-        <translation>Inserisci un indirizzo Anomlay (ad es. %1)</translation>
+        <source>Enter a Anomaly address (e.g. %1)</source>
+        <translation>Inserisci un indirizzo Anomaly (ad es. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1879,8 +1879,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>&amp;Messaggio:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Anomlay network.</source>
-        <translation>Un messaggio opzionale da allegare e mostrare all'apertura della richiesta di pagamento. Nota: Il messaggio non sarà inviato con il pagamento sulla rete Anomlay.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Anomaly network.</source>
+        <translation>Un messaggio opzionale da allegare e mostrare all'apertura della richiesta di pagamento. Nota: Il messaggio non sarà inviato con il pagamento sulla rete Anomaly.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2045,7 +2045,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Invia Anomlay</translation>
+        <translation>Invia Anomaly</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2308,8 +2308,8 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation><numerusform>Inizio delle conferme stimato entro %n blocchi.</numerusform><numerusform>Inizio delle conferme stimato entro %n blocchi.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Anomlay address</source>
-        <translation>Attenzione: Indirizzo Anomlay non valido</translation>
+        <source>Warning: Invalid Anomaly address</source>
+        <translation>Attenzione: Indirizzo Anomaly non valido</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2351,8 +2351,8 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Questo è un normale pagamento.</translation>
     </message>
     <message>
-        <source>The Anomlay address to send the payment to</source>
-        <translation>L'indirizzo Anomlay a cui vuoi inviare il pagamento</translation>
+        <source>The Anomaly address to send the payment to</source>
+        <translation>L'indirizzo Anomaly a cui vuoi inviare il pagamento</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2399,8 +2399,8 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Inserisci un'etichetta per questo indirizzo per aggiungerlo alla lista degli indirizzi utilizzati</translation>
     </message>
     <message>
-        <source>A message that was attached to the anomaly: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Anomlay network.</source>
-        <translation>Messaggio incluso nel anomaly URI e che sarà memorizzato con la transazione per vostro riferimento. Nota: Questo messaggio non sarà inviato attraverso la rete Anomlay.</translation>
+        <source>A message that was attached to the anomaly: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Anomaly network.</source>
+        <translation>Messaggio incluso nel anomaly URI e che sarà memorizzato con la transazione per vostro riferimento. Nota: Questo messaggio non sarà inviato attraverso la rete Anomaly.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2448,8 +2448,8 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>È possibile firmare messaggi/accordi con i propri indirizzi in modo da dimostrare di poter ricevere anomaly attraverso di essi. Si consiglia di prestare attenzione a non firmare dichiarazioni vaghe o casuali, attacchi di phishing potrebbero cercare di indurre ad apporre la firma su di esse. Si raccomanda di firmare esclusivamente dichiarazioni completamente dettagliate e delle quali si condivide in pieno il contenuto.</translation>
     </message>
     <message>
-        <source>The Anomlay address to sign the message with</source>
-        <translation>L'indirizzo Anomlay da utilizzare per firmare il messaggio</translation>
+        <source>The Anomaly address to sign the message with</source>
+        <translation>L'indirizzo Anomaly da utilizzare per firmare il messaggio</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2480,8 +2480,8 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Copia la firma corrente nella clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Anomlay address</source>
-        <translation>Firma un messaggio per dimostrare di possedere questo indirizzo Anomlay</translation>
+        <source>Sign the message to prove you own this Anomaly address</source>
+        <translation>Firma un messaggio per dimostrare di possedere questo indirizzo Anomaly</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2504,11 +2504,11 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Per verificare il messaggio inserire l'indirizzo del firmatario, il messaggio e la firma nei campi sottostanti, assicurandosi di copiare esattamente anche ritorni a capo, spazi, tabulazioni, etc.. Si raccomanda di non lasciarsi fuorviare dalla firma a leggere più di quanto non sia riportato nel testo del messaggio stesso, in modo da evitare di cadere vittima di attacchi di tipo man-in-the-middle. Si ricorda che la verifica della firma dimostra soltanto che il firmatario può ricevere pagamenti con l'indirizzo corrispondente, non prova l'invio di alcuna transazione.</translation>
     </message>
     <message>
-        <source>The Anomlay address the message was signed with</source>
-        <translation>L'indirizzo Anomlay con cui è stato contrassegnato il messaggio</translation>
+        <source>The Anomaly address the message was signed with</source>
+        <translation>L'indirizzo Anomaly con cui è stato contrassegnato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Anomlay address</source>
+        <source>Verify the message to ensure it was signed with the specified Anomaly address</source>
         <translation>Verifica il messaggio per accertare che sia stato firmato con l'indirizzo specificato</translation>
     </message>
     <message>
@@ -3040,7 +3040,7 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Invia Anomlay</translation>
+        <translation>Invia Anomaly</translation>
     </message>
     <message>
         <source>Fee bump error</source>
@@ -3149,8 +3149,8 @@ Nota: poiché la commissione è calcolata su base per byte, una commissione di "
         <translation>Impossibile avviare il server HTTP. Dettagli nel log di debug.</translation>
     </message>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Anomlay Core</translation>
+        <source>Anomaly Core</source>
+        <translation>Anomaly Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

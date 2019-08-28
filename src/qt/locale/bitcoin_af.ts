@@ -62,12 +62,12 @@
         <translation>Ontvanger adresse</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Hierdie is die adresse vanwaar u Anomlay betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
+        <source>These are your Anomaly addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Hierdie is die adresse vanwaar u Anomaly betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
     </message>
     <message>
-        <source>These are your Anomlay addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Hierdie is die adresse waar u Anomlays sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
+        <source>These are your Anomaly addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Hierdie is die adresse waar u Anomalys sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,8 +172,8 @@
         <translation>Bevestig dat die beursie gekodifiseer is</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomlayS&lt;/b&gt;!</source>
-        <translation>Waarskuwing: Indien u die beursie kodifiseer en u vergeet u wagwoord &lt;b&gt;VERLOOR U AL U AnomlayS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomalyS&lt;/b&gt;!</source>
+        <translation>Waarskuwing: Indien u die beursie kodifiseer en u vergeet u wagwoord &lt;b&gt;VERLOOR U AL U AnomalyS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -232,7 +232,7 @@
     </message>
 </context>
 <context>
-    <name>AnomlayGUI</name>
+    <name>AnomalyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Teken &amp;boodskap...</translation>
@@ -334,8 +334,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a Anomlay address</source>
-        <translation>Stuur munte na 'n Anomlay adres</translation>
+        <source>Send coins to a Anomaly address</source>
+        <translation>Stuur munte na 'n Anomaly adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -358,8 +358,8 @@
         <translation>&amp;Verifieer boodskap...</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -386,12 +386,12 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your Anomlay addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u Anomlay adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your Anomaly addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u Anomaly adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Anomlay addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Anomlay adresse</translation>
+        <source>Verify messages to ensure they were signed with specified Anomaly addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Anomaly adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -516,8 +516,8 @@
         <translation>Inkomende transaksie</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Anomlay can no longer continue safely and will quit.</source>
-        <translation>'N fatale fout het voorgekom. Anomlay kan nie meer veilig voortgaan nie en sal nou toemaak.</translation>
+        <source>A fatal error occurred. Anomaly can no longer continue safely and will quit.</source>
+        <translation>'N fatale fout het voorgekom. Anomaly kan nie meer veilig voortgaan nie en sal nou toemaak.</translation>
     </message>
 </context>
 <context>
@@ -706,8 +706,8 @@
         <translation>Wysig stuur adres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Anomlay address.</source>
-        <translation>Die ingevoerde adres "%1" is nie 'n geldige Anomlay adres nie.</translation>
+        <source>The entered address "%1" is not a valid Anomaly address.</source>
+        <translation>Die ingevoerde adres "%1" is nie 'n geldige Anomaly adres nie.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -779,8 +779,8 @@
         <translation>Gebruik 'n persoonlike data gids:</translation>
     </message>
     <message>
-        <source>Anomlay</source>
-        <translation>Anomlay</translation>
+        <source>Anomaly</source>
+        <translation>Anomaly</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1144,8 +1144,8 @@
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>Enter a Anomlay address (e.g. %1)</source>
-        <translation>Voer in 'n Anomlay adres (bv. %1)</translation>
+        <source>Enter a Anomaly address (e.g. %1)</source>
+        <translation>Voer in 'n Anomaly adres (bv. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1878,8 +1878,8 @@
 <context>
     <name>anomaly-core</name>
     <message>
-        <source>Anomlay Core</source>
-        <translation>Anomlay Kern</translation>
+        <source>Anomaly Core</source>
+        <translation>Anomaly Kern</translation>
     </message>
     <message>
         <source>Error loading %s</source>

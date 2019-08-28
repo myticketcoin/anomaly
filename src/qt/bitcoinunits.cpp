@@ -42,9 +42,9 @@ QString BitcoinUnits::longName(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Anomlay");
-    case mBTC: return QString("mAnomlay");
-    case uBTC: return QString::fromUtf8("μAnomlay (bits)");
+    case BTC: return QString("Anomaly");
+    case mBTC: return QString("mAnomaly");
+    case uBTC: return QString::fromUtf8("μAnomaly (bits)");
     case SAT: return QString("Satoshi (sat)");
     default: return QString("???");
     }
@@ -64,9 +64,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Anomlays");
-    case mBTC: return QString("Milli-Anomlays (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-Anomlays (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case BTC: return QString("Anomalys");
+    case mBTC: return QString("Milli-Anomalys (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-Anomalys (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     case SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }

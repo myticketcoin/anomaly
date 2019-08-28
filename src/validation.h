@@ -43,7 +43,7 @@
 #include <anomaly/storageresults.h>
 
 
-extern std::unique_ptr<AnomlayState> globalState;
+extern std::unique_ptr<AnomalyState> globalState;
 extern std::shared_ptr<dev::eth::SealEngineFace> globalSealEngine;
 extern bool fRecordLogOpcodes;
 extern bool fIsVMlogFile;
@@ -51,7 +51,7 @@ extern bool fGettingValuesDGP;
 
 struct EthTransactionParams;
 using valtype = std::vector<unsigned char>;
-using ExtractAnomlayTX = std::pair<std::vector<AnomlayTransaction>, std::vector<EthTransactionParams>>;
+using ExtractAnomalyTX = std::pair<std::vector<AnomalyTransaction>, std::vector<EthTransactionParams>>;
 ///////////////////////////////////////////
 
 class CBlockIndex;
@@ -629,8 +629,8 @@ bool CheckMinGasPrice(std::vector<EthTransactionParams>& etps, const uint64_t& m
 
 struct ByteCodeExecResult;
 
-void EnforceContractVoutLimit(ByteCodeExecResult& bcer, ByteCodeExecResult& bcerOut, const dev::h256& oldHashAnomlayRoot,
-    const dev::h256& oldHashStateRoot, const std::vector<AnomlayTransaction>& transactions);
+void EnforceContractVoutLimit(ByteCodeExecResult& bcer, ByteCodeExecResult& bcerOut, const dev::h256& oldHashAnomalyRoot,
+    const dev::h256& oldHashStateRoot, const std::vector<AnomalyTransaction>& transactions);
 
 void writeVMlog(const std::vector<ResultExecute>& res, const CTransaction& tx = CTransaction(), const CBlock& block = CBlock());
 
@@ -657,13 +657,13 @@ struct ByteCodeExecResult{
     std::vector<CTransaction> valueTransfers;
 };
 
-class AnomlayTxConverter{
+class AnomalyTxConverter{
 
 public:
 
-    AnomlayTxConverter(CTransaction tx, CCoinsViewCache* v = NULL, const std::vector<CTransactionRef>* blockTxs = NULL) : txBit(tx), view(v), blockTransactions(blockTxs){}
+    AnomalyTxConverter(CTransaction tx, CCoinsViewCache* v = NULL, const std::vector<CTransactionRef>* blockTxs = NULL) : txBit(tx), view(v), blockTransactions(blockTxs){}
 
-    bool extractionAnomlayTransactions(ExtractAnomlayTX& anomalyTx);
+    bool extractionAnomalyTransactions(ExtractAnomalyTX& anomalyTx);
 
 private:
 
@@ -671,7 +671,7 @@ private:
 
     bool parseEthTXParams(EthTransactionParams& params);
 
-    AnomlayTransaction createEthTX(const EthTransactionParams& etp, const uint32_t nOut);
+    AnomalyTransaction createEthTX(const EthTransactionParams& etp, const uint32_t nOut);
 
     const CTransaction txBit;
     const CCoinsViewCache* view;
@@ -685,7 +685,7 @@ class ByteCodeExec {
 
 public:
 
-    ByteCodeExec(const CBlock& _block, std::vector<AnomlayTransaction> _txs, const uint64_t _blockGasLimit) : txs(_txs), block(_block), blockGasLimit(_blockGasLimit) {}
+    ByteCodeExec(const CBlock& _block, std::vector<AnomalyTransaction> _txs, const uint64_t _blockGasLimit) : txs(_txs), block(_block), blockGasLimit(_blockGasLimit) {}
 
     bool performByteCode(dev::eth::Permanence type = dev::eth::Permanence::Committed);
 
@@ -699,7 +699,7 @@ private:
 
     dev::Address EthAddrFromScript(const CScript& scriptIn);
 
-    std::vector<AnomlayTransaction> txs;
+    std::vector<AnomalyTransaction> txs;
 
     std::vector<ResultExecute> result;
 

@@ -84,7 +84,7 @@ static UniValue gethexaddress(const JSONRPCRequest& request) {
 
     CTxDestination dest = DecodeDestination(request.params[0].get_str());
     if (!IsValidDestination(dest)) {
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomlay address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Anomaly address");
     }
 
     const CKeyID *keyID = boost::get<CKeyID>(&dest);
@@ -483,7 +483,7 @@ CMutableTransaction ConstructTransaction(const UniValue& inputs_in, const UniVal
 
             // Get dgp gas limit and gas price
             LOCK(cs_main);
-            AnomlayDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
+            AnomalyDGP anomalyDGP(globalState.get(), fGettingValuesDGP);
             uint64_t blockGasLimit = anomalyDGP.getBlockGasLimit(chainActive.Height());
             uint64_t minGasPrice = CAmount(anomalyDGP.getMinGasPrice(chainActive.Height()));
             CAmount nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE)?minGasPrice:DEFAULT_GAS_PRICE;
@@ -551,7 +551,7 @@ CMutableTransaction ConstructTransaction(const UniValue& inputs_in, const UniVal
         } else {
             CTxDestination destination = DecodeDestination(name_);
             if (!IsValidDestination(destination)) {
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Anomlay address: ") + name_);
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Anomaly address: ") + name_);
             }
 
             if (!destinations.insert(destination).second) {
@@ -607,7 +607,7 @@ static UniValue createrawtransaction(const JSONRPCRequest& request)
             "      \"contract\":{\n"
             "         \"contractAddress\":\"address\", (string, required) Valid contract address (valid hash160 hex data)\n"
             "         \"data\":\"hex\",                (string, required) Hex data to add in the call output\n"
-            "         \"amount\":x.xxx,                (numeric, optional) Value in Anomlay to send with the call, should be a valid amount, default 0\n"
+            "         \"amount\":x.xxx,                (numeric, optional) Value in Anomaly to send with the call, should be a valid amount, default 0\n"
             "         \"gasLimit\":x,                  (numeric, optional) The gas limit for the transaction\n"
             "         \"gasPrice\":x.xxx               (numeric, optional) The gas price for the transaction\n"
             "       } \n"
@@ -1421,7 +1421,7 @@ UniValue decodepsbt(const JSONRPCRequest& request)
     if (request.fHelp || request.params.size() != 1)
         throw std::runtime_error(
             "decodepsbt \"psbt\"\n"
-            "\nReturn a JSON object representing the serialized, base64-encoded partially signed Anomlay transaction.\n"
+            "\nReturn a JSON object representing the serialized, base64-encoded partially signed Anomaly transaction.\n"
 
             "\nArguments:\n"
             "1. \"psbt\"            (string, required) The PSBT base64 string\n"
@@ -1446,7 +1446,7 @@ UniValue decodepsbt(const JSONRPCRequest& request)
             "          \"asm\" : \"asm\",            (string) The asm\n"
             "          \"hex\" : \"hex\",            (string) The hex\n"
             "          \"type\" : \"pubkeyhash\",    (string) The type, eg 'pubkeyhash'\n"
-            "          \"address\" : \"address\"     (string) Anomlay address if there is one\n"
+            "          \"address\" : \"address\"     (string) Anomaly address if there is one\n"
             "        }\n"
             "      },\n"
             "      \"partial_signatures\" : {             (json object, optional)\n"
@@ -1703,7 +1703,7 @@ UniValue combinepsbt(const JSONRPCRequest& request)
     if (request.fHelp || request.params.size() != 1)
         throw std::runtime_error(
             "combinepsbt [\"psbt\",...]\n"
-            "\nCombine multiple partially signed Anomlay transactions into one transaction.\n"
+            "\nCombine multiple partially signed Anomaly transactions into one transaction.\n"
             "Implements the Combiner role.\n"
             "\nArguments:\n"
             "1. \"txs\"                   (string) A json array of base64 strings of partially signed transactions\n"

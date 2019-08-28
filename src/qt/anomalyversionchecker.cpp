@@ -10,26 +10,26 @@
 
 #define paternVersion "anomaly-([0-9]+\\.)?([0-9]+\\.)?([0-9]+)-"
 
-AnomlayVersionChecker::AnomlayVersionChecker(QObject *parent) : QObject(parent)
+AnomalyVersionChecker::AnomalyVersionChecker(QObject *parent) : QObject(parent)
 {
     currentVersion = Version(CLIENT_VERSION_MAJOR, CLIENT_VERSION_MINOR, CLIENT_VERSION_REVISION);
 }
 
-AnomlayVersionChecker::~AnomlayVersionChecker()
+AnomalyVersionChecker::~AnomalyVersionChecker()
 {
 
 }
 
-bool AnomlayVersionChecker::newVersionAvailable()
+bool AnomalyVersionChecker::newVersionAvailable()
 {
     Version maxReleaseVersion = getMaxReleaseVersion();
     return maxReleaseVersion > currentVersion;
 }
 
-QList<Version> AnomlayVersionChecker::getVersions()
+QList<Version> AnomalyVersionChecker::getVersions()
 {
     QNetworkAccessManager manager;
-    QNetworkReply *response = manager.get(QNetworkRequest(QUrl(Anomlay_RELEASES)));
+    QNetworkReply *response = manager.get(QNetworkRequest(QUrl(Anomaly_RELEASES)));
     QEventLoop event;
     connect(response, SIGNAL(finished()), &event, SLOT(quit()));
     event.exec();
@@ -52,7 +52,7 @@ QList<Version> AnomlayVersionChecker::getVersions()
     return versions;
 }
 
-Version AnomlayVersionChecker::getMaxReleaseVersion()
+Version AnomalyVersionChecker::getMaxReleaseVersion()
 {
     QList<Version> versions = getVersions();
     Version maxVersion;

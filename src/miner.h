@@ -291,7 +291,7 @@ private:
 };
 
 /** Generate a new block, without valid proof-of-work */
-void StakeAnomlays(bool fStake, CWallet *pwallet, CConnman* connman, boost::thread_group*& stakeThread);
+void StakeAnomalys(bool fStake, CWallet *pwallet, CConnman* connman, boost::thread_group*& stakeThread);
 
 /** Modify the extranonce in a block */
 void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned int& nExtraNonce);

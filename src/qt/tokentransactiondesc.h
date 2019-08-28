@@ -1,5 +1,5 @@
-#ifndef Anomlay_QT_TOKENTRANSACTIONDESC_H
-#define Anomlay_QT_TOKENTRANSACTIONDESC_H
+#ifndef Anomaly_QT_TOKENTRANSACTIONDESC_H
+#define Anomaly_QT_TOKENTRANSACTIONDESC_H
 
 #include <QObject>
 #include <QString>
@@ -26,4 +26,4 @@ private:
     static QString FormatTxStatus(interfaces::Wallet& wallet, const interfaces::TokenTx& wtx);
 };
 
-#endif // Anomlay_QT_TOKENTRANSACTIONDESC_H
+#endif // Anomaly_QT_TOKENTRANSACTIONDESC_H
