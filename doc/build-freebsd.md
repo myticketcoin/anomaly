@@ -27,7 +27,7 @@ Download the source code:
 git clone https://github.com/anomalyproject/anomaly --recursive
 ```
 
-## Building Qtum Core
+## Building Anomlay Core
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).
 

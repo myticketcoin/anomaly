@@ -28,7 +28,7 @@ Ensure that the ./gitian-builder directory is up to date.
     git pull
     popd
 
-### Build and sign Qtum for Linux, Windows, and OS X:
+### Build and sign Anomlay for Linux, Windows, and OS X:
 
   ```anomaly/contrib/gitian-build.sh --build --signer signer version``` or 
   ```anomaly/contrib/gitian-build.sh --build --kvm --signer signer version```

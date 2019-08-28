@@ -66,12 +66,12 @@
         <translation>Mottagaradresser</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Detta är dina Qtum-adresser för att skicka betalningar. Kontrollera alltid summan och den mottagande adressen innan du skickar anomaly.</translation>
+        <source>These are your Anomlay addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Detta är dina Anomlay-adresser för att skicka betalningar. Kontrollera alltid summan och den mottagande adressen innan du skickar anomaly.</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Detta är dina Qtum-adresser för att ta emot betalningar. Det rekommenderas att använda en ny mottagningsadress för varje transaktion.</translation>
+        <source>These are your Anomlay addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Detta är dina Anomlay-adresser för att ta emot betalningar. Det rekommenderas att använda en ny mottagningsadress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -177,8 +177,8 @@ Var vänlig och försök igen.</translation>
         <translation>Bekräfta kryptering av plånbok</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR QTUMS&lt;/b&gt;!</source>
-        <translation>VARNING: Om du krypterar din plånbok och glömmer ditt lösenord, kommer du att &lt;b&gt;FÖRLORA ALLA DINA QTUM&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AnomlayS&lt;/b&gt;!</source>
+        <translation>VARNING: Om du krypterar din plånbok och glömmer ditt lösenord, kommer du att &lt;b&gt;FÖRLORA ALLA DINA Anomlay&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -241,7 +241,7 @@ Var vänlig och försök igen.</translation>
     </message>
 </context>
 <context>
-    <name>QtumGUI</name>
+    <name>AnomlayGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signera &amp;meddelande...</translation>
@@ -347,8 +347,8 @@ Var vänlig och försök igen.</translation>
         <translation>Återindexerar block på disken...</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
-        <translation>Skicka anomaly till en Qtum-adress</translation>
+        <source>Send coins to a Anomlay address</source>
+        <translation>Skicka anomaly till en Anomlay-adress</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -371,8 +371,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Verifiera meddelande...</translation>
     </message>
     <message>
-        <source>Qtum</source>
-        <translation>Qtum</translation>
+        <source>Anomlay</source>
+        <translation>Anomlay</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -399,12 +399,12 @@ Var vänlig och försök igen.</translation>
         <translation>Kryptera de privata nycklar som tillhör din plånbok</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
-        <translation>Signera meddelanden med dina Qtum-adresser för att bevisa att du äger dem</translation>
+        <source>Sign messages with your Anomlay addresses to prove you own them</source>
+        <translation>Signera meddelanden med dina Anomlay-adresser för att bevisa att du äger dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
-        <translation>Verifiera meddelanden för att vara säker på att de signerades med angivna Qtum-adresser</translation>
+        <source>Verify messages to ensure they were signed with specified Anomlay addresses</source>
+        <translation>Verifiera meddelanden för att vara säker på att de signerades med angivna Anomlay-adresser</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -443,8 +443,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Kommandoradsalternativ</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network</source>
-        <translation><numerusform>%n aktiva anslutningar till Qtum-nätverket.</numerusform><numerusform>%n aktiva anslutningar till Qtum-nätverket.</numerusform></translation>
+        <source>%n active connection(s) to Anomlay network</source>
+        <translation><numerusform>%n aktiva anslutningar till Anomlay-nätverket.</numerusform><numerusform>%n aktiva anslutningar till Anomlay-nätverket.</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -487,8 +487,8 @@ Var vänlig och försök igen.</translation>
         <translation>Uppdaterad</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
-        <translation>Visa %1 hjälpmeddelande för att få en lista med möjliga Qtum kommandoradsalternativ.</translation>
+        <source>Show the %1 help message to get a list with possible Anomlay command-line options</source>
+        <translation>Visa %1 hjälpmeddelande för att få en lista med möjliga Anomlay kommandoradsalternativ.</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -557,8 +557,8 @@ Var vänlig och försök igen.</translation>
         <translation>Denna plånbok är &lt;b&gt;krypterad&lt;/b&gt; och för närvarande &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Qtum can no longer continue safely and will quit.</source>
-        <translation>Ett kritiskt fel uppstod. Qtum kan inte fortsätta att köra säkert och kommer att avslutas.</translation>
+        <source>A fatal error occurred. Anomlay can no longer continue safely and will quit.</source>
+        <translation>Ett kritiskt fel uppstod. Anomlay kan inte fortsätta att köra säkert och kommer att avslutas.</translation>
     </message>
 </context>
 <context>
@@ -747,8 +747,8 @@ Var vänlig och försök igen.</translation>
         <translation>Redigera avsändaradress</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Qtum address.</source>
-        <translation>Den angivna adressen "%1" är inte en giltig Qtum-adress.</translation>
+        <source>The entered address "%1" is not a valid Anomlay address.</source>
+        <translation>Den angivna adressen "%1" är inte en giltig Anomlay-adress.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -832,8 +832,8 @@ Var vänlig och försök igen.</translation>
         <translation>Använd en anpassad datakatalog:</translation>
     </message>
     <message>
-        <source>Qtum</source>
-        <translation>Qtum</translation>
+        <source>Anomlay</source>
+        <translation>Anomlay</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -844,8 +844,8 @@ Var vänlig och försök igen.</translation>
         <translation>Ungefär %1 GB data kommer att lagras i den här katalogen.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Qtum block chain.</source>
-        <translation>%1 kommer att ladda ner och lagra en kopia av Qtum-blockkedjan.</translation>
+        <source>%1 will download and store a copy of the Anomlay block chain.</source>
+        <translation>%1 kommer att ladda ner och lagra en kopia av Anomlay-blockkedjan.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -876,7 +876,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the anomaly network, as detailed below.</source>
-        <translation>Nyligen gjorda transaktioner visas inte korrekt och därför kan din plånboks saldo visas felaktigt. Denna information kommer att visas korrekt så snart din plånbok har synkroniserat klart med Qtum-nätverket enligt detaljer nedan.</translation>
+        <translation>Nyligen gjorda transaktioner visas inte korrekt och därför kan din plånboks saldo visas felaktigt. Denna information kommer att visas korrekt så snart din plånbok har synkroniserat klart med Anomlay-nätverket enligt detaljer nedan.</translation>
     </message>
     <message>
         <source>Attempting to spend anomalys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -1049,8 +1049,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Spendera obekräftad växel</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Öppna automatiskt Qtum-klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är är aktiverat.</translation>
+        <source>Automatically open the Anomlay client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Öppna automatiskt Anomlay-klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är är aktiverat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1065,8 +1065,8 @@ Var vänlig och försök igen.</translation>
         <translation>Tillåt ankommande anslutningar</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
-        <translation>Anslut till Qtum-nätverket genom en SOCKS5-proxy.</translation>
+        <source>Connect to the Anomlay network through a SOCKS5 proxy.</source>
+        <translation>Anslut till Anomlay-nätverket genom en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1101,8 +1101,8 @@ Var vänlig och försök igen.</translation>
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Anslut till Qtum-nätverket genom en separat SOCKS5-proxy för dolda tjänster i Tor.</translation>
+        <source>Connect to the Anomlay network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Anslut till Anomlay-nätverket genom en separat SOCKS5-proxy för dolda tjänster i Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1208,8 +1208,8 @@ Var vänlig och försök igen.</translation>
         <translation>Formulär</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med Qtum-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Anomlay network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med Anomlay-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1299,8 +1299,8 @@ Var vänlig och försök igen.</translation>
         <translation>Ogiltig betalningsadress %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
-        <translation>URI kan inte parsas! Detta kan orsakas av en ogiltig Qtum-adress eller felaktiga URI-parametrar.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Anomlay address or malformed URI parameters.</source>
+        <translation>URI kan inte parsas! Detta kan orsakas av en ogiltig Anomlay-adress eller felaktiga URI-parametrar.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1401,8 +1401,8 @@ Var vänlig och försök igen.</translation>
         <translation>Mängd</translation>
     </message>
     <message>
-        <source>Enter a Qtum address (e.g. %1)</source>
-        <translation>Ange en Qtum-adress (t.ex. %1)</translation>
+        <source>Enter a Anomlay address (e.g. %1)</source>
+        <translation>Ange en Anomlay-adress (t.ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1821,8 +1821,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Meddelande:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
-        <translation>Ett valfritt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. Obs: Meddelandet kommer inte att sändas med betalningen över Qtum-nätverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Anomlay network.</source>
+        <translation>Ett valfritt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. Obs: Meddelandet kommer inte att sändas med betalningen över Anomlay-nätverket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2226,8 +2226,8 @@ Var vänlig och försök igen.</translation>
         <translation><numerusform>Uppskattas till att påbörja bekräftelse inom %n block.</numerusform><numerusform>Uppskattas till att påbörja bekräftelse inom %n block.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Qtum address</source>
-        <translation>Varning: Ogiltig Qtum-adress</translation>
+        <source>Warning: Invalid Anomlay address</source>
+        <translation>Varning: Ogiltig Anomlay-adress</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2269,8 +2269,8 @@ Var vänlig och försök igen.</translation>
         <translation>Detta är en normal betalning.</translation>
     </message>
     <message>
-        <source>The Qtum address to send the payment to</source>
-        <translation>Qtum-adress att sända betalning till</translation>
+        <source>The Anomlay address to send the payment to</source>
+        <translation>Anomlay-adress att sända betalning till</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2317,8 +2317,8 @@ Var vänlig och försök igen.</translation>
         <translation>Ange en etikett för denna adress för att lägga till den i listan med använda adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the anomaly: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
-        <translation>Ett meddelande som bifogades anomaly: -URIn och som lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över Qtum-nätverket.</translation>
+        <source>A message that was attached to the anomaly: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Anomlay network.</source>
+        <translation>Ett meddelande som bifogades anomaly: -URIn och som lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över Anomlay-nätverket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2366,8 +2366,8 @@ Var vänlig och försök igen.</translation>
         <translation>Du kan signera meddelanden/avtal med dina adresser för att bevisa att du kan ta emot anomaly som skickats till dem. Var försiktig så du inte signerar något oklart eller konstigt, eftersom phishing-angrepp kan försöka få dig att signera över din identitet till dem. Signera endast väldetaljerade meddelanden som du godkänner.</translation>
     </message>
     <message>
-        <source>The Qtum address to sign the message with</source>
-        <translation>Qtum-adress att signera meddelandet med</translation>
+        <source>The Anomlay address to sign the message with</source>
+        <translation>Anomlay-adress att signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2398,8 +2398,8 @@ Var vänlig och försök igen.</translation>
         <translation>Kopiera signaturen till systemets Urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Qtum address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna Qtum-adress</translation>
+        <source>Sign the message to prove you own this Anomlay address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna Anomlay-adress</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2422,12 +2422,12 @@ Var vänlig och försök igen.</translation>
         <translation>Ange mottagarens adress, meddelande (kopiera radbrytningar, mellanslag, TAB-tecken, osv. exakt) och signatur nedan, för att verifiera meddelandet. Undvik att läsa in mera information i signaturen än vad som stod i själva det signerade meddelandet, för att undvika ett man-in-the-middle-angrepp. Notera att detta endast bevisar att den signerande parten tar emot med adressen, det bevisar inte vem som skickat transaktionen!</translation>
     </message>
     <message>
-        <source>The Qtum address the message was signed with</source>
-        <translation>Qtum-adress som meddelandet signerades med</translation>
+        <source>The Anomlay address the message was signed with</source>
+        <translation>Anomlay-adress som meddelandet signerades med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
-        <translation>Verifiera meddelandet för att vara säker på att det signerades med angiven Qtum-adress</translation>
+        <source>Verify the message to ensure it was signed with the specified Anomlay address</source>
+        <translation>Verifiera meddelandet för att vara säker på att det signerades med angiven Anomlay-adress</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2962,7 +2962,7 @@ Var vänlig och försök igen.</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Skicka Qtums</translation>
+        <translation>Skicka Anomlays</translation>
     </message>
     <message>
         <source>Increasing transaction fee failed</source>
@@ -3063,8 +3063,8 @@ Var vänlig och försök igen.</translation>
         <translation>Kunde inte starta HTTP-server. Se avlusningsloggen för detaljer.</translation>
     </message>
     <message>
-        <source>Qtum Core</source>
-        <translation>Qtum Core</translation>
+        <source>Anomlay Core</source>
+        <translation>Anomlay Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

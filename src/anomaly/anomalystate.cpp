@@ -8,23 +8,23 @@ using namespace std;
 using namespace dev;
 using namespace dev::eth;
 
-QtumState::QtumState(u256 const& _accountStartNonce, OverlayDB const& _db, const string& _path, BaseState _bs) :
+AnomlayState::AnomlayState(u256 const& _accountStartNonce, OverlayDB const& _db, const string& _path, BaseState _bs) :
         State(_accountStartNonce, _db, _bs) {
-            dbUTXO = QtumState::openDB(_path + "/anomalyDB", sha3(rlp("")), WithExisting::Trust);
+            dbUTXO = AnomlayState::openDB(_path + "/anomalyDB", sha3(rlp("")), WithExisting::Trust);
 	        stateUTXO = SecureTrieDB<Address, OverlayDB>(&dbUTXO);
 }
 
-QtumState::QtumState() : dev::eth::State(dev::Invalid256, dev::OverlayDB(), dev::eth::BaseState::PreExisting) {
+AnomlayState::AnomlayState() : dev::eth::State(dev::Invalid256, dev::OverlayDB(), dev::eth::BaseState::PreExisting) {
     dbUTXO = OverlayDB();
     stateUTXO = SecureTrieDB<Address, OverlayDB>(&dbUTXO);
 }
 
-ResultExecute QtumState::execute(EnvInfo const& _envInfo, SealEngineFace const& _sealEngine, QtumTransaction const& _t, Permanence _p, OnOpFunc const& _onOp){
+ResultExecute AnomlayState::execute(EnvInfo const& _envInfo, SealEngineFace const& _sealEngine, AnomlayTransaction const& _t, Permanence _p, OnOpFunc const& _onOp){
 
     assert(_t.getVersion().toRaw() == VersionVM::GetEVMDefault().toRaw());
 
     addBalance(_t.sender(), _t.value() + (_t.gas() * _t.gasPrice()));
-    newAddress = _t.isCreation() ? createQtumAddress(_t.getHashWith(), _t.getNVout()) : dev::Address();
+    newAddress = _t.isCreation() ? createAnomlayAddress(_t.getHashWith(), _t.getNVout()) : dev::Address();
 
     _sealEngine.deleteAddresses.insert({_t.sender(), _envInfo.author()});
 
@@ -122,7 +122,7 @@ ResultExecute QtumState::execute(EnvInfo const& _envInfo, SealEngineFace const& 
     }
 }
 
-std::unordered_map<dev::Address, Vin> QtumState::vins() const // temp
+std::unordered_map<dev::Address, Vin> AnomlayState::vins() const // temp
 {
     std::unordered_map<dev::Address, Vin> ret;
     for (auto& i: cacheUTXO)
@@ -136,19 +136,19 @@ std::unordered_map<dev::Address, Vin> QtumState::vins() const // temp
     return ret;
 }
 
-void QtumState::transferBalance(dev::Address const& _from, dev::Address const& _to, dev::u256 const& _value) {
+void AnomlayState::transferBalance(dev::Address const& _from, dev::Address const& _to, dev::u256 const& _value) {
     subBalance(_from, _value);
     addBalance(_to, _value);
     if (_value > 0)
         transfers.push_back({_from, _to, _value});
 }
 
-Vin const* QtumState::vin(dev::Address const& _a) const
+Vin const* AnomlayState::vin(dev::Address const& _a) const
 {
-    return const_cast<QtumState*>(this)->vin(_a);
+    return const_cast<AnomlayState*>(this)->vin(_a);
 }
 
-Vin* QtumState::vin(dev::Address const& _addr)
+Vin* AnomlayState::vin(dev::Address const& _addr)
 {
     auto it = cacheUTXO.find(_addr);
     if (it == cacheUTXO.end()){
@@ -167,7 +167,7 @@ Vin* QtumState::vin(dev::Address const& _addr)
     return &it->second;
 }
 
-// void QtumState::commit(CommitBehaviour _commitBehaviour)
+// void AnomlayState::commit(CommitBehaviour _commitBehaviour)
 // {
 //     if (_commitBehaviour == CommitBehaviour::RemoveEmptyAccounts)
 //         removeEmptyAccounts();
@@ -181,7 +181,7 @@ Vin* QtumState::vin(dev::Address const& _addr)
 //     m_unchangedCacheEntries.clear();
 // }
 
-void QtumState::kill(dev::Address _addr)
+void AnomlayState::kill(dev::Address _addr)
 {
     // If the account is not in the db, nothing to kill.
     if (auto a = account(_addr))
@@ -190,7 +190,7 @@ void QtumState::kill(dev::Address _addr)
         v->alive = 0;
 }
 
-void QtumState::addBalance(dev::Address const& _id, dev::u256 const& _amount)
+void AnomlayState::addBalance(dev::Address const& _id, dev::u256 const& _amount)
 {
     if (dev::eth::Account* a = account(_id))
     {
@@ -221,7 +221,7 @@ void QtumState::addBalance(dev::Address const& _id, dev::u256 const& _amount)
         m_changeLog.emplace_back(dev::eth::detail::Change::Balance, _id, _amount);
 }
 
-dev::Address QtumState::createQtumAddress(dev::h256 hashTx, uint32_t voutNumber){
+dev::Address AnomlayState::createAnomlayAddress(dev::h256 hashTx, uint32_t voutNumber){
     uint256 hashTXid(h256Touint(hashTx));
 	std::vector<unsigned char> txIdAndVout(hashTXid.begin(), hashTXid.end());
 	std::vector<unsigned char> voutNumberChrs;
@@ -238,7 +238,7 @@ dev::Address QtumState::createQtumAddress(dev::h256 hashTx, uint32_t voutNumber)
 	return dev::Address(hashTxIdAndVout);
 }
 
-void QtumState::deleteAccounts(std::set<dev::Address>& addrs){
+void AnomlayState::deleteAccounts(std::set<dev::Address>& addrs){
     for(dev::Address addr : addrs){
         dev::eth::Account* acc = const_cast<dev::eth::Account*>(account(addr));
         if(acc)
@@ -249,7 +249,7 @@ void QtumState::deleteAccounts(std::set<dev::Address>& addrs){
     }
 }
 
-void QtumState::updateUTXO(const std::unordered_map<dev::Address, Vin>& vins){
+void AnomlayState::updateUTXO(const std::unordered_map<dev::Address, Vin>& vins){
     for(auto& v : vins){
         Vin* vi = const_cast<Vin*>(vin(v.first));
 
@@ -264,7 +264,7 @@ void QtumState::updateUTXO(const std::unordered_map<dev::Address, Vin>& vins){
     }
 }
 
-void QtumState::printfErrorLog(const dev::eth::TransactionException er){
+void AnomlayState::printfErrorLog(const dev::eth::TransactionException er){
     std::stringstream ss;
     ss << er;
     clog(ExecutiveWarnChannel) << "VM exception:" << ss.str();

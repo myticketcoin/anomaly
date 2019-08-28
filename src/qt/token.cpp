@@ -75,9 +75,9 @@ struct TokenData
     {}
 };
 
-bool ToHash160(const std::string& strQtumAddress, std::string& strHash160)
+bool ToHash160(const std::string& strAnomlayAddress, std::string& strHash160)
 {
-    CTxDestination anomalyAddress = DecodeDestination(strQtumAddress);
+    CTxDestination anomalyAddress = DecodeDestination(strAnomlayAddress);
     if(!IsValidDestination(anomalyAddress))
         return false;
     const CKeyID * keyid = boost::get<CKeyID>(&anomalyAddress);
@@ -89,13 +89,13 @@ bool ToHash160(const std::string& strQtumAddress, std::string& strHash160)
     return true;
 }
 
-bool ToQtumAddress(const std::string& strHash160, std::string& strQtumAddress)
+bool ToAnomlayAddress(const std::string& strHash160, std::string& strAnomlayAddress)
 {
     uint160 key(ParseHex(strHash160.c_str()));
     CKeyID keyid(key);
     CTxDestination anomalyAddress = keyid;
     if(IsValidDestination(anomalyAddress)){
-        strQtumAddress = EncodeDestination(anomalyAddress);
+        strAnomlayAddress = EncodeDestination(anomalyAddress);
         return true;
     }
     return false;
@@ -611,9 +611,9 @@ bool Token::execEvents(int64_t fromBlock, int64_t toBlock, int func, std::vector
             TokenEvent tokenEvent;
             tokenEvent.address = variantMap.value("contractAddress").toString().toStdString();
             tokenEvent.sender = topicsList[1].toString().toStdString().substr(24);
-            ToQtumAddress(tokenEvent.sender, tokenEvent.sender);
+            ToAnomlayAddress(tokenEvent.sender, tokenEvent.sender);
             tokenEvent.receiver = topicsList[2].toString().toStdString().substr(24);
-            ToQtumAddress(tokenEvent.receiver, tokenEvent.receiver);
+            ToAnomlayAddress(tokenEvent.receiver, tokenEvent.receiver);
             tokenEvent.blockHash = uint256S(variantMap.value("blockHash").toString().toStdString());
             tokenEvent.blockNumber = variantMap.value("blockNumber").toLongLong();
             tokenEvent.transactionHash = uint256S(variantMap.value("transactionHash").toString().toStdString());

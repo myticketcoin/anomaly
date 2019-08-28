@@ -36,7 +36,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>AnomlayGUI</name>
     </context>
 <context>
     <name>CoinControlDialog</name>

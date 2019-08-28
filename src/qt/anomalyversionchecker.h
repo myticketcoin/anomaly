@@ -1,9 +1,9 @@
-#ifndef QTUMVERSIONCHECKER_H
-#define QTUMVERSIONCHECKER_H
+#ifndef AnomlayVERSIONCHECKER_H
+#define AnomlayVERSIONCHECKER_H
 
 #include <QObject>
 
-#define QTUM_RELEASES "https://github.com/anomalyproject/anomaly/releases"
+#define Anomlay_RELEASES "https://github.com/anomalyproject/anomaly/releases"
 
 class Version {
 
@@ -79,12 +79,12 @@ private:
     }
 };
 
-class QtumVersionChecker : public QObject
+class AnomlayVersionChecker : public QObject
 {
     Q_OBJECT
 public:
-    explicit QtumVersionChecker(QObject *parent = 0);
-    ~QtumVersionChecker();
+    explicit AnomlayVersionChecker(QObject *parent = 0);
+    ~AnomlayVersionChecker();
 
     bool newVersionAvailable();
 
@@ -95,4 +95,4 @@ private:
     Version currentVersion;
 };
 
-#endif // QTUMVERSIONCHECKER_H
+#endif // AnomlayVERSIONCHECKER_H

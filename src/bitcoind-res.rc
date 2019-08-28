@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Qtum"
-            VALUE "FileDescription",    "anomalyd (Qtum node with a JSON-RPC server)"
+            VALUE "CompanyName",        "Anomlay"
+            VALUE "FileDescription",    "anomalyd (Anomlay node with a JSON-RPC server)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "anomalyd"
             VALUE "LegalCopyright",     COPYRIGHT_STR

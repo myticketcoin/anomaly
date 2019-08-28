@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.anomaly.Qtum-Qt";
+        return @"org.anomaly.Anomlay-Qt";
     } else {
         return [self __bundleIdentifier];
     }

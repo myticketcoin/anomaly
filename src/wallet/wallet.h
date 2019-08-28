@@ -788,7 +788,7 @@ private:
      * Wallet staking coins.
      */
     boost::thread_group* stakeThread = nullptr;
-    void StakeQtums(bool fStake, CConnman* connman);
+    void StakeAnomlays(bool fStake, CConnman* connman);
 
 public:
     /*
@@ -1303,10 +1303,10 @@ public:
     bool RemoveTokenEntry(const uint256& tokenHash, bool fFlushOnClose=true);
 
     /* Start staking anomalys */
-    void StartStake(CConnman* connman) { StakeQtums(true, connman); }
+    void StartStake(CConnman* connman) { StakeAnomlays(true, connman); }
 
     /* Stop staking anomalys */
-    void StopStake() { StakeQtums(false, 0); }
+    void StopStake() { StakeAnomlays(false, 0); }
 };
 
 /** A key allocated from the key pool. */
