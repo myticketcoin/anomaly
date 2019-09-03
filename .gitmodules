@@ -1,3 +1,3 @@
 [submodule "src/cpp-ethereum"]
 	path = src/cpp-ethereum
-	url = https://github.com/Anomalyproject/cpp-eth-Qtum.git
+	url = https://github.com/Qtumproject/cpp-eth-Qtum.git
